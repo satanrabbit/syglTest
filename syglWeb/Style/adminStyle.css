@@ -1,0 +1,228 @@
+﻿body {
+}
+a {
+    color: #1b2348;
+}
+a:hover {
+    color: #bb1e1f;
+    text-decoration:underline;
+}
+/*admin Header*/
+#adminHeader
+{
+    height:60px;
+    width:100%;
+    border-bottom:2px solid #1c52cc;
+    margin:0 0 5px 0;
+    background-color:#0a59b1;
+    color:#FFF;
+    font-family:"微软雅黑","黑体",tahoma;
+}
+/*admin Header End*/
+/*adminPage*/
+#adminPage
+{
+    width:100%;
+    position:relative;
+    overflow:auto;
+    zoom:1;
+}
+/*admin page side*/
+#adminPage_side
+{
+    width:210px;
+    margin:10px 0 0 15px;
+    height:550px; 
+    border:1px solid #a5c5c8;
+    border-radius:5px;
+    position:absolute;
+}
+#adminPage_side h2
+{
+    margin:10px 10px 0 10px;
+}
+#adminPage_side h2 a
+{
+    display:block;    
+    color:#fafafa !important ;
+    font-family:"微软雅黑","黑体",tahoma;
+    text-decoration:none; 
+    padding-left:20px;
+    line-height:25px;
+    background:#0a59b1;    
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+}
+#adminLoginInfo
+{
+    margin:10px;
+    border:1px solid #0a59b1;
+    border-radius:5px;
+    padding:10px 8px;  
+}
+#adminLoginInfo dl
+{
+    overflow:auto;
+    zoom:1;
+    border-bottom:1px dotted #c2c2ee;
+    line-height:26px;
+    
+}
+#adminLoginInfo dl dt,#adminLoginInfo dl dd
+{
+    float:left;
+}
+#adminLoginInfo dl dt
+{
+    width:80px;
+    text-align:center;
+}
+#adminPage_side h2 a:hover
+{
+    background:#b34f2c;
+}
+#adminPage_side ul
+{
+    margin:0 10px 10px 10px;
+    border:1px solid #0a59b1;
+    border-top:0px;  
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    padding:10px 8px;
+}
+#adminPage_side ul li
+{
+    border-bottom:1px dotted #c2c2ee;
+    padding:5px 0 3px 0; 
+}
+#adminPage_side ul li a
+{
+    text-decoration: none; 
+    line-height:20px;
+    padding-left:20px;  
+}
+/*admin page side end*/
+/*admin page main */
+#adminPage_main
+{
+    margin:10px 10px 0 245px;
+    border:1px solid #a5c5c8;
+    border-radius:5px;
+    height:550px;
+    overflow:auto;
+}
+/*page main guider*/
+.mainGuider
+{
+    margin:3px 10px;
+}
+.mainGuider h3
+{
+    background:#0a59b1;
+    padding:0px 0 0px 20px;
+    color:#ccc;
+    height:35px;
+    overflow:hidden;
+    line-height:35px;
+}
+.mainGuider h3 a
+{
+    color:#ccc;
+    margin :0 10px;
+    text-decoration:none;
+    font-family:"微软雅黑","黑体",tahoma;
+}
+.mainGuider h3 a:hover
+{
+    text-decoration:underline;
+    color:#fff;
+}
+.addArt_btn {
+    float:right;
+    margin-right:20px;
+    padding-left:35px;
+}
+/*page main guider end*/
+/*page main list*/
+.mainArtList_wp {
+    margin:3px 10px;
+}
+.mainArtList_wp ul{
+    margin:5px;
+}
+.mainArtList_wp ul li{
+    border-bottom:dashed 1px #808080;
+    line-height:28px;
+    color:#7e7c7c;
+    overflow:auto;
+    zoom:1;
+}
+.mainArtList_wp ul li .mArtTitle{
+    float:left;
+    width:55%;
+    display:block;
+}
+.mainArtList_wp ul li .mArtPostTime {
+    width:20%;
+    display:block;
+    float:left;
+}
+.mainArtList_wp ul li .mArtOp {
+    width:25%;
+    display:block;
+    float:left;
+}
+.mArtOp a {
+    display:block;
+    background:#0a59b1;
+    color:#eee;
+    width:80px;
+    float:left;
+    margin:0 5px;
+    text-align:center;
+    text-decoration:none;
+}
+.mArtOp a:hover {
+    background:#b34f2c;
+}
+/*page main list end */
+/*page main edit */
+.artEdit {
+    margin:3px 10px;
+}
+/*<dl><dt>标题</dt><dd><asp:TextBox ID="TextBoxArticleTitle" runat="server" CssClass="article_title_txb"></asp:TextBox></dd></dl>*/
+.artEdit dl {
+    position:relative; 
+    padding-left:80px;
+}
+.artEdit dl dt{ 
+    width:70px;
+    position:absolute;
+    left:5px;
+    top:5px;
+    text-align:right;
+    line-height:24px;
+}
+.artEdit dl dd {
+    padding-left:15px;
+}
+.artEdit .article_title_txb,.article_author_txb,.article_intro_txb,.article_postTime_txb{ 
+    line-height:24px;
+    height:24px;
+    margin:5px 0 5px 0px;
+    border:1px solid #a5c5c8;
+    border-radius:3px;
+     width:60%;
+}
+.article_intro_txb {
+    height:45px;
+    width:60%;
+}
+.art_subtn {
+    line-height:24px;
+    border:1px solid #808080;
+
+}
+/*page main edit end */
+/*admin page main end*/
+/*adminPage End*/

@@ -1,0 +1,10 @@
+﻿
+#slide { position:relative;width:602px; height:220px; overflow:hidden; border:1px solid #ccc; float:left}
+#slide img{width:602px; height:220px}
+#slide .ico{position:absolute; right:8px;bottom:6px}
+#slide .ico li{
+	background:#fff;float:left;display:block; width:15px; height:15px; line-height:15px;border:1px solid #cecece;
+	font-family:Arial, Helvetica, sans-serif;text-align:center;margin:2px; padding: 1px;cursor:pointer
+}
+#slide .ico li.high{background:#047;color:#fff;font-weight:bolder}
+

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="syglWeb.Share.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link type="text/css" rel="stylesheet" href="~/Style/base.css" />
+    <link type="text/css" rel="stylesheet" href="~/Style/com.css" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery-1.7.2.min.js") %>"></script> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <div id="header">
+        <div id="headerTop">
+            <div id="headerLogo"></div>
+            <div id="headerSubLogo"></div>
+            <div id="headerBanner"></div>
+            <div id="headerDock"></div>
+            <div id="headerLink"></div>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="/Default.aspx" class="select">首页</a></li>
+                <li><a href="/clm.aspx?clm=1">通知公告</a></li>
+                <li><a href="/clm.aspx?clm=2">工作动态</a></li>
+                <li><a href="/clm.aspx?clm=3">招标采购</a></li>
+                <li><a href="/clm.aspx?clm=4">办事流程</a></li>
+                <li><a href="/clm.aspx?clm=5">规章制度</a></li>
+                <li><a href="downList.aspx">文档下载</a></li>
+                <li><a href="/Department.aspx">部门介绍</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="page">
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </div>
+    <div id="footer">Copyright © 实验室与设备管理处<a href="../admLogin.aspx" target="_blank" style="color:#666; text-decoration:none;">管理</a><br /></div>
+</body>
+</html>

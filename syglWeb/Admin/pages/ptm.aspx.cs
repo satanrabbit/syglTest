@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace syglWeb.Admin.pages
+{
+    public partial class ptm : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.Cookies["SyglAdmin"] == null)
+            {
+                Response.Redirect("/admLogin.aspx?f=unlogin");
+            }
+        }
+    }
+}

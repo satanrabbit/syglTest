@@ -1,0 +1,222 @@
+﻿body ,div
+{
+    margin:0;
+    padding:0;
+    font-size:0.75em;color:#131a30;
+}
+.clear
+{
+    clear:both;
+}
+.mstBody{
+    background-color:#ba7e4a; 
+    margin-bottom:3px;
+}
+ul,li
+{
+    margin:0;
+    padding:0;
+    list-style:none;    
+}
+a
+{
+    text-decoration:none;
+    color:#131a30;
+}
+a:hover
+{
+    color:#ab6019;
+}
+/**********管理头部样式*****************/
+#mheader
+{
+    width:100%;
+    height:47px;
+    background-color:#207fbf;
+    float:left;
+}
+#mpage
+{ 
+    width:100%;
+    position:relative;
+    margin-bottom:3px;
+    float:left;
+}
+#mfooter
+{
+    width:100%;
+    height:30px;
+    margin-top:3px;
+    background-color:#207fbf;
+    float:left;
+} 
+#mpage_left
+{
+    background-color:#FFF;
+    width:20%;
+    margin-bottom:3px; 
+    float:left;
+   
+}
+#mpage_right
+{
+    background-color:#FFF; 
+    margin-bottom:3px;
+    width:80%;
+    float:left;
+    background-color:#ddd;
+}
+.mnav_item
+{
+    margin:5px 8px;
+    border:1px solid #b8b2af;
+}
+.mnav_item h3
+{
+    margin:0;
+    border-bottom:1px solid #b8b2af;
+    background:#acbfe8;
+    font-size:14px;
+    padding-left:10px;
+    line-height:2em;
+}
+.mnav_item ul 
+{
+    margin:5px auto;
+}
+.mnav_item ul li
+{
+    line-height:24px;
+    padding-left:30px;
+}
+.mNews_btn
+{
+    line-height:2em;
+    background:#006;
+    color:#FFF;
+    margin:5px;
+    padding:5px;
+}
+.mguider
+{
+    margin:5px 15px;
+    line-height:2em;
+    background-color:#1c5c7a;
+    color:#FFF;
+    font-weight:600;
+    padding:0 0 0 10px;
+}
+
+.mcontent
+{
+    margin:10px 5px;
+}
+.mnews_ul
+{
+    line-height:2em;
+}
+.mnews_ul li
+{
+    margin:2px 0 3px 10px;
+    border-bottom:1px dotted #63544f;
+    overflow:auto;zoom:1
+}
+
+.mnews_ul li .mnews_titile,.mnews_ul li .mnews_time,.mnews_ul li .mnews_opt,.mnews_ul li .mtp_year,.mnews_ul li .mtp_time,.mnews_ul li .mtp_opt ,.mnews_ul li .mtp_name
+{
+    display:block;
+    float:left;
+}
+.mnews_ul li .mnews_titile
+{
+     width:55%; 
+}
+.mnews_ul li .mnews_time
+{
+    width:20%; 
+}
+.mnews_ul li .mnews_opt
+{
+    width:25%; 
+}
+.mnews_ul li  .mtp_name
+{
+    width:40%; 
+}
+ .mnews_ul li .mtp_year
+{
+    width:15%; 
+}
+ .mnews_ul li .mtp_time
+{
+    width:25%; 
+}
+ .mnews_ul li .mtp_opt
+{
+    width:20%; 
+} 
+/****项目进程管理****/
+.cpm_item
+{
+    width:220px;
+    border:2px solid #EEE;
+    float:left;
+    margin:5px;
+    height:150px;
+    
+}
+.cpm_item h3
+{
+    margin:0;
+    padding:0;
+    line-height:2em;
+    background-color:#006;
+    color:#FFF;
+}
+.cpm_item h3 a
+{
+     color:#FFF;
+}
+.cpm_item dl,.cpm_item dt,.cpm_item dd
+{
+    margin:0;
+    padding:0;
+    float:left;
+    line-height:2em;
+}
+.cpm_item dl
+{
+    width:100%;
+}
+.cpm_item dt
+{
+    
+}
+.pager {
+font-size: 12px;
+margin: 25px 0;
+text-align: center;
+color: #2E6AB1;
+line-height: 200%;
+}
+.pager a {
+border: 1px solid #9AAFE5;
+color: #2E6AB1;
+margin: 0px 2px;
+padding: 2px 5px;
+text-decoration: none;
+}
+
+.pager a:hover{
+border: 1px solid #9AAFE5;
+color: #2E6AB1;
+margin: 0px 2px;
+padding: 2px 5px;
+text-decoration: none;
+}
+.pager a.current,.pager a:hover {
+background-color: #2E6AB1;
+border: 1px solid navy;
+color: white;
+font-weight: bold;
+}

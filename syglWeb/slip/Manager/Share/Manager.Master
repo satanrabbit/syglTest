@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.master.cs" Inherits="syglWeb.slip.Manager.Shara.Manager" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/slip/Manager/Style/MStyle.css" rel="stylesheet" type="text/css" />
+    <link href="~/slip/Sources/jquery-ui-1.9.1.custom/css/smoothness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.7.2.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/ajaxfileupload.js")%>"></script> 
+    <script src="<%=ResolveUrl("~/Slip/Sources/jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.min.js")%>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body> 
+<form method="post" runat="server">
+    <div id="mheader"></div>
+    <div id="mpage">
+        <div id="mpage_left">
+            <div id="mpage_nav">
+                <div class="mnav_item">
+                    <h3>菜单菜单</h3>
+                    <ul>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="mnav_item">
+                    <h3>文章管理</h3>
+                    <ul>
+                        <li><a href="MNews.aspx">全部资讯</a></li>
+                        <li><a href="EditNews.aspx">添加资讯</a></li>
+                        <li><a href="Supports.aspx">项目支持</a></li>
+                    </ul>
+                </div>
+                <div class="mnav_item">
+                    <h3>项目管理</h3>
+                    <ul>
+                        <li><a href="cp.aspx">进度管理</a></li>
+                        <li><a href="#">项目审核</a></li>
+                        <li><a href="#">项目评选</a></li>
+                    </ul>
+                </div>
+                <div class="mnav_item">
+                    <h3>菜单菜单</h3>
+                    <ul>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                        <li><a href="#">业务一</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mpage_right"> 
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="mfooter"></div>      
+     </form>
+</body>
+</html>

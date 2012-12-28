@@ -1,0 +1,156 @@
+﻿@fff:#fff;
+@w_lf:710px;
+@w_rt:190px;
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.clrc{
+    overflow:auto;
+    zoom:1;
+}
+.tage {     
+    background-color:#78a1f6;
+    margin:2px ;
+    line-height:2.5em;
+    padding:5px 3px 3px 3px;
+    color:@fff - #111;
+    border-bottom:2px solid #ddd;
+    border-right:2px solid #ddd;
+    white-space: nowrap;
+}
+.tage_hover {
+    color:@fff;   
+    background-color:#c21807;
+    border-bottom:2px solid #e89292;
+    border-right:2px solid #e89292;
+}
+ 
+        #pg_lf {.fl;width:@w_lf;}
+        #dsc_guider {margin:5px auto;width:700px;}
+        #dsc_list {margin:5px auto;width:@w_lf;}
+        #dsc_li_header {
+            height:34px;
+            border-bottom:#808080 1px solid;
+            margin-top:10px;
+        }
+        
+            #dsc_list #dsc_ul li { 
+                .clrc;
+                border-bottom:#0094ff dashed 1px;
+                padding:5px 0 8px 0;
+            }
+        #dsc_li_title  {
+            .fl;
+        } 
+        #dsc_li_sort  {
+            .fr;
+        } 
+        #dsc_li_sort ul {.clrc;
+           li {
+                .fl;
+                height:33px;
+                margin:0 5px;
+                padding: 0 10px;
+                text-align:center;
+                 a {
+                    line-height:33px;
+                    font-weight:600;
+                    color:#888;
+                }
+            }
+            .dsc_sort_select {
+                border:1px solid #808080;
+                border-bottom:1px solid #fff;
+                color:#555 !important;
+            }
+         }       
+           
+        .dsc_li_portrait {
+            width:55px;
+            height:55px;
+            .fl;
+            margin-right:5px;
+        }
+        .dsc_li_body {
+            width:450px;
+            .fl;
+            margin-right:10px;
+        }
+            .dsc_li_body h4{
+                font-size:14px;
+                margin-bottom:3px;
+            }
+                .dsc_li_body h4 a{
+                    color:#0f245a;
+                    line-height:26px;
+                    font-weight:400;
+                }
+                .dsc_li_body h4 a:hover {
+                    color:#c21807;
+                    text-decoration:underline;
+                }
+        .dsc_tags {.clrc; a {.tage;} a:hover { .tage_hover;}}        
+        .dsc_date {color:#666;}
+        .dsc_li_status {
+            display:block;
+            width:170px;.fl;        
+              ul {
+                .clrc;
+                li {
+                   .fl;
+                    width:50px;
+                    height:50px;
+                    text-align:center;  
+                    margin-top:5px;  
+                    border-bottom:none !important;
+                    padding:0 !important;
+                    em {
+                        font-weight:600;
+                        font-style:initial;
+                        display:block;
+                        line-height:2em;
+                    }
+                } 
+            }
+        }   
+        .dsc_li_replay {
+            background-color:#0094ff;
+            color:#fefefe;
+        }
+        #pg_rt {
+            .fr;
+            width:@w_rt;
+            padding:10px 0 0 0;
+        }
+        .dsc_rt_openTopic {
+            display:block;
+            width:@w_rt - 70px;
+            line-height:45px;
+            background-color:#0094ff;
+            margin:0 auto;
+            text-align:center;
+            font-size:16px;font-weight:600;
+            color:#eee;
+            font-family:'Microsoft YaHei','黑体';
+        }
+            .dsc_rt_openTopic:hover {
+                background:#a63b1b;
+                color:#fff;
+            }
+        .dsc_rt_hotTags h3 {
+            margin:10px 0 5px 0;
+            border-bottom:solid 2px #808080;
+            padding-bottom:5px;
+            color:#333;
+            .clrc;       
+            .hot_tg_more{.fr;
+                color:#808080;
+                font-family:'Microsoft YaHei';
+                font-weight:400;
+            }
+       }
+       .dsc_rt_hotTags,.dsc_tags  { p{ a {  .tage; } a:hover { .tage_hover;}  }}
+            

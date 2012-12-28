@@ -1,0 +1,50 @@
+﻿/*CSS reset*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:"”";}
+abbr,acronym{border:0;}
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.bc{margin-left:auto;margin-right:auto;}
+.w100{width:100px;}
+.l23{ line-height:23px;}
+.f14 {font-size: 14px;}
+.clearfix {clear:both;}
+.zoom{ zoom:1;}
+.layout {width: 960px;margin: 0 auto; overflow:auto;zoom:1;}
+
+.pager {
+font-size: 12px;
+margin: 25px 0;
+text-align: center;
+color: #2E6AB1;
+line-height: 200%;
+}
+.pager a {
+border: 1px solid #9AAFE5;
+color: #2E6AB1;
+margin: 0px 2px;
+padding: 2px 5px;
+text-decoration: none;
+}
+
+.pager a:hover{
+border: 1px solid #9AAFE5;
+color: #2E6AB1;
+margin: 0px 2px;
+padding: 2px 5px;
+text-decoration: none;
+}
+.pager a.current,.pager a:hover {
+background-color: #439cef;
+border: 1px solid #eee;
+color: white;
+font-weight: bold;
+}

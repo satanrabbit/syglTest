@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="syglWeb.Admin.Share.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Style/base.css" rel="Stylesheet" type="text/css" />
+    <link href="~/Style/adminStyle.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/jquery-1.7.2.min.js") %>" ></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="adminHeader">
+        <div id="adminLogon">logo</div>
+        <div id="adminBanner"></div>
+        <div id="adminDock"></div>
+    </div>
+    <div id="adminPage">
+        <div id="adminPage_side">
+            <div id="adminLoginInfo">
+                <dl><dt>当前登陆</dt><dd>admin</dd></dl>
+                <dl><dt><a href="#">退出</a></dt><dd><a href="#">修改密码</a></dd></dl>
+            </div>
+            <h2><a href="javascript:;" >内容管理</a></h2>
+            <ul>
+                <li><a href="adminClm.aspx?clm=1">通知公告</a></li>
+                <li><a href="adminClm.aspx?clm=3">招标采购</a></li>
+                <li><a href="adminClm.aspx?clm=2">工作动态</a></li>
+                <li><a href="adminClm.aspx?clm=7">探索研究</a></li>
+                <li><a href="adminClm.aspx?clm=5">规章制度</a></li>
+                <li><a href="adminClm.aspx?clm=4">办事流程</a></li>
+                <li><a href="Down.aspx">文档下载</a></li>
+                <li><a href="#">机构设置</a></li>
+            </ul> 
+            <h2><a href="javascript:;" >网站设置</a></h2>
+            <ul>
+                <li><a href="#">网站栏目</a></li>
+                <li><a href="#">轮播图片</a></li>
+                <li><a href="#">平台入口</a></li>
+                <li><a href="#">页底信息</a></li>
+            </ul>
+        </div>
+        <div id="adminPage_main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="adminFooter"></div>
+
+
+    </form>
+</body>
+</html>

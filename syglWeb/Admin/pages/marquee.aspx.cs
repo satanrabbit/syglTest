@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace syglWeb.Admin.pages
+{
+    public partial class marquee : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.Cookies["SyglAdmin"] == null)
+            {
+
+                Response.Redirect("/admLogin.aspx?f=unlogin");
+            }
+            else
+            {
+                Request.Cookies["SyglAdmin"].Expires = DateTime.Now.AddHours(1);
+            }
+        }
+    }
+}
