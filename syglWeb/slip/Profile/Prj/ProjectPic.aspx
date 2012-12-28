@@ -37,7 +37,7 @@
                                     <asp:Repeater ID="RepeaterProjImg" runat="server">
                                         <ItemTemplate>
                                             <div class="img_item_wp">
-                                                <div class="img_wp"><img src="<%# DataBinder.Eval(Container.DataItem as System.Data.DataRowView, "topicImgMini") %>">" /></div>
+                                                <div class="img_wp"><img src="<%# DataBinder.Eval(Container.DataItem as System.Data.DataRowView, "topicImgMini") %>" /></div>
                                                 <div class="img_dist"><%# DataBinder.Eval(Container.DataItem as System.Data.DataRowView, "topicImgInfo")%></div>
                                                 <div class="img_buttoms">
                                                     <a href="javascript:;" imgID="<%# DataBinder.Eval(Container.DataItem as System.Data.DataRowView, "topicImgID") %>" class='delete_img_btn'>删除</a>
@@ -198,8 +198,7 @@
                 '<input id="imgFile" name="imgFile" type="file"  />' +
                 '</div>');
             $(".upload_dialog").dialog({
-                title: '添加图片',
-                
+                title: '添加图片',                
                 width: 700,
                 doSize: true,
                 modal: true,
@@ -207,12 +206,24 @@
                     text: "确定",
                     handler: function () {
                         $.ajaxFileUpload({
-                            url: 'UploadImg.ashx?isComp=true&isTemp=true',  
+                            url: '/slip/Handlers/UploadProjImg.ashx?tid=' + $("#ctl00_ctl00_ContentPlaceHolderPage_ContentPlaceHolderProflie_HiddenFieldTopicID").val(),
                             secureuri: false,  
-                            fileElementId: 'Filedata',  
+                            fileElementId: 'imgFile',
                             dataType: 'json',  
                             success: function (data, status)   
                             {
+                                if (data.status === 0) {
+                                    $(".imgs_wp").prepend('<div class="img_item_wp">' +
+                                                '<div class="img_wp"><img src="' + data.imgNamePath + '">" /&gt;</div>' +
+                                                '<div class="img_dist"></div>' +
+                                                '<div class="img_buttoms">' +
+                                                '<a href="javascript:;" imgid="' + data.imgID + '" class="delete_img_btn">删除</a>' +
+                                                '<a href="javascript:;" class="edit_dis_btn">修改描述</a></div>' +
+                                                '</div>');
+                                    $(".upload_dialog").dialog('destroy').remove();
+                                } else {
+                                    $.messager.alert("错误",data.msg,"error");
+                                }
                             },
                             error: function (data, status, e) 
                             {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syglWeb", "syglWeb\syglWeb.csproj", "{22CABD75-EDE8-4D21-A383-E9DE3AD046D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRLib", "..\..\..\SRlib\SRLib\SRLib.csproj", "{7A97E212-B647-443B-84BF-2AEC46CCE337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRLib", "..\..\..\..\SRlib\SRLib\SRLib.csproj", "{7A97E212-B647-443B-84BF-2AEC46CCE337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

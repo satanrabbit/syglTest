@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Web;
 using syglWeb.slip.SRDel;
+using LitJson;
+using System.Collections;
 
 namespace syglWeb.slip.Handlers
 {
@@ -27,7 +29,7 @@ namespace syglWeb.slip.Handlers
             try
             {
                 SRUploadFile fileUpload = new SRUploadFile(filesPath, allowFileExt, null);
-                HttpPostedFile file = HttpContext.Current.Request.Files["user_avatar"];
+                HttpPostedFile file = HttpContext.Current.Request.Files["imgFile"];
                 status = fileUpload.UploadFile(file);
                 //设置默认文件上传大小
                 //设置上传路径
@@ -88,9 +90,15 @@ namespace syglWeb.slip.Handlers
             {
                 err = ex.ToString();
             }
-
-            context.Response.ContentType = "text/html";
-            context.Response.Write("{'status':'" + status.ToString() + "','error':'" + err + "','imgNamePath':'" + srCom.jsonString(miniImgNamePath) + "','path':'" + srCom.jsonString(path) + "','imgID':'"+imgID+"'}");
+            Hashtable jdata = new Hashtable(); 
+            jdata["status"] = status;
+            jdata["error"] = err;
+            jdata["imgNamePath"] = (miniImgNamePath);
+            jdata["path"] = (path);
+            jdata["imgID"] = imgID;
+            string jdataStr = JsonMapper.ToJson(jdata);
+            context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+            context.Response.Write(jdataStr);
             context.Response.End();
         }
 
