@@ -1,6 +1,8 @@
 ﻿@fff:#fff;
 @w_lf:710px;
 @w_rt:190px;
+@line-height:24px;
+@wl:160px;
 .fl {
     float:left;
 }
@@ -10,6 +12,9 @@
 .clrc{
     overflow:auto;
     zoom:1;
+}
+.mid {
+    margin:5px auto;
 }
 .tage {     
     background-color:#78a1f6;
@@ -153,4 +158,35 @@
             }
        }
        .dsc_rt_hotTags,.dsc_tags  { p{ a {  .tage; } a:hover { .tage_hover;}  }}
+    /*讨论帖详细页样式*/
+.issue {
+    .clrc;
+    .issue_side{background-color:#efefef;.fl;width:@wl - 40px;.isssue_user_pro{text-align:center;} .isssue_user_intro {line-height:24px;}}
+    .issue_main {.fr;width:@wl * 3.4 + 30px;line-height:2em;}
+}
+.comment {
+    margin:10px 0;
+    .comment_head{ h3{line-height:20px;margin: 5px 30px 10px 20px;border-bottom:3px #0094ff double;}}
+    .comment_list {
+        .comment_item{ 
+            border-bottom:1px dashed #555;
+            .clrc;width:@wl * 4; .mid;
+            .comment_side{ .fl;width:@wl / 4;}
+            .comment_main {
+                .fr;width:@wl * 3.5 + 20px;
+                line-height:28px;
+                .comment_info{color:#666;}
+                .comment_content {font-size:13px;}
+                .comment_replay {
+                    margin:10px ;
+                    .replay_head{font-weight:600;}
+                    ul li {
+                         .clrc;
+                         .replay_user_pro{ .fl; width:30px;}
+                    }
+                }
+            }
+        }
+    }
+}
             
