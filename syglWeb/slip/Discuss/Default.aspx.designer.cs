@@ -22,6 +22,51 @@ namespace syglWeb.slip.Discuss {
         protected global::syglWeb.slip.Controls.header header;
         
         /// <summary>
+        /// RepeaterIssues 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeaterIssues;
+        
+        /// <summary>
+        /// HyperLinkPrePage 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkPrePage;
+        
+        /// <summary>
+        /// LabelPages 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPages;
+        
+        /// <summary>
+        /// HyperLinkNextPage 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkNextPage;
+        
+        /// <summary>
+        /// hotTags1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::syglWeb.slip.Controls.hotTags hotTags1;
+        
+        /// <summary>
         /// footer 控件。
         /// </summary>
         /// <remarks>

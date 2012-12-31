@@ -148,7 +148,7 @@
                   };
                   $("#select_img").click(function () {
 
-                      $("#target_wrapper").empty().append("<input type='file' name='user_avatar' id='user_avatar'/>");
+                      $("#target_wrapper").empty().append("<input type='file' name='logo_file' id='logo_file'/>");
                       $("#user_avatar").trigger("click");
                   });
                   $("#trigger_btn").click(function () {
@@ -167,7 +167,7 @@
                       $.ajaxFileUpload({
                           url: "Handlers/UploadImage.ashx",
                           secureuri: false,
-                          fileElementId: "user_avatar",
+                          fileElementId: "logo_file",
                           dataType: 'json',
                           success: function (json, status) { 
                               if (json.status == 0) {

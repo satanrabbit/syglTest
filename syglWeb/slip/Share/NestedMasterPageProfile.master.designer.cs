@@ -121,6 +121,51 @@ namespace syglWeb.slip.Share {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
+        /// LabelMsgCount 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMsgCount;
+        
+        /// <summary>
+        /// HyperLinkPrj 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkPrj;
+        
+        /// <summary>
+        /// HyperLinkDiscussMsg 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkDiscussMsg;
+        
+        /// <summary>
+        /// HyperLinkSysMsg 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkSysMsg;
+        
+        /// <summary>
+        /// HyperLinkUserMsg 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkUserMsg;
+        
+        /// <summary>
         /// ContentPlaceHolderProflie 控件。
         /// </summary>
         /// <remarks>

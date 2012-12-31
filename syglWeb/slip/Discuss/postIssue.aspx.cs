@@ -101,6 +101,7 @@ namespace syglWeb.slip.Discuss
                     }
 
                     trans.Commit();
+                    Response.Redirect("issue.aspx?id=" + issueID);
                 }
                 catch (Exception ex)
                 {

@@ -1,5 +1,5 @@
 ﻿$.extend({
-     sr_edit_dialog: function (url, data, fn) {
+    sr_edit_dialog: function (url, data, fn) {
         var u, d, f;
         if (arguments.length == 0) {
             $.messager.alert("错误", "错误:未填写发送请求地址！", "error");
@@ -32,7 +32,7 @@
             $.messager.progress();
             $('.sr_edit_dialog').load(u, d, function () {
                 $.messager.progress("close");
-                var dg = $(this);
+                var dg = $('.sr_edit_dialog');
                 var fm;
                 if (d.title != null) {
                     dg.dialog({ title: d.title });
@@ -48,11 +48,12 @@
                     $(".sr_edit_dialog").dialog('destroy').remove();
                 } else {
                     dg.dialog({
-                        iconCls: 'icon-page_edit', modal: true, maximizable: true,
+                        iconCls: 'icon-page_edit', modal: true, maximizable: true,maximized:true,  resizable: true,
                         top: 10,
+                         
                         buttons: [{
                             text: "保存",
-                            iconCls: 'icon-disk',
+                            iconCls: 'icon-disk',modal:true,
                             handler: function () {
                                 //提交表单
                                 fm.form('submit', {

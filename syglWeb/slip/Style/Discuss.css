@@ -188,5 +188,10 @@
             }
         }
     }
+    .post_comment_wp {
+         .clrc;width:@wl * 4; .mid;
+         .post_comment_head{width:@wl / 2;.fl;margin-top:10px;}
+        .post_comment_edit {width:@wl * 3.5;.fl;text-align:center;}
+    }
 }
             

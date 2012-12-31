@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="issue.aspx.cs" Inherits="syglWeb.slip.Discuss.issue" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" EnableViewState="false" CodeBehind="issue.aspx.cs" Inherits="syglWeb.slip.Discuss.issue" %>
 
 <%@ Register Src="~/slip/Controls/hotTags.ascx" TagPrefix="uc1" TagName="hotTags" %>
 <%@ Register Src="~/slip/Controls/header.ascx" TagPrefix="uc1" TagName="header" %>
@@ -27,8 +27,7 @@
     <script src="../../Sourse/jquery_easyui/locale/easyui-lang-zh_CN.js"></script>
     <script src="../../Scripts/less-1.3.0.min.js"></script>
 </head>
-<body>
-        
+<body>        
     <uc1:header runat="server" ID="header" />
     <form id="form1" runat="server">
         <div id="page"> 
@@ -39,7 +38,7 @@
             <div id="dsc_list">  
                 <div id="dsc_li_header">
                     <div id="dsc_li_title">
-                        <h2>创新论坛：</h2> 
+                        <h2>创新论坛：<asp:Label ID="LabelIssueTitle" runat="server" Text=""></asp:Label></h2> 
                     </div>                    
                 </div>
                 <div class="dsc_tags">
@@ -56,96 +55,211 @@
                             <img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="60" />
                         </div>
                         <div class="isssue_user_intro">
-                            <div >姓名：<span>夏千祥</span></div>
-                            <div >研究方向：<span>计算机科学与技术</span></div>
+                            <div >
+                                <asp:Label ID="LabelUserName" runat="server" Text=""></asp:Label>
+                                <asp:HiddenField ID="HiddenFieldIssueUserID" runat="server" />
+                            </div>
+                            <div >
+                                <asp:Label ID="LabelMajor" runat="server" Text=""></asp:Label>
+
+                            </div>
+                             <div >
+                                <asp:Label ID="LabelIssuePostTime" runat="server" Text="Label"></asp:Label>
+
+                            </div>
                         </div>
                     </div>
                     <div class="issue_main">
-                        <p>张建国副校长在讲话中强调此次校级实验教学示范中心评审是我校实验教学改革工作的重要组成部分，对切实加快我校实验室建设步伐，促进学校优质实验教学资源的整合和共享，提高学生实践能力和创新精神具有重要意义。他表示一方面我们要优中选优，推荐出参加天津市级实验教学示范中心评选的候选单位，另一方面我们也会在未来加强对相对薄弱中心的关注与建设，保证学校各学科专业的均衡发展。</p>
-                        <p>此次申报实验教学示范中心的的机械基础实验中心等20个单位负责人分别向评审专家汇报了中心建设的整体概况、建设理念、管理体制、师资队伍、实验教学改革思路以及面向社会的辐射作用，介绍了中心的特色、示范效应以及所取得的各项成果，并对专家组提出的问题给予详细的解答。专家在审阅材料、听取汇报之后，结合之前对各中心的实地考察情况，对中心的建设以及材料撰写提出了富有建设性的意见和建议。</p>
+                        <asp:Label ID="LabelIssueContent" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="comment">
                     <div class="comment_head">
                         <h3>回复：</h3>
                     </div>
-                    <div class="comment_list">
-                        <div class="comment_item">
-                            <div class="comment_side">
-                                <div class="comment_user_pro">
-                                    <img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="40" />
+                    <div class="comment_list" >
+                        <asp:Repeater ID="RepeaterComment" runat="server" OnItemDataBound="RepeaterComment_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="comment_item">
+                                    <div class="comment_side">
+                                        <div class="comment_user_pro">
+                                            <img src="<%# Eval("avatarMini") %>" width="40" />
+                                        </div>
+                                    </div>
+                                    <div class="comment_main">
+                                        <div class="comment_info"><%# DataBinder.Eval(Container.DataItem,"username") %> 回复于 <%# DataBinder.Eval(Container.DataItem,"commentPostTime","{0:yyyy-M-d hh:mm:ss}")%> 
+                                            (<a href="javascript:;" class="comment_replay_btn" isrp="false" user_name="<%#DataBinder.Eval(Container.DataItem,"userName") %>" user="<%# DataBinder.Eval(Container.DataItem,"commentUser")  %>" comment="<%# DataBinder.Eval(Container.DataItem,"commentID")  %>" >回复</a>) </div>
+                                        <div class="comment_content"> <%# DataBinder.Eval(Container.DataItem,"commentContent") %></div>
+                                        <asp:Panel ID="PanelCommentReply" CssClass="comment_replay" runat="server">
+                                            <asp:Label ID="LableReplayHead" runat="server">---共条回复---</asp:Label> 
+                                            <ul>                                  
+                                                <asp:Repeater ID="RepeaterComment_reply" runat="server" OnItemDataBound="RepeaterComment_reply_ItemDataBound" >
+                                                    <ItemTemplate>
+                                                         <li>
+                                                            <div class="replay_user_pro"><a ><img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="30" /></a></div>
+                                                            <div>
+                                                                <span> @<a href="javscript:;" style="color:#ff6a00;"><%# DataBinder.Eval(Container.DataItem,"replyToUserName") %></a> <%# DataBinder.Eval(Container.DataItem,"replyContent") %></span>
+                                                                <span style="color:#666;">(<asp:Label ID="LabelReplyPostTime" runat="server" Text=""></asp:Label> by <%# DataBinder.Eval(Container.DataItem,"UserName") %>)</span>
+                                                                (<a href="javascript:;"  class="comment_replay_btn" isrp="true" user_name="<%#DataBinder.Eval(Container.DataItem,"userName") %>" user="<%# DataBinder.Eval(Container.DataItem,"replyUser")  %>" comment="<%# DataBinder.Eval(Container.DataItem,"replyComment")  %>" >回复</a>) 
+                                                            </div>
+                                                        </li>                                                
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+                                                </ul>    
+                                        </asp:Panel> 
+                                        <div class="comment_opt"></div>
+                                    </div>
                                 </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <div class="post_comment_wp">
+                        <div class="post_comment_head">发表回复：<br />
+                            <div>
+                                <asp:image id="userAvatar"  runat="server" width="50"  ImageUrl="~/slip/Sources/Portraits/Mini/201211031603526697.jpg" />
                             </div>
-                            <div class="comment_main">
-                                <div class="comment_info">Susanno 回答于 2012-12-28 23:47</div>
-                                <div class="comment_content">flash么，用的AMF协议，建议用charles 抓包，我以前做过，详情就不说了 </div>
-                                <div class="comment_replay">
-                                    <span class="replay_head">---共2条回复---</span>
-                                    <ul>
-                                        <li>
-                                            <div class="replay_user_pro"><a ><img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="30" /></a></div>
-                                            <div>
-                                                <span>读写分离好弄，前段缓存如何解释？ 至于负载平衡，好像编程不能彻底 前段缓存如何解释？前段缓存如何解释？ 至于负载平衡，好像编程不能彻底  至于负载平衡，好像编程不能彻底 至于负载平衡，好像编程不能彻底解决吧</span>
-                                                <span>(8个月前 by 诸葛非卿)</span>
-                                                <span><a href="javascript:;">回复</a></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="replay_user_pro"><a ><img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="30" /></a></div>
-                                            <div>
-                                                <span>读写分离好弄，前段缓存如何解释？段缓存如何解释？ 至于负载平衡，好像编程不能彻底 至于负载平衡，好像编程不能彻底解决吧</span>
-                                                <span>(8个月前 by 诸葛非卿)</span>
-                                                <a href="javascript:;">回复</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="comment_opt"></div>
-                            </div>
+                            <span style="color:#808080;">（夏千祥）</span>
                         </div>
-                        <div class="comment_item">
-                            <div class="comment_side">
-                                <div class="comment_user_pro">
-                                    <img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="40" />
-                                </div>
-                            </div>
-                            <div class="comment_main">
-                                <div class="comment_info">Susanno 回答于 2012-12-28 23:47</div>
-                                <div class="comment_content">flash么，用的AMF协议，建议用charles 抓包，我以前做过，详情就不说了 </div>
-                                <div class="comment_replay">
-                                    <span class="replay_head">---共2条回复---</span>
-                                    <ul>
-                                        <li>
-                                            <div class="replay_user_pro"><a ><img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="30" /></a></div>
-                                            <div>
-                                                <span>读写分离好弄，前段缓存如何解释？ 至于负载平衡，好像编程不能彻底 前段缓存如何解释？前段缓存如何解释？ 至于负载平衡，好像编程不能彻底  至于负载平衡，好像编程不能彻底 至于负载平衡，好像编程不能彻底解决吧</span>
-                                                <span>(8个月前 by 诸葛非卿)</span>
-                                                <span><a href="javascript:;">回复</a></span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="replay_user_pro"><a ><img src="../Sources/Portraits/Mini/201211031603526697.jpg" width="30" /></a></div>
-                                            <div>
-                                                <span>读写分离好弄，前段缓存如何解释？段缓存如何解释？ 至于负载平衡，好像编程不能彻底 至于负载平衡，好像编程不能彻底解决吧</span>
-                                                <span>(8个月前 by 诸葛非卿)</span>
-                                                <a href="javascript:;">回复</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="comment_opt"></div>
-                            </div>
+                        <div class="post_comment_edit">
+                            <textarea id="post_comment" name="post_comment" style="width:90%;"></textarea>
+                            <br />
+                            <asp:HiddenField ID="HiddenFieldIssueID" runat="server" />
+                            <asp:HiddenField ID="HiddenFieldUserID" runat="server" Value="0" />
+                            <a href="JavaScript:;" id="post_comment_submit" class="easyui-linkbutton">回复</a>
                         </div>
                     </div>
                 </div>
             </div>            
         </div>
         <div id="pg_rt"> 
+            <a class="dsc_rt_openTopic" href="postIssue.aspx">发起话题</a>
             <uc1:hotTags runat="server" id="hotTags1" />
         </div>
   <div class="clear"></div>
   </div>
     </form>
-    <uc1:footer runat="server" ID="footer" />    
+    <uc1:footer runat="server" ID="footer" />
+    <script type="text/javascript">
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('[name="post_comment"]', {
+                width: '98%',
+                items: [
+                        'source',
+                        'justifyleft', 'justifycenter', 'justifyright',
+                        'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                        'superscript', 'selectall', '|', 'fullscreen', '/',
+                        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'insertfile', 'table', 'hr',
+                        'anchor', 'link', 'unlink', '|', 'about'
+                ],
+                uploadJson: "../../Sources/kindeditor_4.1.3/asp.net/upload_json.ashx",
+                fileManagerJson: '../../Sources/kindeditor_4.1.3/asp.net/file_manager_json.ashx',
+                allowFileManager: true
+            });
+        });
+        $(function () {
+            $("#post_comment_submit").click(function () {
+                editor.sync(); 
+                var comment = $("#post_comment").val();
+                if (comment != "") {
+                    $.post("PostComment.ashx", {issueUserID:$("#HiddenFieldIssueUserID").val(), issueID: $("#HiddenFieldIssueID").val(), commentContent: comment }, function (data) {
+                        data = $.parseJSON(data);
+                        if (data.status === 1) {
+                            $.messager.show({title:"提示",msg:data.msg,timeout:2000});
+                        } else {
+                            $.messager.alert("错误",data.msg,"error");
+                        }
+                    });
+                } else {
+                    $.messager.show({title:"提示",msg:"请填写评论内容！",timeout:2000});
+                }
+            });
+            $(".comment_replay_btn").live("click", function () {
+                //是否登录
+                var userID = $("#HiddenFieldUserID").val();
+                if (userID == 0) {
+                    $.messager.confirm("未登录", "您还没有登录，请登录后回复！", function (b) {
+                        if (b) {
+                            window.location.href = "/slip/LogOn.aspx?reurl=" + window.location.href;
+                        }
+                    });
+                } else {
+                    var $this = $(this);
+                    var comment = $this.attr("comment");
+                    var user = $this.attr("user");
+                    var user_name = $this.attr("user_name");
+                    $(".reply_dialog").dialog("destroy").remove();
+                    $("body").append("<div class='reply_dialog'><textarea style='width:300px; height:80px;' name='reply_text'></textarea></div>");
+                    $(".reply_dialog").dialog({
+                        title: "回复:" + user_name,
+                        modal: true,
+                        buttons: [{
+                            text: "回复",
+                            iconCls: "icon-pencil",
+                            handler: function () {
+                                var reply_content = $("textarea[name='reply_text']").val();
+                                if (reply_content == "") {
+                                    $.messager.show({ title: "提示", msg: "回复内容不能为空！", timeout: 2000 });
+                                } else {
+                                    //提交回复
+                                    $.post("PostReply.ashx",
+                                        { comment: comment, user: user, userName: user_name, issueID: $("#HiddenFieldIssueID").val(), reply: reply_content },
+                                        function (data) {
+                                            data = $.parseJSON(data);
+                                            if (data.status === 1) {
+                                                //用户头像
+                                                var userAvatar = $("img#userAvatar").attr("src");
+                                                var $rps;
+                                                if ($this.attr("isrp")) {
+                                                    $rps = $this.parents(".comment_replay");
+                                                    console.info($rps);
+                                                } else {
+                                                    $rps = $this.parent().siblings(".comment_replay");
+                                                }
+                                                if ($rps.length === 0) {
+                                                    $this.parent().siblings(".comment_content").after(
+                                                        '<div id="RepeaterComment_ctl01_PanelCommentReply" class="comment_replay">' +
+                                                        '<span id="RepeaterComment_ctl01_LableReplayHead">---共1条回复---</span> ' +
+                                                        '<ul><li>' +
+                                                        '<div class="replay_user_pro"><a ><img src="' + userAvatar + '" width="30" /></a></div>' +
+                                                            '<div>' +
+                                                                '<span> @<a href="javscript:;" style="color:#ff6a00;">'+user_name+'</a>' + reply_content + '</span>' +
+                                                                '<span>(刚刚) by )</span>' +
+                                                                ' (<a href="javascript:;"  class="comment_replay_btn" isrp="true" user_name="' + user_name + '" user="' + userID + '" comment="' + comment + '" >回复</a>)' +
+                                                            '</div>' +
+                                                        '</li></ul></div> ');
+                                                } else {
+                                                    var numli=$rps.find("ul>li").length+1;
+                                                    $rps.find("span:first").text("-----共" + numli + "条回复-----")
+                                                    $rps.find("ul>li:last").after('<li>' +
+                                                        '<div class="replay_user_pro"><a ><img src="' + userAvatar + '" width="30" /></a></div>' +
+                                                            '<div>' +
+                                                                '<span> @<a href="javscript:;" style="color:#ff6a00;">'+user_name+'</a>' + reply_content + '</span>' +
+                                                                '<span>(刚刚) by )</span>' +
+                                                                ' (<a href="javascript:;"  class="comment_replay_btn" isrp="true" user_name="'+user_name+'" user="'+userID+'" comment="'+comment+'" >回复</a>)' +
+                                                            '</div>' +
+                                                        '</li>');
+                                                }
+
+                                                $(".reply_dialog").dialog("destroy").remove();
+                                            } else {
+                                                $.messager.alert("错误", data.msg, "error");
+                                            }
+                                    });
+                                }
+                            }
+                        }, {
+                            text: "取消", iconCls: "icon-cross",
+                            handler: function () {
+                                $(".reply_dialog").dialog("destroy").remove();
+                            }
+
+                        }]
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

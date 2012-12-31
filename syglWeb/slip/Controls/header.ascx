@@ -25,7 +25,7 @@
         <li>
             <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Slip/Profile/">项目管理</asp:HyperLink></li>
         <li>
-            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Slip/news.aspx">创新论坛</asp:HyperLink></li>
+            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Slip/Discuss/">创新论坛</asp:HyperLink></li>
         <li>
             <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Slip/news.aspx">关于</asp:HyperLink></li>
     </ul>

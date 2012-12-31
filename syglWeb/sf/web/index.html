@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>示范中心</title>
+<link href="../style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">  
+<!--  
+$(function(){
+	//获取请求的iframe的url	
+		function getUrlParams(){
+			var paramjson="" ;
+			urlParamStr=location.search.substr(1);//substr()
+			subParamStr=urlParamStr.split("&");	
+			for(var i=0 ;i<subParamStr.length;i++)
+			{				
+				spKey=subParamStr[i].split("=")[0];
+				spVal=subParamStr[i].split("=")[1];
+				if(paramjson==""){
+					paramjson=paramjson+"\""+spKey+"\":\""+spVal+"\"";
+				}else{
+					paramjson=paramjson+",\""+spKey+"\":\""+spVal+"\"";
+				}				
+			}
+			
+			paramjson="{"+paramjson+"}"
+			paramjson=$.parseJSON(paramjson);			
+			return paramjson;
+		};
+		
+		urlParams=getUrlParams();
+		$src=urlParams.name+"/"+urlParams.name+".html";
+		//console.info(src);
+    $("#resource_iframe").attr("src",$src); 
+	$("#resource_iframe").load(function(){
+		//alert(src); 
+        $(this).height($(this).contents().find("body").height() + 40);  
+    });  
+      
+});  
+-->  
+</script>  
+</head>
+
+<body>
+	<div id="wrapper">
+    	<div id="header">
+            <div id="dock">
+            </div>
+            <script type="text/javascript"> 				
+					//setInterval($("#dock").text(Date().toLocaleString()+'星期'+'日一二三四五六'.charAt(new Date().getDay()),1000));scrolling="no"
+				
+		  	</script>
+            <div id="nav" >
+            	<ul>
+                	<li><a href="http://www.tust.edu.cn">学校主页</a></li>
+                    <li><a href="http://sygl.tust.edu.cn/sygl/">实验室与设备管理处</a></li>
+                    <li><a href="http://www.tust.edu.cn">联系我们</a></li>
+                    <li><a href="http://www.tust.edu.cn">加入收藏</a></li> 
+                    <li><a href="javascript:void(0);" onclick="history.go(-1)">返回</a></li>                    
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+	    <div id="page">
+        	<iframe id="resource_iframe"  frameborder="0" height="800" width="100%"></iframe>
+        </div> 
+        <div class="clear"></div>       
+        <div id="footer">
+        	版权所有：天津科技大学-实验室与设备管理处<br />
+            地址：天津市河西区大沽南路1038号 &nbsp;&nbsp;&nbsp;&nbsp;邮编：300222&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</body>
+</html>

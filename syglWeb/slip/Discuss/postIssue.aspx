@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>发起话题</title>
     <!--引入样式表，含js框架样式和自定义样式-->
     <!--easyui样式-->
     <link href="../../Sourse/jquery_easyui/themes/metro/easyui.css" type="text/css" rel="stylesheet" />
@@ -79,9 +79,9 @@
     <uc1:footer runat="server" id="footer" />
     
 <script type="text/javascript">
-
+    var editor
     KindEditor.ready(function (K) {
-        var editor1 = K.create('[name="issue_conten"]', {
+         editor = K.create('[name="issue_conten"]', {
             width: '90%',
             items: [
                     'source' ,
@@ -101,6 +101,7 @@
         required: true
     });
     $("#submit_issue").click(function () {
+        editor.sync()
         if ($("#form_postIssue").form("validate")) {
             $("#form_postIssue").submit()
         };

@@ -32,6 +32,8 @@ namespace syglWeb.slip
             #region 处理提交数据
             if (IsPostBack)
             {
+                string returnUrl = Request.QueryString["reurl"];
+
                 SRCom srCom = new SRCom();
                 string userAccount = user_account.Text.Trim();
                 string userPWD = srCom.HashPassword(user_password.Text.Trim());
@@ -79,7 +81,14 @@ namespace syglWeb.slip
                         }
                         else
                         {
-                            Response.Redirect("Profile");
+                            if (returnUrl == "" || returnUrl == null)
+                            {
+                                Response.Redirect("Profile");
+                            }
+                            else
+                            {
+                                Response.Redirect(returnUrl);
+                            }
                         }
                     }
                 }

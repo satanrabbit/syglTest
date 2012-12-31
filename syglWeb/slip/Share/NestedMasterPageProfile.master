@@ -48,9 +48,12 @@
         </div>
         
         <div class="opt_wp">
-            <h2>我的消息</h2>
-            <a href="javascript:;">项目反馈</a>
-            <a href="javascript:;">论坛消息</a>
+            <h2>我的消息<asp:Label ID="LabelMsgCount" runat="server" Text=""></asp:Label></h2>
+            
+            <asp:HyperLink ID="HyperLinkPrj" runat="server">项目反馈</asp:HyperLink> 
+            <asp:HyperLink ID="HyperLinkDiscussMsg" runat="server">论坛消息</asp:HyperLink>
+            <asp:HyperLink ID="HyperLinkSysMsg" runat="server">系统消息</asp:HyperLink> 
+            <asp:HyperLink ID="HyperLinkUserMsg" runat="server">短消息</asp:HyperLink> 
         </div>
 
         <a href="/Slip/Profile/Prj/TopicCollect.aspx" class="current_project_btn">题目征集</a>

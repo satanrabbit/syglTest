@@ -97,12 +97,50 @@
     <Content Include="Scripts\jquery.upload.js" />
     <Content Include="Scripts\jquery_easyUI_dialog_form.js" />
     <Content Include="Scripts\less-1.3.0.min.js" />
+    <Content Include="sf\index.html" />
+    <Content Include="sf\js\jquery-1.7.2.min.js" />
+    <Content Include="sf\js\jquery.iFadeSlide.pack.js" />
+    <Content Include="sf\style\image\1.jpg" />
+    <Content Include="sf\style\image\2.jpg" />
+    <Content Include="sf\style\image\3.jpg" />
+    <Content Include="sf\style\image\4.jpg" />
+    <Content Include="sf\style\image\5.jpg" />
+    <Content Include="sf\style\image\allwidth_bg.png" />
+    <Content Include="sf\style\image\bar_bg.jpg" />
+    <Content Include="sf\style\image\bar_bg.png" />
+    <Content Include="sf\style\image\header_bg.gif" />
+    <Content Include="sf\style\image\index.html" />
+    <Content Include="sf\style\image\mbg.jpg" />
+    <Content Include="sf\style\image\splog.jpg" />
+    <Content Include="sf\style\image\zjlog.jpg" />
+    <Content Include="sf\style\style.css" />
+    <Content Include="sf\web\glbf\glbf.files\colorschememapping.xml" />
+    <Content Include="sf\web\glbf\glbf.files\filelist.xml" />
+    <Content Include="sf\web\glbf\glbf.files\header.html" />
+    <Content Include="sf\web\glbf\glbf.html" />
+    <Content Include="sf\web\index.html" />
+    <Content Include="sf\web\ssxz\ssxz.html" />
+    <Content Include="sf\web\sszx\ssxz.html" />
+    <Content Include="sf\web\zbtx\zbtx.files\colorschememapping.xml" />
+    <Content Include="sf\web\zbtx\zbtx.files\filelist.xml" />
+    <Content Include="sf\web\zbtx\zbtx.files\header.htm" />
+    <Content Include="sf\web\zbtx\zbtx.htm" />
+    <Content Include="sf\web\zbtx\zbtx.html" />
+    <Content Include="slip\Admin\Default.aspx" />
+    <Content Include="slip\Admin\news.aspx" />
+    <Content Include="slip\Admin\new_edit.aspx" />
+    <Content Include="slip\Admin\op.aspx" />
+    <Content Include="slip\Admin\op_edit.aspx" />
+    <Content Include="slip\Admin\spt.aspx" />
+    <Content Include="slip\Admin\spt_edit.aspx" />
+    <Content Include="slip\Admin\style\base.css" />
     <Content Include="slip\Controls\footer.ascx" />
     <Content Include="slip\Controls\header.ascx" />
     <Content Include="slip\Controls\hotTags.ascx" />
     <Content Include="slip\Discuss\Default.aspx" />
     <Content Include="slip\Discuss\issue.aspx" />
     <Content Include="slip\Discuss\postIssue.aspx" />
+    <Content Include="slip\Discuss\tags.aspx" />
     <Content Include="slip\Sources\Portraits\Mini\201211031603526697.jpg" />
     <Content Include="slip\Style\Discuss.css" />
     <Content Include="slip\Style\Images\logo.gif" />
@@ -2611,6 +2649,67 @@
     <Compile Include="slip\404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\news_list.ashx.cs">
+      <DependentUpon>news_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\new_edit.aspx.cs">
+      <DependentUpon>new_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\new_edit.aspx.designer.cs">
+      <DependentUpon>new_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\op.aspx.cs">
+      <DependentUpon>op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\op.aspx.designer.cs">
+      <DependentUpon>op.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\op_delete.ashx.cs">
+      <DependentUpon>op_delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\op_edit.aspx.cs">
+      <DependentUpon>op_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\op_edit.aspx.designer.cs">
+      <DependentUpon>op_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\op_list.ashx.cs">
+      <DependentUpon>op_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\spt.aspx.cs">
+      <DependentUpon>spt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\spt.aspx.designer.cs">
+      <DependentUpon>spt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\spt_edit.aspx.cs">
+      <DependentUpon>spt_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\spt_edit.aspx.designer.cs">
+      <DependentUpon>spt_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\spt_list.ashx.cs">
+      <DependentUpon>spt_list.ashx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Controls\footer.ascx.cs">
       <DependentUpon>footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2653,12 +2752,25 @@
     <Compile Include="slip\Discuss\issue.aspx.designer.cs">
       <DependentUpon>issue.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\Discuss\PostComment.ashx.cs">
+      <DependentUpon>PostComment.ashx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Discuss\postIssue.aspx.cs">
       <DependentUpon>postIssue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="slip\Discuss\postIssue.aspx.designer.cs">
       <DependentUpon>postIssue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Discuss\PostReply.ashx.cs">
+      <DependentUpon>PostReply.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Discuss\tags.aspx.cs">
+      <DependentUpon>tags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Discuss\tags.aspx.designer.cs">
+      <DependentUpon>tags.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Handlers\DeleteTopicImg.ashx.cs">
       <DependentUpon>DeleteTopicImg.ashx</DependentUpon>
@@ -3002,6 +3114,14 @@
     <Content Include="Admin\pages\delete_img.ashx" />
     <Content Include="slip\Profile\logOut.ashx" />
     <Content Include="slip\Profile\Prj\UploadImg.ashx" />
+    <Content Include="slip\Discuss\PostComment.ashx" />
+    <Content Include="slip\Discuss\PostReply.ashx" />
+    <Content Include="slip\Admin\news_list.ashx" />
+    <Content Include="slip\Admin\spt_list.ashx" />
+    <Content Include="slip\Admin\op_list.ashx" />
+    <Content Include="slip\Admin\op_delete.ashx" />
+    <Content Include="sf\web\glbf\glbf.files\themedata.thmx" />
+    <Content Include="sf\web\zbtx\zbtx.files\themedata.thmx" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetIdHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetInfoHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\UploadHandler.jsp" />
