@@ -10,6 +10,9 @@ using System.Configuration;
 
 namespace syglWeb.slip.Discuss
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class issue : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -65,9 +68,9 @@ namespace syglWeb.slip.Discuss
 
                 int userID = 0;
 
-                if (Request.Cookies["SlipUser"] != null)
+                if (Session["userID"] != null)
                 {
-                    userID = Convert.ToInt32(Request.Cookies["SlipUser"]["userID"]);
+                    userID = Convert.ToInt32(Session["userID"]);
                     this.HiddenFieldUserID.Value = userID.ToString();
                 }
                 conn.Close();

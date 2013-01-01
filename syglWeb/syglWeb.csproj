@@ -84,6 +84,7 @@
     <Content Include="Department.aspx" />
     <Content Include="Down.aspx" />
     <Content Include="DownList.aspx" />
+    <Content Include="index.html" />
     <Content Include="quickpic.ico" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\galleria-1.2.8.min.js" />

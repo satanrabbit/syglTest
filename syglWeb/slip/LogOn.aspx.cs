@@ -10,11 +10,17 @@ using System.Data.OleDb;
 
 namespace syglWeb.slip
 {
+    /// <summary>
+    /// 用户登录
+    /// 用户登录验证已改为session
+    /// 2013-1-1 15:40
+    /// </summary>
     public partial class LogOn : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["SlipUser"] != null)
+            if ( Session["userID"] != null)
             {
                 Response.Redirect("Profile");
             }
@@ -53,31 +59,31 @@ namespace syglWeb.slip
                     if (dataRow["userPWD"].ToString() == userPWD)
                     {
                         userAmount++;
-                        Response.Cookies["SlipUser"]["userName"] = dataRow["userName"].ToString();
-                        Response.Cookies["SlipUser"]["userID"] = dataRow["userID"].ToString();
-                        Response.Cookies["SlipUser"].Expires = DateTime.Now.AddHours(2);
-                        Response.Cookies["SlipUser"]["userIdentity"] = dataRow["userIdentity"].ToString();
+                        Session["userID"] = dataRow["userID"].ToString();
+                        Session["userName"] = dataRow["userName"].ToString();
+                        Session["userIdentity"] = dataRow["userIdentity"].ToString();
+                        Session["userAvatar"] = dataRow["avatarMini"].ToString(); 
                     }
                 }
 
                 if (userAmount > 1)
                 {
                     this.LabelLoginUserTip.Text = "该账号存在两个,请更换帐号登陆！";
-                    Response.Cookies["SlipUser"].Expires = DateTime.Now;
+                    Session.Abandon();
                 }
                 else
                 {
                     if (userAccountAmount == 0)
                     {
                         this.LabelLoginUserTip.Text = "该账号不存在！";
-                        Response.Cookies["SlipUser"].Expires = DateTime.Now;
+                        Session.Abandon();
                     }
                     else
                     {
                         if (userAmount < 1)
                         {
                             this.LabelLoginUserTip.Text = "密码错误！";
-                            Response.Cookies["SlipUser"].Expires = DateTime.Now;
+                            Session.Abandon();
                         }
                         else
                         {

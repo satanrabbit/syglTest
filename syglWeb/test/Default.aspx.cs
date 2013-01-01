@@ -11,10 +11,16 @@ namespace syglWeb.test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            Session["FirstName"] = "neww";
+            if (Request.Cookies["SlipUser"] != null)
             {
-                this.Label1.Text = Request["test"];
+                this.Label1.Text = Session["FirstName"].ToString();
             }
+            else
+            {
+                this.Label1.Text = "no";
+            }
+             
         }
     }
 }

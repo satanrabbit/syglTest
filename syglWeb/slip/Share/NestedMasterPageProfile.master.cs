@@ -12,9 +12,9 @@ namespace syglWeb.slip.Share
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Request.Cookies["SlipUser"] != null)
+            if (Session["userID"] != null)
             {
-                string userID = Request.Cookies["SlipUser"]["userID"].ToString();
+                string userID = Session["userID"].ToString();
                 SRSql srSql = new SRSql();
                 srSql.conn.Open();
                 srSql.cmd.CommandText = "select * from userTB where userID = @userID";

@@ -18,7 +18,7 @@
         <input type="text" name="test" />
         <asp:Button ID="Button1" runat="server" Text="Button" />
     </div>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     </form>
 </body>
 </html>

@@ -13,7 +13,7 @@ namespace syglWeb.slip.Profile
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["SlipUser"] == null)
+            if (Session["userID"] == null)
             {
                 Response.Redirect("/Slip/LogOn.aspx?f=unlogin");
             }
@@ -21,7 +21,7 @@ namespace syglWeb.slip.Profile
             {
                 string fromPage = Request.QueryString["f"];
                 this.HiddenPageFrom.Value = fromPage;
-                int userID = Convert.ToInt32( Request.Cookies["SlipUser"]["userID"]);
+                int userID = Convert.ToInt32(Session["userID"].ToString());
                 srSql.conn.Open();
                 srSql.cmd.CommandText = "SELECT topicTB.*, userTB.*, projectTB.* FROM (topicTB left  JOIN userTB ON userTB.[userID] = topicTB.topicUser) left  JOIN projectTB ON topicTB.topicID = projectTB.topic order by topicPostTime desc";
                
