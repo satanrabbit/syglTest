@@ -4,29 +4,20 @@
    <div class="pro_right">
     <div class="pf_prj_titile">
         <h3> 
-            <asp:HyperLink ID="HyperLinkTopic" runat="server"></asp:HyperLink>   
-        &emsp;消息中心 <asp:HiddenField
-                ID="HiddenFieldTopicID"  runat="server" />
+        &emsp;消息中心   . &emsp;<asp:Label ID="MsgTypeName"  runat="server"></asp:Label>
         </h3>
        
     </div>
        <div class="msg_wp">
-           <ul style="line-height:2em;margin:15px 0;">
-               <asp:Repeater ID="RepeaterMsg" runat="server" OnItemDataBound="RepeaterMsg_ItemDataBound">
-                    <ItemTemplate>
-                        <li style="border-bottom:#778 1px dashed;padding:3px 0;overflow:auto ;zoom:1;">
-                            <div style="float:left;">[<asp:HyperLink ID="HyperLinkMsgType" runat="server"></asp:HyperLink>]&emsp;</div>
-                            <h6 style="font-weight:400; float:left;"><a href="msgd.aspx"><%# Eval("msgTitle")%></a></h6>
-                            <a style="float:right;" class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
-                        </li>
-                    </ItemTemplate>
-               </asp:Repeater>
-           </ul>
-           <div class="pager">
-                <asp:HyperLink ID="HyperLinkPrePage" runat="server"><<</asp:HyperLink>                     
-                <asp:Label ID="LabelPages" runat="server" Text=""></asp:Label>
-                <asp:HyperLink ID="HyperLinkNextPage" runat="server">>></asp:HyperLink>
+            <div style="margin:4px 0;">
+                <h5><asp:Label ID="MsgTitle" runat="server" Text=""></asp:Label></h5>                
             </div>
+           <div style="margin:15px 0; padding:10px;line-height:2em;  border:1px solid #0094ff;">
+               <p><asp:Label ID="MsgContent" runat="server" Text=""></asp:Label></p>
+           </div>
+           <div style="margin:5px 0;">
+               <a class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
+           </div>
        </div>
     
    </div>

@@ -13,57 +13,30 @@ namespace syglWeb.slip.Profile.Prj {
     public partial class msgd {
         
         /// <summary>
-        /// HyperLinkTopic 控件。
+        /// MsgTypeName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkTopic;
+        protected global::System.Web.UI.WebControls.Label MsgTypeName;
         
         /// <summary>
-        /// HiddenFieldTopicID 控件。
+        /// MsgTitle 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HiddenFieldTopicID;
+        protected global::System.Web.UI.WebControls.Label MsgTitle;
         
         /// <summary>
-        /// RepeaterMsg 控件。
+        /// MsgContent 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterMsg;
-        
-        /// <summary>
-        /// HyperLinkPrePage 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkPrePage;
-        
-        /// <summary>
-        /// LabelPages 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPages;
-        
-        /// <summary>
-        /// HyperLinkNextPage 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkNextPage;
+        protected global::System.Web.UI.WebControls.Label MsgContent;
     }
 }

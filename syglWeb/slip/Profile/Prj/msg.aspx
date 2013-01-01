@@ -15,7 +15,7 @@
                     <ItemTemplate>
                         <li style="border-bottom:#778 1px dashed;padding:3px 0;overflow:auto ;zoom:1;">
                             <div style="float:left;">[<asp:HyperLink ID="HyperLinkMsgType" runat="server"></asp:HyperLink>]&emsp;</div>
-                            <h6 style="font-weight:400; float:left;"><a href="msgd.aspx"><%# Eval("msgTitle")%></a></h6>
+                            <h6 style="font-weight:400; float:left;"><a href="msgd.aspx?m=<%# Eval("msgID") %>"><%# Eval("msgTitle")%></a></h6>
                             <a style="float:right;" class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
                         </li>
                     </ItemTemplate>
