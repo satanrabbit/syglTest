@@ -22,9 +22,36 @@ namespace syglWeb.slip.Profile.Prj
                 SRSql srSql=new SRSql();
                 srSql.conn.Open();
                 string sqlType = "";
-                if (Request.QueryString["t"] != "" || Request.QueryString["t"] != null)
+                if (Request.QueryString["t"] != "" &&  Request.QueryString["t"] != null)
                 {
                     sqlType = "and msgType=" + Convert.ToInt32(Request.QueryString["t"]);
+
+                    switch (Convert.ToInt32(Request.QueryString["t"]))
+                    {
+                        case 0:
+                            this.MsgTypeName.Text = "系统消息";
+                            break;
+                        case 1:
+                            this.MsgTypeName.Text = "论坛消息";
+                            break;
+                        case 2:
+
+                            this.MsgTypeName.Text = "项目消息";
+                            break;
+                        case 3:
+
+                            this.MsgTypeName.Text = "短消息";
+                            break;
+                        default:
+
+                            this.MsgTypeName.Visible = false;
+                            break;
+                    }
+
+                }
+                else
+                {
+                    this.MsgTypeName.Visible = false;
                 }
                 srSql.cmd.CommandText = "select * from msgs_tb where 1=1 "+ sqlType+" order by msgPostTime desc";
 
@@ -98,19 +125,19 @@ namespace syglWeb.slip.Profile.Prj
             switch (Convert.ToInt32( drv["msgType"].ToString()))
             {
                 case 0:
-                    msgType.Text = "系统消息";
+                    msgType.Text = "系统消息"; 
                     break;
                 case 1:                    
-                    msgType.Text = "论坛消息";
+                    msgType.Text = "论坛消息"; 
                     break;
                 case 2:
-                    msgType.Text = "项目消息";
+                    msgType.Text = "项目消息"; 
                     break;
                 case 3:
-                    msgType.Text = "短消息";
+                    msgType.Text = "短消息"; 
                     break;
                 default:
-                    msgType.Visible = false;
+                    msgType.Visible = false; 
                     break;
             }
         }

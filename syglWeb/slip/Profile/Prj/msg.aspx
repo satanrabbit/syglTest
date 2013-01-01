@@ -4,9 +4,8 @@
    <div class="pro_right">
     <div class="pf_prj_titile">
         <h3> 
-            <asp:HyperLink ID="HyperLinkTopic" runat="server"></asp:HyperLink>   
-        &emsp;消息中心 <asp:HiddenField
-                ID="HiddenFieldTopicID"  runat="server" />
+              
+        &emsp;<a href="msg.aspx">消息中心</a> &emsp; . &emsp;<asp:Label ID="MsgTypeName"  runat="server"></asp:Label>
         </h3>
        
     </div>
