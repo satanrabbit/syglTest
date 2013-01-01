@@ -6,13 +6,14 @@ using System.Data.OleDb;
 using System.Configuration;
 using LitJson;
 using System.Collections;
+using System.Web.SessionState;
 
 namespace syglWeb.slip.Discuss
 {
     /// <summary>
     /// PostComment 的摘要说明
     /// </summary>
-    public class PostComment : IHttpHandler
+    public class PostComment : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -20,15 +21,15 @@ namespace syglWeb.slip.Discuss
 
             int status = 0;
             string msg = "未知错误！";
-            if (context.Request.Cookies["SlipUser"] == null)
+            if (context.Session["userID"] == null)
             {
                 status = 2;
                 msg = "你还未登录或登录超时！";
             }
             else
             {
-                int userID = Convert.ToInt32(context.Request.Cookies["SlipUser"]["userID"]);
-                string userName = (context.Request.Cookies["SlipUser"]["userName"]);
+                int userID = Convert.ToInt32(context.Session["userID"].ToString());
+                string userName = (context.Session["userName"].ToString());
                 string comment = context.Request.Params["commentContent"].Trim();//
                 int issueID = Convert.ToInt32(context.Request.Params["issueID"].Trim());
                 int issueAuthor = Convert.ToInt32(context.Request.Params["issueUserID"].Trim());

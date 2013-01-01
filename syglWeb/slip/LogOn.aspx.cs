@@ -62,7 +62,8 @@ namespace syglWeb.slip
                         Session["userID"] = dataRow["userID"].ToString();
                         Session["userName"] = dataRow["userName"].ToString();
                         Session["userIdentity"] = dataRow["userIdentity"].ToString();
-                        Session["userAvatar"] = dataRow["avatarMini"].ToString(); 
+                        Session["userAvatar"] = dataRow["avatarMini"].ToString();
+                        Session.Timeout = 100;
                     }
                 }
 

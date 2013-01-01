@@ -76,11 +76,11 @@
                            </ItemTemplate>
                        </asp:Repeater> 
                    </ul>  
-         <div class="pager">
-                    <asp:HyperLink ID="HyperLinkPrePage" runat="server"><<</asp:HyperLink>                     
-                    <asp:Label ID="LabelPages" runat="server" Text=""></asp:Label>
-                    <asp:HyperLink ID="HyperLinkNextPage" runat="server">>></asp:HyperLink>
-                </div>
+                    <div class="pager">
+                        <asp:HyperLink ID="HyperLinkPrePage" runat="server"><<</asp:HyperLink>                     
+                        <asp:Label ID="LabelPages" runat="server" Text=""></asp:Label>
+                        <asp:HyperLink ID="HyperLinkNextPage" runat="server">>></asp:HyperLink>
+                    </div>
                 </div>
             
             </div>

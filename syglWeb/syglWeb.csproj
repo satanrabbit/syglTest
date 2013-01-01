@@ -142,6 +142,8 @@
     <Content Include="slip\Discuss\issue.aspx" />
     <Content Include="slip\Discuss\postIssue.aspx" />
     <Content Include="slip\Discuss\tags.aspx" />
+    <Content Include="slip\Profile\Prj\msg.aspx" />
+    <Content Include="slip\Profile\Prj\msgd.aspx" />
     <Content Include="slip\Sources\Portraits\Mini\201211031603526697.jpg" />
     <Content Include="slip\Style\Discuss.css" />
     <Content Include="slip\Style\Images\logo.gif" />
@@ -2945,6 +2947,20 @@
     </Compile>
     <Compile Include="slip\Profile\Prj\EditTopicMb.aspx.designer.cs">
       <DependentUpon>EditTopicMb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Profile\Prj\msg.aspx.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Profile\Prj\msg.aspx.designer.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Profile\Prj\msgd.aspx.cs">
+      <DependentUpon>msgd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Profile\Prj\msgd.aspx.designer.cs">
+      <DependentUpon>msgd.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Profile\Prj\ProjectManage.aspx.cs">
       <DependentUpon>ProjectManage.aspx</DependentUpon>

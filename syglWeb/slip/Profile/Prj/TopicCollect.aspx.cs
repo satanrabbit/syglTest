@@ -12,7 +12,7 @@ namespace syglWeb.slip.Profile.Prj
         protected void Page_Load(object sender, EventArgs e)
         {
             #region 未登录
-            if (Request.Cookies["SlipUser"] == null)
+            if (Session["userID"] == null)
             {
                 Response.Redirect("/Slip/LogOn.aspx");
 
@@ -28,7 +28,7 @@ namespace syglWeb.slip.Profile.Prj
                 string topicTitle = Request.Form[TextBoxTopicTitle.UniqueID];
                 string topicInfo = Request.Form[TextBoxTopicInfo.UniqueID];
                 string topicDetail = Request.Form[TextBoxTopicDetaile.UniqueID];
-                int topicUser = Convert.ToInt32(Request.Cookies["SlipUser"]["userID"]);
+                int topicUser = Convert.ToInt32(Session["userID"]);
                 int topicID = 0;
                 if (HiddenFieldTopicID.Value != null && (HiddenFieldTopicID.Value != ""))
                 {
