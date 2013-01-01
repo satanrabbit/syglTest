@@ -34,6 +34,7 @@ namespace syglWeb.slip.Share
                 if (srSql.ds.Tables["msgs_tb"].Rows.Count > 0)
                 {
                     this.LabelMsgCount.Text = "(" + srSql.ds.Tables["msgs_tb"].Rows.Count + ")";
+                    
                     int msgCount = srSql.ds.Tables["msgs_tb"].Select("msgType=1").Length;
                     if (msgCount > 0)
                     {
@@ -47,12 +48,12 @@ namespace syglWeb.slip.Share
                     int sysCount = srSql.ds.Tables["msgs_tb"].Select("msgType=0").Length;
                     if (sysCount > 0)
                     {
-                        this.HyperLinkSysMsg.Text = "项目反馈(" + sysCount + ")";
+                        this.HyperLinkSysMsg.Text = "系统消息(" + sysCount + ")";
                     }
                     int usermsgCount = srSql.ds.Tables["msgs_tb"].Select("msgType=3").Length;
                     if (usermsgCount > 0)
                     {
-                        this.HyperLinkUserMsg.Text = "项目反馈(" + usermsgCount + ")";
+                        this.HyperLinkUserMsg.Text = "短信息(" + usermsgCount + ")";
                     }
                 }
 
