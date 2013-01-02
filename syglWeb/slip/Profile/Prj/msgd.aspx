@@ -16,10 +16,30 @@
                <p><asp:Label ID="MsgContent" runat="server" Text=""></asp:Label></p>
            </div>
            <div style="margin:5px 0;">
-               <a class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
+               <a class="easyui-linkbutton msg_delete_btn" mid="<%= Request.QueryString["m"] %>" data-options="iconCls:'icon-delete'">删除</a>
            </div>
        </div>
     
    </div>
-
+    
+   <script type="text/javascript">
+       $(function () {
+           $(".msg_delete_btn").click(function () {
+               var o = $(this);
+               var mID = $(this).attr("mid");
+               $.post("msgDelete.ashx", { mid: mID }, function (data) {
+                   data = $.parseJSON(data);
+                   if (data.status == 1) {
+                       //设置提示！
+                       $.messager.alert("错误", data.msg, "info", function () {
+                          window.location.href= window.history.back(-1);
+                       });
+                   }
+                   else {
+                       $.messager.alert("错误", data.msg, "error");
+                   }
+               });
+           });
+       });
+   </script>
 </asp:Content>

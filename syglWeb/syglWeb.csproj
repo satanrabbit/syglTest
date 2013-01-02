@@ -2962,6 +2962,9 @@
     <Compile Include="slip\Profile\Prj\msgd.aspx.designer.cs">
       <DependentUpon>msgd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\Profile\Prj\msgDelete.ashx.cs">
+      <DependentUpon>msgDelete.ashx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Profile\Prj\ProjectManage.aspx.cs">
       <DependentUpon>ProjectManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3139,6 +3142,7 @@
     <Content Include="slip\Admin\op_delete.ashx" />
     <Content Include="sf\web\glbf\glbf.files\themedata.thmx" />
     <Content Include="sf\web\zbtx\zbtx.files\themedata.thmx" />
+    <Content Include="slip\Profile\Prj\msgDelete.ashx" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetIdHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetInfoHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\UploadHandler.jsp" />

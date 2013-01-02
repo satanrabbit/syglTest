@@ -25,7 +25,7 @@ namespace syglWeb.slip.Profile.Prj
                     this.MsgContent.Text = srSql.dr["msgContent"].ToString();
                     this.MsgTitle.Text = srSql.dr["msgTitle"].ToString();
 
-                    switch (Convert.ToInt32( srSql.dr["msgType"].ToString()))
+                    switch (Convert.ToInt32(srSql.dr["msgType"].ToString()))
                     {
                         case 0:
                             this.MsgTypeName.Text = "系统消息";
@@ -46,6 +46,10 @@ namespace syglWeb.slip.Profile.Prj
                             this.MsgTypeName.Visible = false;
                             break;
                     }
+                }
+                else
+                {
+                    Response.Redirect("/slip/404.aspx");
                 }
                 //更新消息已经被查看
                 srSql.dr.Close();

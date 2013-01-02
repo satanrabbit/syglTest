@@ -16,7 +16,7 @@
                         <li style="border-bottom:#778 1px dashed;padding:3px 0;overflow:auto ;zoom:1;">
                             <div style="float:left;">[<asp:HyperLink ID="HyperLinkMsgType" runat="server"></asp:HyperLink>]&emsp;</div>
                             <h6 style="font-weight:400; float:left;"><a href="msgd.aspx?m=<%# Eval("msgID") %>"><%# Eval("msgTitle")%></a></h6>
-                            <a style="float:right;" class="easyui-linkbutton" data-options="iconCls:'icon-delete'">删除</a>
+                            <a style="float:right;" mid="<%# Eval("msgID") %>" class="easyui-linkbutton msg_delete_btn" data-options="iconCls:'icon-delete'">删除</a>
                         </li>
                     </ItemTemplate>
                </asp:Repeater>
@@ -32,17 +32,18 @@
    
    <script type="text/javascript">
        $(function () {
-           $(".delete_mb").click(function () {
+           $(".msg_delete_btn").click(function () {
                var o = $(this);
-               var mbID = $(this).attr("mb_id");
-               $.post("DeleteMb.ashx", { mbid: mbID }, function (data) {
+               var mID = $(this).attr("mid");
+               $.post("msgDelete.ashx", { mid: mID }, function (data) {
                    data = $.parseJSON(data);
-                   if (data.status == 0) {
+                   if (data.status == 1) {
                        //设置提示！
-                       o.parent().parent().parent().remove();
+                       o.parent().remove();
+                       $.messager.show({title:"提示",msg:data.msg,timeout:2000});
                    }
                    else {
-                       alert(data.msg);
+                       $.messager.alert("错误",data.msg,"error");
                    }
                });
            });
