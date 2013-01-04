@@ -32,7 +32,7 @@
                    if (data.status == 1) {
                        //设置提示！
                        $.messager.alert("错误", data.msg, "info", function () {
-                          window.location.href= window.history.back(-1);
+                           window.location.href = "/Slip/Profile/Prj/msg.aspx";
                        });
                    }
                    else {
