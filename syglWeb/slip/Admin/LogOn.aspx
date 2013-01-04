@@ -1,18 +1,17 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SlipSite.master.cs" Inherits="syglWeb.slip.Share.SlipSite" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogOn.aspx.cs" Inherits="syglWeb.slip.Admin.LogOn" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">    
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link type="text/css" rel="stylesheet" href="~/Slip/Style/Style.css" />
     <link type="text/css" rel="stylesheet" href="~/Slip/Style/iFadeSlide.css" /> 
     <script src="/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script> 
     <title>创新平台</title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div id="top_link">
+     <div id="top_link">
         <div id="top_link_box"> 天津科技大学 </div>
     </div>
     <div id="header">
@@ -20,12 +19,12 @@
         <div id="sub_logo">
             <asp:Panel ID="Panel1" runat="server">
             </asp:Panel> 
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderActive" runat="server">            
-        </asp:ContentPlaceHolder></div>
+         </div>
         <div id="dock">联系我们</div>
         <div id="intro_dock"> </div>
         
-      </div>
+     
+    </div>
     <div id="nav">
         <ul>
           <li>
@@ -42,9 +41,19 @@
       </div>
      
     <div id="page">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server">
         
-        </asp:ContentPlaceHolder>
+    <form id="form1" runat="server">
+     <div class="m_login"> 
+        <p><label><span>帐号</span></label><asp:TextBox ID="TextBoxAdminAccount" runat="server"  CssClass="input_text"></asp:TextBox><asp:RequiredFieldValidator
+                ID="RequiredFieldValidator1" runat="server" ErrorMessage="请填写帐号！" ControlToValidate="TextBoxAdminAccount"></asp:RequiredFieldValidator></p>
+        <p><label><span>密码</span></label><asp:TextBox ID="TextBoxAdminPWD" runat="server" CssClass="input_text"></asp:TextBox><asp:RequiredFieldValidator
+                ID="RequiredFieldValidator2" runat="server" ErrorMessage="请填写密码!" ControlToValidate="TextBoxAdminPWD"></asp:RequiredFieldValidator></p>
+                <p>
+                    <asp:Label ID="Label1" runat="server" Text=""  ForeColor="Red"></asp:Label></p>
+        <p> <a class="login_submit_link"><asp:Button ID="ButtonLogin" runat="server" Text="登录" CssClass="login_btn" /> </a></p>
+        
+    </div>
+    </form>
   <div class="clear"></div>
   </div>
   <div id="footer">

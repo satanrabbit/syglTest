@@ -130,6 +130,7 @@
     <Content Include="slip\about.aspx" />
     <Content Include="slip\about.txt" />
     <Content Include="slip\Admin\Default.aspx" />
+    <Content Include="slip\Admin\LogOn.aspx" />
     <Content Include="slip\Admin\news.aspx" />
     <Content Include="slip\Admin\new_edit.aspx" />
     <Content Include="slip\Admin\op.aspx" />
@@ -2669,6 +2670,13 @@
     </Compile>
     <Compile Include="slip\Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\LogOn.aspx.cs">
+      <DependentUpon>LogOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\LogOn.aspx.designer.cs">
+      <DependentUpon>LogOn.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\news.aspx.cs">
       <DependentUpon>news.aspx</DependentUpon>
