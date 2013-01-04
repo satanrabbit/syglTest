@@ -33,7 +33,7 @@
           </li>
           <li>
               <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Slip/news.aspx">创新资讯</asp:HyperLink></li>
-          <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Slip/Projects/">创新成果</asp:HyperLink> </li>
+          <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Slip/op.aspx">创新成果</asp:HyperLink> </li>
           <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Slip/Support/Defualt.aspx">项目支持</asp:HyperLink></li>
           <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Slip/Profile/">项目管理</asp:HyperLink></li>
           <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Slip/Discuss/">创新论坛</asp:HyperLink></li>

@@ -15,16 +15,16 @@ namespace syglWeb.slip.Discuss
         protected void Page_Load(object sender, EventArgs e)
         {
             //判断验证
-            if (Request.Cookies["SlipUser"] == null)
+            if (Session["userID"]== null)
             {
-                Response.Redirect("/slip/LogOn.aspx");
+                Response.Redirect("/slip/LogOn.aspx?reurl="+Request.Url);
             }
 
 
 
             if (IsPostBack)
             {
-                int userID =Convert.ToInt32( Request.Cookies["SlipUser"]["userID"]);
+                int userID = Convert.ToInt32(Session["userID"]);
                 //保存数据
                 string title = Request.Form["issue_title"];
                 string content = Request.Form["issue_conten"];

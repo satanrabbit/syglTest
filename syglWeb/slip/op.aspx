@@ -12,7 +12,7 @@
     <ul>
         <asp:Repeater ID="RepeaterNewsList" runat="server">
         <ItemTemplate>
-        <li><a class="news_li_tl" href="opd.aspx?did=<%# Eval("opID") %>"><%# Eval("opTitle") %></a><span class="news_time_sp"><%# Eval("opYear") %>度</span></li>
+        <li><a class="news_li_tl" href="opd.aspx?did=<%# Eval("opID") %>"><%# Eval("opTitle") %></a><span class="news_time_sp"><%# Eval("opYear") %></span></li>
         </ItemTemplate>
         </asp:Repeater>
     </ul>

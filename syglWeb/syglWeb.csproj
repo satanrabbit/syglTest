@@ -127,6 +127,8 @@
     <Content Include="sf\web\zbtx\zbtx.files\header.htm" />
     <Content Include="sf\web\zbtx\zbtx.htm" />
     <Content Include="sf\web\zbtx\zbtx.html" />
+    <Content Include="slip\about.aspx" />
+    <Content Include="slip\about.txt" />
     <Content Include="slip\Admin\Default.aspx" />
     <Content Include="slip\Admin\news.aspx" />
     <Content Include="slip\Admin\new_edit.aspx" />
@@ -2653,6 +2655,13 @@
     </Compile>
     <Compile Include="slip\404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
