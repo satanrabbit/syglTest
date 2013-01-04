@@ -142,6 +142,8 @@
     <Content Include="slip\Discuss\issue.aspx" />
     <Content Include="slip\Discuss\postIssue.aspx" />
     <Content Include="slip\Discuss\tags.aspx" />
+    <Content Include="slip\op.aspx" />
+    <Content Include="slip\opd.aspx" />
     <Content Include="slip\Profile\Prj\msg.aspx" />
     <Content Include="slip\Profile\Prj\msgd.aspx" />
     <Content Include="slip\Sources\Portraits\Mini\201211031603526697.jpg" />
@@ -2917,6 +2919,20 @@
     </Compile>
     <Compile Include="slip\NewsDetail.aspx.designer.cs">
       <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\op.aspx.cs">
+      <DependentUpon>op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\op.aspx.designer.cs">
+      <DependentUpon>op.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\opd.aspx.cs">
+      <DependentUpon>opd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\opd.aspx.designer.cs">
+      <DependentUpon>opd.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Profile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
