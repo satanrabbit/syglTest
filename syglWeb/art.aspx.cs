@@ -44,14 +44,10 @@ namespace syglWeb
 
                 this.LabelArticlePostTime.Text = ((DateTime)ds.Tables["articles_tb"].Rows[0]["articlePostTime"]).ToShortDateString();
                 this.LabelArticleContent.Text = ds.Tables["articles_tb"].Rows[0]["articleContent"].ToString();
-                if (ds.Tables["articles_tb"].Rows[0]["articleIntro"].ToString().Trim() == "")
-                {
-                    this.Panel1.Visible = false;
-                }
-                else
-                {
-                    this.LabelArticleIntro.Text = ds.Tables["articles_tb"].Rows[0]["articleIntro"].ToString();
-                }
+                 
+                this.Panel1.Visible = false;
+                 
+                
                 //栏目标题
                 conn.Open();
                 cmd = new OleDbCommand();

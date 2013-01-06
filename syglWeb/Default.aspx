@@ -76,7 +76,7 @@
                 <li class="longTile"><a href="http://www.tust.edu.cn" class="subdoor" title="资产管理数字化平台从校园门户登陆！" ><i id="door1" class="door1">.</i><span class="sdtext">资产管理数字化平台</span></a></li>
                 <li class="longTile"><a href="http://210.31.141.73/dzyh/Default_Stu.aspx" class="subdoor" ><i id="door2" class="door2">.</i><span class="sdtext">低值易耗品申领系统</span></a></li>
                 <li class="longTile"><a href="http://210.31.141.73/dxyq/index.aspx" class="subdoor" ><i id="door3" class="door3">.</i><span class="sdtext">大型仪器预约系统</span></a></li>
-                <li class="longTile"><a href="http://sygl.tust.edu.cn/webdecl/login.aspx" class="subdoor" ><i id="door6" class="door6">.</i><span class="sdtext">资产上报系统</span></a></li>
+                <li class="longTile"><a href="http://sygl.tust.edu.cn/webdecl/login.aspx" class="subdoor" ><i id="door6" class="door6">.</i><span class="sdtext">实验室信息上报系统</span></a></li>
                  <li class="shortTile"><a href="/slip/" target="_blank" class="subdoor" ><i id="door4" class="door4">.</i><span class="sdtext">创新平台</span></a></li>
                 <li class="shortTile"><a href="/sf/index.html" class="subdoor" ><i id="door5" class="door5">.</i><span class="sdtext">示范中心</span></a></li>
             </ul>
@@ -132,7 +132,7 @@
                     <img width="320" height="90" src="slip/Sources/Pictures/5.jpg" />
                 </div>
                  <h1><a href="/clm.aspx?clm=5" class="h1title">规章制度</a><a href="/clm.aspx?clm=5" class="h1more">更多</a></h1>
-                <ul style="height:300px; overflow:hidden;">
+                <ul style="height:280px; overflow:hidden;">
                     <asp:Repeater ID="Repeater_gzzd" runat="server"  OnItemDataBound="Repeater_gzzd_ItemDataBound" >
                         <ItemTemplate>
                              <li>
@@ -149,12 +149,12 @@
             
                 <h1><a href="Department.aspx" class="h1title">机构设置</a><a href="Department.aspx" class="h1more">详细</a></h1>
                 <ul id="ptm">   
-                    <li id="pmt1"><a href="Department.aspx#pmt1">实验室管理科 </a></li> 
+                    <li id="pmt4"><a href="Department.aspx#pmt4">规划建设科 </a></li> 
                     <li id="pmt2"><a href="Department.aspx#pmt2">供应科</a></li> 
                     <li id="pmt3"><a href="Department.aspx#pmt3">物资设备管理科</a></li> 
-                    <li id="pmt4"><a href="Department.aspx#pmt4">规划建设科</a></li>
+                    <li id="pmt1"><a href="Department.aspx#pmt1">实验室管理科</a></li>
                     <li id="pmt5"><a href="Department.aspx#pmt5">计算中心</a> </li>  
-                    <li id="pmt6"><a href="Department.aspx#pmt6">现代教育技术中心</a></li>  
+                    <li id="pmt6"><a href="Department.aspx#pmt6">教育技术中心</a></li>  
                     <li id="pmt7"><a href="Department.aspx#pmt7">现代分析技术研究中心</a></li>
                 </ul>
             <div id="home_flink" >

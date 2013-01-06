@@ -35,7 +35,7 @@ namespace syglWeb
             //工作动态
             cmd = new OleDbCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select TOP 10 articleID,articleTitle,articlePostTime from articles_tb where articleType in(select articleTypeID from articleTypes_tb where articleTypeParent=2) order by articlePostTime desc";
+            cmd.CommandText = "select TOP 8 articleID,articleTitle,articlePostTime from articles_tb where articleType in(select articleTypeID from articleTypes_tb where articleTypeParent=2) order by articlePostTime desc";
             da.SelectCommand = cmd;
             da.Fill(ds, "articles_tb_gzdt");
 
@@ -122,7 +122,7 @@ namespace syglWeb
         {
             DataRowView drv = (DataRowView)(e.Item.DataItem);
             HyperLink gzdt_title = (HyperLink)e.Item.FindControl("HyperLink_zbcg_title");
-            gzdt_title.Text = drv["articleTitle"].ToString().Length > 17 ? drv["articleTitle"].ToString().Substring(0, 17) + "…" : drv["articleTitle"].ToString();
+            gzdt_title.Text = drv["articleTitle"].ToString();
             gzdt_title.NavigateUrl = "art.aspx?aid=" + drv["articleID"];
             //时间
             Label gzdt_postTime = (Label)e.Item.FindControl("Label_zbcg_postTime");

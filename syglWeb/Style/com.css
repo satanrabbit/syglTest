@@ -102,7 +102,7 @@ a:hover {
 }
 .chief p{    
     color: #666666;
-    margin:5px;
+    margin:1px;
 }
 .chief a,.extra a
 {
@@ -166,7 +166,7 @@ a:hover {
 }
 
 .chief_main ul li h4{ 
-     line-height:26px;
+     /*line-height:22px;*/
 }
 .chief_main ul li .time_sp
 {
@@ -178,11 +178,11 @@ a:hover {
 .chief_sub ul ,.extra #cg,#home_bslc,#home_wdxz
 {
     margin:10px 0 0 0;
-    line-height:26px;
+    line-height:24px;
 }
 .chief_sub ul li,.extra #cg li,#home_bslc li
 {
-    margin:3px 0 ;
+    margin:0 0 ;
     border-bottom: #9bb2d7 dotted 1px;
 }
 .extra
@@ -265,12 +265,12 @@ a:hover {
 .subdoors ul li.longTile
 {
     float:left;
-    width:190px;
+    width:160px;
 }
 .subdoors ul li.shortTile
 {
     float:left;
-    width:95px;
+    width:160px;
 }
 .subdoors ul li a
 {
@@ -290,14 +290,25 @@ a:hover {
     text-decoration:underline; 
     color:#FFF;  
 }
-.subdoors ul li a i
+.subdoors ul li.longTile a i
 {
     position:absolute;
     display:block;
     width:50px;
     height:50px;    
     top:2px;
-    left:18%;
+    left:35%;
+    text-indent:-1000px;
+}
+
+.subdoors ul li.shortTile a i
+{
+    position:absolute;
+    display:block;
+    width:50px;
+    height:50px;    
+    top:2px;
+    left:30%;
     text-indent:-1000px;
 }
 .door1

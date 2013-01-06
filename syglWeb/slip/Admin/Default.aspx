@@ -105,7 +105,7 @@
                         <li><a href="news.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">创新资讯</a></li>
                         <li><a href="op.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">创新成果（旧）</a></li>
                         <li><a href="spt.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">项目支持</a></li>                        
-                        <li><a href="pages/art.aspx?clm=5" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">关于</a></li>
+                        <li><a href="about.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">关于</a></li>
                         
 				    </ul>
 			    </div>

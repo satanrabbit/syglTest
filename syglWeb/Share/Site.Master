@@ -9,7 +9,7 @@
     <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery-1.7.2.min.js") %>"></script> 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
+    <title>天津科技大学实验室与设备管理处</title>
 </head>
 <body>
     <div id="header">

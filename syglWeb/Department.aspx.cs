@@ -39,7 +39,7 @@ namespace syglWeb
             da.SelectCommand = cmd;
             da.Fill(ds,"ptms_tb");
 
-            DataRow[] drw = ds.Tables["ptms_tb"].Select("ptmID=1");
+            DataRow[] drw = ds.Tables["ptms_tb"].Select("ptmID=4");
             this.Label_ptm1.Text = drw[0]["ptmIntro"].ToString();
 
             drw = ds.Tables["ptms_tb"].Select("ptmID=2");
@@ -48,7 +48,7 @@ namespace syglWeb
             drw = ds.Tables["ptms_tb"].Select("ptmID=3");
             this.Label_ptm3.Text = drw[0]["ptmIntro"].ToString();
 
-            drw = ds.Tables["ptms_tb"].Select("ptmID=4");
+            drw = ds.Tables["ptms_tb"].Select("ptmID=1");
             this.Label_ptm4.Text = drw[0]["ptmIntro"].ToString();
 
             drw = ds.Tables["ptms_tb"].Select("ptmID=5");

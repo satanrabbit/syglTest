@@ -111,7 +111,7 @@
                         width: 220,
                         align: 'center',
                         formatter: function (value, rowData, rowIndex) {
-                            var pid = rowData.ptmID;
+                            var pid = rowData.ptmID;                            
                             var html = '<a href="/Department.aspx#pmt' + pid +
                                 '" class="art_view_btn" target="_blank">查看</a><a href="javascript:;" pid=' + pid +
                                 ' class="art_edit_btn">修改</a> ';

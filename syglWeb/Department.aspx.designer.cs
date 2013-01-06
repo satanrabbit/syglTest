@@ -76,13 +76,13 @@ namespace syglWeb {
         protected global::System.Web.UI.WebControls.Label LabelShTedaTell;
         
         /// <summary>
-        /// Label_ptm1 控件。
+        /// Label_ptm4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_ptm1;
+        protected global::System.Web.UI.WebControls.Label Label_ptm4;
         
         /// <summary>
         /// Label_ptm2 控件。
@@ -103,13 +103,13 @@ namespace syglWeb {
         protected global::System.Web.UI.WebControls.Label Label_ptm3;
         
         /// <summary>
-        /// Label_ptm4 控件。
+        /// Label_ptm1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_ptm4;
+        protected global::System.Web.UI.WebControls.Label Label_ptm1;
         
         /// <summary>
         /// Label_ptm5 控件。

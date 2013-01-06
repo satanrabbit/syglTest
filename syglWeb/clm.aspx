@@ -42,12 +42,12 @@
                 </ul>
                 <h1><a href="#" class="h1title">机构设置</a><a href="#" class="h1more">更多</a></h1>
                <ul id="ptm">   
-                    <li id="pmt1"><a href="Department.aspx#pmt1">实验室管理科 </a></li> 
+                    <li id="pmt4"><a href="Department.aspx#pmt4">规划建设科 </a></li> 
                     <li id="pmt2"><a href="Department.aspx#pmt2">供应科</a></li> 
                     <li id="pmt3"><a href="Department.aspx#pmt3">物资设备管理科</a></li> 
-                    <li id="pmt4"><a href="Department.aspx#pmt4">规划建设科</a></li>
+                    <li id="pmt1"><a href="Department.aspx#pmt1">实验室管理科</a></li>
                     <li id="pmt5"><a href="Department.aspx#pmt5">计算中心</a> </li>  
-                    <li id="pmt6"><a href="Department.aspx#pmt6">现代教育技术中心</a></li>  
+                    <li id="pmt6"><a href="Department.aspx#pmt6">教育技术中心</a></li>  
                     <li id="pmt7"><a href="Department.aspx#pmt7">现代分析技术研究中心</a></li>
                 </ul>
         </div>

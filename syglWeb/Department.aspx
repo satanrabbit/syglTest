@@ -57,27 +57,27 @@
         </div>
         <div id="dpt_set">
             <h2 style="color:#b34f2c;">机构设置</h2>
-            <h4  id="pmt1"><a href="#pmt1" name="pmt1">实验室管理科<i class="guid_arrow">.</i></a></h4>
+            <h4  id="pmt4"><a href="#pmt4" name="pmt4">规划建设科<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
-                <asp:Label ID="Label_ptm1" runat="server" Text=""></asp:Label>                
+                <asp:Label ID="Label_ptm4" runat="server" Text=""></asp:Label>                
             </div>
             <h4  id="pmt2"><a href="#pmt2" class="" name="pmt2">供应科<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
                 <asp:Label ID="Label_ptm2" runat="server" Text=""></asp:Label>
             </div>
-            <h4  id="pmt3"><a href="#pmt3"  name="pmt3">物资设备科<i class="guid_arrow">.</i></a></h4>
+            <h4  id="pmt3"><a href="#pmt3"  name="pmt3">物资设备管理科<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
                 <asp:Label ID="Label_ptm3" runat="server" Text=""></asp:Label>
             </div>
-            <h4  id="pmt4"><a href="#pmt4"  name="pmt4">规划科<i class="guid_arrow">.</i></a></h4>
+            <h4  id="pmt1"><a href="#pmt1"  name="pmt1">实验室管理科<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
-                <asp:Label ID="Label_ptm4" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label_ptm1" runat="server" Text=""></asp:Label>
             </div>
             <h4  id="pmt5"><a href="#pmt5"  name="pmt5">计算中心<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
                 <asp:Label ID="Label_ptm5" runat="server" Text=""></asp:Label>
             </div>
-           <h4  id="pmt6"><a href="#pmt6"  name="pmt6">现代教育技术中心<i class="guid_arrow">.</i></a></h4>
+           <h4  id="pmt6"><a href="#pmt6"  name="pmt6">教育技术中心<i class="guid_arrow">.</i></a></h4>
             <div class="dpt_set_detail">
                 <asp:Label ID="Label_ptm6" runat="server" Text=""></asp:Label>
             </div>

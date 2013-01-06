@@ -128,7 +128,9 @@
     <Content Include="sf\web\zbtx\zbtx.htm" />
     <Content Include="sf\web\zbtx\zbtx.html" />
     <Content Include="slip\about.aspx" />
-    <Content Include="slip\about.txt" />
+    <Content Include="slip\about.html" />
+    <Content Include="slip\Admin\about.aspx" />
+    <Content Include="slip\Admin\aboutEdit.aspx" />
     <Content Include="slip\Admin\Default.aspx" />
     <Content Include="slip\Admin\LogOn.aspx" />
     <Content Include="slip\Admin\news.aspx" />
@@ -2664,12 +2666,29 @@
     <Compile Include="slip\about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\Admin\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\aboutEdit.aspx.cs">
+      <DependentUpon>aboutEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\aboutEdit.aspx.designer.cs">
+      <DependentUpon>aboutEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="slip\Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\getAbout.ashx.cs">
+      <DependentUpon>getAbout.ashx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\LogOn.aspx.cs">
       <DependentUpon>LogOn.aspx</DependentUpon>
@@ -3176,6 +3195,7 @@
     <Content Include="sf\web\glbf\glbf.files\themedata.thmx" />
     <Content Include="sf\web\zbtx\zbtx.files\themedata.thmx" />
     <Content Include="slip\Profile\Prj\msgDelete.ashx" />
+    <Content Include="slip\Admin\getAbout.ashx" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetIdHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetInfoHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\UploadHandler.jsp" />
