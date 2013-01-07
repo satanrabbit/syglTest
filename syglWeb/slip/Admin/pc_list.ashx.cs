@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using System.Data;
-using System.Data.OleDb;
-using System.Configuration;
-using LitJson;
 using System.Web.SessionState;
+using LitJson;
+using syglWeb.slip.SRDel;
+
 namespace syglWeb.slip.Admin
 {
     /// <summary>
-    /// news_list 的摘要说明
+    /// pc_list 的摘要说明
     /// </summary>
-    public class news_list : IHttpHandler,IRequiresSessionState
+    public class pc_list : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
+
             int total = 0;
             JsonData rows = new JsonData();
             if (context.Session["SyglAdmin"] == null)
             {
                 context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
-                context.Response.Write("未登录或登录超时！请重新登陆！");
+                context.Response.Write("未登录或登录超时！请重新登陆！<a href='LogOn.aspx'  target='_top'> 请登录</a>");
                 context.Response.End();
             }
             else
@@ -37,7 +37,7 @@ namespace syglWeb.slip.Admin
                     pageSize = Convert.ToInt32(context.Request["rows"]);
                 }
 
-                string sort = "articlePostTime";
+                string sort = "cpID";
                 if (context.Request["sort"] != null && context.Request["sort"] != "")
                 {
                     sort = (context.Request["sort"]);
@@ -47,50 +47,49 @@ namespace syglWeb.slip.Admin
                 {
                     order = (context.Request["order"]);
                 }
-                string connStr = ConfigurationManager.ConnectionStrings["SlipConnStr"].ConnectionString;
 
-                OleDbConnection conn = new OleDbConnection();
-                conn.ConnectionString = connStr;
-                conn.Open();
-                OleDbCommand cmd = new OleDbCommand();
-                cmd.Connection = conn;
+                SRSql srSql = new SRSql();
+
+                srSql.conn.Open();
+
                 if (page == 0)
                 {
-                    cmd.CommandText = "select top " + pageSize
-                        + " newsID,newsTitle,newsPostTime from  newsTB  order by " + sort + " " + order + " ";
+                    srSql.cmd.CommandText = "select top " + pageSize
+                        + " cpID,cpName , cpYear ,cpStartTime ,cpEndTime from  cpTB  order by " + sort + " " + order + " ";
                 }
                 else
                 {
-                    cmd.CommandText = "select top " + pageSize +
-                        "  newsID,newsTitle,newsPostTime from  newsTB where  newsID not in ( select top " + page * pageSize +
-                        " newsID from newsTB order by order by " + sort + " " + order + " )  order by " + sort + " " + order + " )";
-                      
+                   srSql.cmd.CommandText = "select top " + pageSize +
+                        " cpID,cpName , cpYear  ,cpStartTime ,cpEndTime from  cpTB  where  cpID not in ( select top " + page * pageSize +
+                        " cpID from cpTB order by order by " + sort + " " + order + " )  order by " + sort + " " + order + " )";
+
                 }
 
-                OleDbDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                srSql.dr = srSql.cmd.ExecuteReader();
+                if (srSql.dr.Read())
                 {
                     do
                     {
                         JsonData row = new JsonData();
-                        row["newsTitle"] = dr["newsTitle"].ToString();
-                        row["newsPostTime"] = ((DateTime)dr["newsPostTime"]).ToString("yyyy年MM月dd日");
-                        row["newsID"] = Convert.ToInt32(dr["newsID"].ToString());
+                        row["cpName"] = srSql.dr["cpName"].ToString();
+                        row["cpID"] = Convert.ToInt32(srSql.dr["cpID"].ToString());
+                        row["cpYear"] = srSql.dr["cpYear"].ToString();
+                        row["cpEndTime"] = ((DateTime)srSql.dr["cpEndTime"]).ToString("yyyy-MM-dd");
+                        row["cpStartTime"] = ((DateTime)srSql.dr["cpStartTime"]).ToString("yyyy-MM-dd");
                         rows.Add(row);
-                    } while (dr.Read());
+                    } while (srSql.dr.Read());
                 }
                 else
                 {
                     rows = "";
                 }
+                srSql.dr.Close();
                 //查询数量
-                cmd = new OleDbCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "select count(newsID) from newsTB   ";
-                 
-                total = Convert.ToInt32(cmd.ExecuteScalar());
+                srSql.cmd.CommandText = "select count(supportID) from supportTB   ";
 
-                conn.Close();
+                total = Convert.ToInt32(srSql.cmd.ExecuteScalar());
+
+                srSql.conn.Close();
 
                 JsonData jsonData = new JsonData();
                 jsonData["total"] = total;

@@ -41,7 +41,7 @@
                             centerTabs.tabs('add', {
                                 title: node.text,
                                 closable: true,
-                                content: '<iframe src="' + node.attributes.url + '" frameborder="0" style="border:0;width:100%;height:99.4%;"></iframe>'
+                                content: '<iframe  src="' + node.attributes.url + '"  frameborder="0" style="border:0;width:100%;height:99.4%;"></iframe>'
                             });
                         }
                         else {
@@ -79,9 +79,6 @@
                 </div>
 		    </div>
 	    </div >
-	    <div data-options="region:'south'"  style="height:30px;padding:0 10px;background:#efefef;">
-		
-	    </div>
 	    <div data-options="region:'east',iconCls:'icon-reload',collapsed:true,split:true" title="关于" style="width:180px;">
             <div style=" margin:5px auto; text-align:center;">
                 <p>本系统由&emsp;<em style="color:#9d0808; text-decoration:line-through;">夏千祥</em>&emsp;制作；</p><p>
@@ -100,8 +97,8 @@
 			    <div title="账号" style="padding:10px;overflow:auto;" data-options="selected:true">
 				   
 			    </div>
-			    <div title="内容管理"  style="padding:10px;">
-				    <ul style="padding:3px 10px;">
+			    <div title="内容管理"  style="padding:10px 0; text-align:left;">
+				    <ul style="padding:3px 0; text-align:left;">
                         <li><a href="news.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">创新资讯</a></li>
                         <li><a href="op.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">创新成果（旧）</a></li>
                         <li><a href="spt.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">项目支持</a></li>                        
@@ -110,15 +107,15 @@
 				    </ul>
 			    </div>
                 
-			    <div title="项目管理" style="padding:10px">
-                <ul style="padding:3px 10px;">
-                    <li><a href="pages/marquee.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">进度管理</a></li>
+			    <div title="项目管理" style="padding:10px 0;text-align:left;">
+                <ul style="padding:3px  0px;text-align:left;">
+                    <li><a href="pc.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">进度管理</a></li>
                     <li><a href="#" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">项目评审</a></li> 
                     <li><a href="#" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">用户管理</a></li>                        
 				</ul>
 			    </div>
-                <div title="论坛管理" style="padding:10px">
-                <ul style="padding:3px 10px;">
+                <div title="论坛管理" style="padding:10px 0;text-align:left;">
+                <ul style="padding:3px  0px;text-align:left;">
                     <li><a href="pages/marquee.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">论坛话题</a></li>
                     <li><a href="#" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">评论回复</a></li>                         
 				</ul>

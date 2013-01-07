@@ -7,18 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace syglWeb.slip.Admin
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class pc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["SyglAdmin"] != null)
-            {
-
-            }
-            else
-            {
-                Response.Redirect("/slip/admin/LogOn.aspx");
-            }
+           
         }
     }
 }

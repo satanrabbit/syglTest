@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="news.aspx.cs" Inherits="syglWeb.slip.Admin.news" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pc.aspx.cs" Inherits="syglWeb.slip.Admin.pc" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+     <title></title>
     <!--引入样式表，含js框架样式和自定义样式-->
     <!--easyui样式-->
     <link href="../../Sourse/jquery_easyui/themes/metro/easyui.css" type="text/css" rel="stylesheet" />
@@ -20,7 +20,7 @@
     <script src="../../Scripts/less-1.3.0.min.js"></script>
     <script src="../../Sourse/jquery_easyui/easyui_ex.js"></script>
     <script src="../../Scripts/jquery_easyUI_dialog_form.js"></script>
-</head>
+</head> 
 <body class="easyui-layout">
 	<div data-options="region:'north',title:'查询',iconCls:'icon-search',collapsed:true" style="height:100px;background:#EFEFEF;padding:5px">         
     </div>
@@ -33,9 +33,9 @@
            *初始化列表
            */
             var $art_tt = $("#dt").datagrid({
-                //title: "",
+                title: "历届项目",
                 rownumbers: true,
-                url: "news_list.ashx",
+                url: "pc_list.ashx",
                 //queryParams: { clm: " " },
                 iconCls: "icon-wrench",
                 pagination: true,
@@ -45,41 +45,45 @@
                 fitColumns: true,
                 nowarp: false,//设置是否折行，false为折行
                 border: true,//设置是否显示border
-                idField: 'newsID',//设置跨页选择的标识栏
-                sortName: "newsPostTime",
+                idField: 'cpID',//设置跨页选择的标识栏
+                sortName: "cpID",
                 sortOrder: "desc",
                 columns: [[
                     {
                         title: "编号",
-                        field: "newsID",
+                        field: "cpID",
                         width: 80,
                         sortable: true,
                         checkbox: true
                     }, {
                         title: "标题",
-                        field: "newsTitle", sortable: true,
-                        width: 480,
-                        align: 'center',
-                        formatter: function (value, rowData, rowIndex) {
-                            var newsid = rowData.newsID;
-                            var html = '<a href="/slip/NewsDetail.aspx?nid=' + newsid +
-                                '" target="_blank">' + value + '</a>';
-                            return html;
-                        }
+                        field: "cpName", sortable: true,
+                        width: 280,
+                        align: 'center'
                     }, {
-                        title: "发布日期",
-                        field: "newsPostTime", sortable: true,
-                        width: 180,
+                        title: "年度",
+                        field: "cpYear", sortable: true,
+                        width: 100,
+                        align: 'center'
+                    }, {
+                        title: "开始时间",
+                        field: "cpStartTime", sortable: true,
+                        width: 120,
+                        align: 'center'
+                    }, {
+                        title: "结束时间",
+                        field: "cpEndTime", sortable: true,
+                        width: 120,
                         align: 'center'
                     }, {
                         title: "操作",
-                        field: "_articleID",
+                        field: "_cpID",
                         width: 220,
                         align: 'center',
                         formatter: function (value, rowData, rowIndex) {
-                            var did = rowData.newsID;
-                            var html = '<a href="/slip/NewsDetail.aspx?nid=' + did +
-                                '" class="art_view_btn" target="_blank">查看</a><a href="javascript:;" did=' + did +
+                            var did = rowData.cpID;
+                            var html = '<a href="pcStep.aspx?did=' + did +
+                                '" class="art_view_btn" target="_self">进度管理</a><a href="javascript:;" did=' + did +
                                 ' class="art_edit_btn">修改</a><a href="javascript:;" did=' + did +
                                 ' class="art_del_btn">删除</a>';
                             return html;
@@ -91,7 +95,7 @@
                         text: "增加",
                         iconCls: "icon-add",
                         handler: function () {
-                            $.edit_down("添加文档", 'down_edit.aspx');
+                            $.edit_down("d", 'down_edit.aspx');
                         }
                     }, "-", {
                         text: "删除",
@@ -143,7 +147,7 @@
                                 $.messager.show({ title: "提示", msg: data.msg, timeout: 2000 })
                                 $art_tt.datagrid("reload");
                             } else {
-                                $.messager.alert("错误",data.msg,"error");
+                                $.messager.alert("错误", data.msg, "error");
                             }
                         });
                     });

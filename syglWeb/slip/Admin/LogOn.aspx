@@ -46,7 +46,7 @@
      <div class="m_login"> 
         <p><label><span>帐号</span></label><asp:TextBox ID="TextBoxAdminAccount" runat="server"  CssClass="input_text"></asp:TextBox><asp:RequiredFieldValidator
                 ID="RequiredFieldValidator1" runat="server" ErrorMessage="请填写帐号！" ControlToValidate="TextBoxAdminAccount"></asp:RequiredFieldValidator></p>
-        <p><label><span>密码</span></label><asp:TextBox ID="TextBoxAdminPWD" runat="server" CssClass="input_text"></asp:TextBox><asp:RequiredFieldValidator
+        <p><label><span>密码</span></label><asp:TextBox ID="TextBoxAdminPWD" runat="server" TextMode="Password" CssClass="input_text"></asp:TextBox><asp:RequiredFieldValidator
                 ID="RequiredFieldValidator2" runat="server" ErrorMessage="请填写密码!" ControlToValidate="TextBoxAdminPWD"></asp:RequiredFieldValidator></p>
                 <p>
                     <asp:Label ID="Label1" runat="server" Text=""  ForeColor="Red"></asp:Label></p>

@@ -5,20 +5,20 @@ using System.Data;
 using System.Data.OleDb;
 using System.Configuration;
 using LitJson;
-
+using System.Web.SessionState;
 namespace syglWeb.slip.Admin
 {
     /// <summary>
     /// op_list 的摘要说明
     /// </summary>
-    public class op_list : IHttpHandler
+    public class op_list : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
             int total = 0;
             JsonData rows = new JsonData();
-            if (context.Request.Cookies["SyglAdmin"] == null)
+            if (context.Session["SyglAdmin"] == null)
             {
                 context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
                 context.Response.Write("未登录或登录超时！请重新登陆！");
