@@ -90,19 +90,21 @@
                         align: 'center',
                         formatter: function (value, rowData, rowIndex) {
                             var did = rowData.tpID;
-                            
+                            var html;
                             var txt;
                             var icon;
                             if (did == "") {
                                 txt = "开启";
                                 icon = "icon-pencil";
+                                html = '<a href="javascript:;" tp="' + rowData.tp + '"  sw="' + rowData.open + '" tp_index="' + rowData.tpIndex + '" for_cp="' + rowData.forCp + '" class="art_edit_btn" data-options="iconCls: \'' + icon + '\'">' + txt
+                                    + '</a>';
                             } else {
                                 txt = "修改";
-                                icon = "icon-pencil_green"
+                                icon = "icon-pencil_green";
+                                html = '<a href="javascript:;" tp="' + rowData.tp + '"  sw="' + rowData.open + '" tp_index="' + rowData.tpIndex + '" for_cp="' + rowData.forCp + '" class="art_edit_btn" data-options="iconCls: \'' + icon + '\'">' + txt
+                                    + '</a><a href="/slip/tpNotice.aspx?tpid=' + did +
+                                    '" class="art_view_btn" target="_blank">查看</a>';
                             }
-                            var html = '<a href="javascript:;" tp="' + rowData.tp + '"  sw="' + rowData.open + '" tp_index="' + rowData.tpIndex + '" for_cp="' + rowData.forCp + '" class="art_edit_btn" data-options="iconCls: \'' + icon + '\'">' + txt
-                                + '</a><a href="/slip/NewsDetail.aspx?nid=' + did +
-                                '" class="art_view_btn" target="_self">查看</a>';
                             return html;
                         }
                     }
@@ -113,25 +115,12 @@
                         iconCls: "icon-back",
                         handler: function () {                            
                         }
-                    //}, "-", {
-                    //    text: "删除",
-                    //    iconCls: "icon-delete",
-                    //    handler: function () {
-                    //        var rows = $("#art_tt").datagrid("getSelections");
-                    //        if (rows.length <= 0) {
-                    //            return false;
-                    //        }
-                    //        $.messager.confirm("提示", "将删除" + rows.length + "条记录！<br />操作将不可逆！<br />请确认！", function (b) {
-                    //            if (b) {
-                    //                var dids = [];
-                    //                $.each(rows, function (i, item) {
-                    //                    dids.push(item.downID);
-                    //                });
-                    //                dids = dids.join(",");
-                    //                $.delete_art(dids, "down_delete.ashx")
-                    //            }
-                    //        });
-                    //    }
+                    }, "-", {
+                        text: "刷新",
+                        iconCls: "icon-reload",
+                        handler: function () {
+                            $art_tt.datagrid("load");
+                        }
                     //}, "-", {
                     //    text: "查询",
                     //    iconCls: "icon-search",

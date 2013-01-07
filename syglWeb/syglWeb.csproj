@@ -139,6 +139,7 @@
     <Content Include="slip\Admin\op_edit.aspx" />
     <Content Include="slip\Admin\pc.aspx" />
     <Content Include="slip\Admin\pcStep.aspx" />
+    <Content Include="slip\Admin\pc_edit.aspx" />
     <Content Include="slip\Admin\spt.aspx" />
     <Content Include="slip\Admin\spt_edit.aspx" />
     <Content Include="slip\Admin\style\base.css" />
@@ -2683,6 +2684,9 @@
     <Compile Include="slip\Admin\aboutEdit.aspx.designer.cs">
       <DependentUpon>aboutEdit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\Admin\cp_delete.ashx.cs">
+      <DependentUpon>cp_delete.ashx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2753,6 +2757,13 @@
     </Compile>
     <Compile Include="slip\Admin\pcStep_list.ashx.cs">
       <DependentUpon>pcStep_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\pc_edit.aspx.cs">
+      <DependentUpon>pc_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\pc_edit.aspx.designer.cs">
+      <DependentUpon>pc_edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\pc_list.ashx.cs">
       <DependentUpon>pc_list.ashx</DependentUpon>
@@ -3228,6 +3239,7 @@
     <Content Include="slip\Admin\getAbout.ashx" />
     <Content Include="slip\Admin\pc_list.ashx" />
     <Content Include="slip\Admin\pcStep_list.ashx" />
+    <Content Include="slip\Admin\cp_delete.ashx" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetIdHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetInfoHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\UploadHandler.jsp" />

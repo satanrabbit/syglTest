@@ -28,9 +28,9 @@ namespace syglWeb.slip.Admin
                 {
                     if (adminPWD == srSql.dr["adminPWD"].ToString())
                     {
-                        Session["SyglAdmin"] = srSql.dr["ID"].ToString();
-                        Session["SyglAdminName"] = srSql.dr["adminName"].ToString();
-                        Session["SyglAdminIdentity"] = srSql.dr["adminIdentity"].ToString();
+                        Session["SlipAdmin"] = srSql.dr["ID"].ToString();
+                        Session["SlipAdminName"] = srSql.dr["adminName"].ToString();
+                        Session["SlipAdminIdentity"] = srSql.dr["adminIdentity"].ToString();
                         Session.Timeout = 120;  
                         Response.Redirect("/slip/Admin/");
                     }

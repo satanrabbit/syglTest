@@ -14,7 +14,7 @@ namespace syglWeb.slip.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["SyglAdmin"] == null)
+            if (Session["SlipAdmin"] == null)
             {
                 //未登录 
                 this.panel_Form.Visible = false;

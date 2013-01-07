@@ -18,7 +18,7 @@ namespace syglWeb.slip.Admin
         {
             int total = 0;
             JsonData rows = new JsonData();
-            if (context.Session["SyglAdmin"] == null)
+            if (context.Session["SlipAdmin"] == null)
             {
                 context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
                 context.Response.Write("未登录或登录超时！请重新登陆！");

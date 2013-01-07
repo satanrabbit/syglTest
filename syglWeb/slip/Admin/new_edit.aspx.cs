@@ -16,7 +16,7 @@ namespace syglWeb.slip.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Request.Cookies["SyglAdmin"] == null)
+            if (Session["SlipAdmin"] == null)
             {
                 Response.Redirect("/admLogin.aspx?f=unlogin");
             }

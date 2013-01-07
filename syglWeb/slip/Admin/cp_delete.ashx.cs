@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using System.Web.SessionState;
+ 
 using syglWeb.slip.SRDel;
 using LitJson;
-using System.Web.SessionState;
 
 namespace syglWeb.slip.Admin
 {
     /// <summary>
-    /// op_delete 的摘要说明
+    /// cp_delete 的摘要说明
     /// </summary>
-    public class op_delete : IHttpHandler,IRequiresSessionState
+    public class cp_delete : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
+
             int status = 0;
             string msg = "未知错误！";
             if (context.Session["SlipAdmin"] == null)
             {
-                //未登录                  
-                msg = "未登录或登录超时！请重新登陆！<a href='LogOn.aspx'  target='_top'> 请登录</a>";
+                msg = "您未登录或登录超时！";
             }
             else
             {
@@ -35,7 +36,7 @@ namespace syglWeb.slip.Admin
                     try
                     {
                         srSql.conn.Open();
-                        srSql.cmd.CommandText = "delete from oldProjects_tb where opID in ( " + dids + ") ";
+                        srSql.cmd.CommandText = "delete from cpTB where cpID in ( " + dids + ") ";
                         int effects = srSql.cmd.ExecuteNonQuery();
                         status = 1;
                         msg = "成功删除" + effects + "条记录";
