@@ -110,7 +110,7 @@
 			    <div title="项目管理" style="padding:10px 0;text-align:left;">
                 <ul style="padding:3px  0px;text-align:left;">
                     <li><a href="pc.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">进度管理</a></li>
-                    <li><a href="#" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">项目评审</a></li> 
+                    <li><a href="pm.aspx" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">项目评审</a></li> 
                     <li><a href="#" class="menuLink easyui-linkbutton" data-options="iconCls:'icon-page_white_gear',plain:true">用户管理</a></li>                        
 				</ul>
 			    </div>

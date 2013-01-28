@@ -82,6 +82,7 @@
     <Content Include="clm.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Department.aspx" />
+    <Content Include="dj\index.aspx" />
     <Content Include="Down.aspx" />
     <Content Include="DownList.aspx" />
     <Content Include="index.html" />
@@ -140,6 +141,7 @@
     <Content Include="slip\Admin\pc.aspx" />
     <Content Include="slip\Admin\pcStep.aspx" />
     <Content Include="slip\Admin\pc_edit.aspx" />
+    <Content Include="slip\Admin\pm.aspx" />
     <Content Include="slip\Admin\spt.aspx" />
     <Content Include="slip\Admin\spt_edit.aspx" />
     <Content Include="slip\Admin\style\base.css" />
@@ -2634,6 +2636,13 @@
     <Compile Include="Department.aspx.designer.cs">
       <DependentUpon>Department.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dj\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dj\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Down.aspx.cs">
       <DependentUpon>Down.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2767,6 +2776,13 @@
     </Compile>
     <Compile Include="slip\Admin\pc_list.ashx.cs">
       <DependentUpon>pc_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\pm.aspx.cs">
+      <DependentUpon>pm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\Admin\pm.aspx.designer.cs">
+      <DependentUpon>pm.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\spt.aspx.cs">
       <DependentUpon>spt.aspx</DependentUpon>
