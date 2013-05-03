@@ -4325,7 +4325,7 @@
     <Content Include="slip_\admin\fileManage.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\SRlib\SRLib\SRLib.csproj">
+    <ProjectReference Include="..\..\SRlib\SRLib\SRLib.csproj">
       <Project>{7a97e212-b647-443b-84bf-2aec46cce337}</Project>
       <Name>SRLib</Name>
     </ProjectReference>
