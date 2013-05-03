@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syglWeb", "syglWeb\syglWeb.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRLib", "..\..\..\..\SRlib\SRLib\SRLib.csproj", "{7A97E212-B647-443B-84BF-2AEC46CCE337}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRFileManagerLibrary", "E:\GitHub\SRFileManagerLibrary\SRFileManagerLibrary\SRFileManagerLibrary.csproj", "{ADB20E89-4121-420F-8B6C-A5456F33A7FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{7A97E212-B647-443B-84BF-2AEC46CCE337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A97E212-B647-443B-84BF-2AEC46CCE337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A97E212-B647-443B-84BF-2AEC46CCE337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB20E89-4121-420F-8B6C-A5456F33A7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB20E89-4121-420F-8B6C-A5456F33A7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB20E89-4121-420F-8B6C-A5456F33A7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB20E89-4121-420F-8B6C-A5456F33A7FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -88,7 +88,9 @@
 	    <div data-options="region:'west',split:true" title="管理面板" style="width:180px;padding:1px;overflow:hidden;">
 		    <div class="easyui-accordion" data-options="fit:true,border:false">
 			    <div title="账号" style="padding:10px;overflow:auto;" data-options="selected:true">
-				   
+				  <div>
+
+				  </div>
 			    </div>
 			    <div title="内容管理"  style="padding:10px;">
 				    <ul style="padding:3px 10px;">

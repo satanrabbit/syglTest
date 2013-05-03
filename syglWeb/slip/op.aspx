@@ -8,6 +8,13 @@
 <div class="tit tit_left">
           <h2><a href="#">创新成果</a></h2>
        </div>
+    <div class="op-nav-wp">
+        <ul>
+            <li><a href="#"><i>2011</i>2011年创新成果</a></li>
+             <li><a href="#"><i>2012</i>2012年创新成果</a></li>
+             <li><a href="#"><i>2013</i>2013年创新成果</a></li>
+        </ul>
+    </div>
 <div class="news_li_wp">
     <ul>
         <asp:Repeater ID="RepeaterNewsList" runat="server">
@@ -17,8 +24,7 @@
         </asp:Repeater>
     </ul>
 </div>
-
-    <div class="pager">
+    <!-- div class="pager">
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
@@ -27,5 +33,5 @@
         <a href="#">6</a>
         <a href="#">7</a>
         <a href="#">8</a>
-    </div>
+    </div !-->
 </asp:Content>

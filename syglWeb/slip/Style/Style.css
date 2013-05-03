@@ -22,6 +22,9 @@ a:hover{
 img{
 	border:none;
 }
+p {
+    line-height:24px;
+}
 #top_link{
 	width: 100%;
 	background: #F8F8F8;
@@ -55,6 +58,7 @@ img{
 	bottom:10px;
 	left:245px;
 }
+
 #sub_logo a.logo_tips
 {
     display:block;
@@ -952,14 +956,13 @@ font-weight: 700;
 .support a
 {
     display:block;
-    border:1px solid #a7ada4;
+   
     line-height:3em;
     width:250px;
-    margin:10px 25px;
-    border-radius: 5px;
+    margin:10px 25px; 
     float:left;
     font-size:2em;
-    background-color:#414f32;
+    background-color:#0094ff;
     color:#FFF;
 }
 .support a:hover

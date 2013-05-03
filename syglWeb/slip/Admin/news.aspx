@@ -29,6 +29,25 @@
     </div>
     <script type="text/javascript">
         $(function () {
+
+            $.extend({
+                delete_item: function (params, url, dg) {
+                    $.messager.confirm("确认删除？", "删除操作不可逆<br />&emsp;请确认！", function (b) {
+                        if (b) {
+                            $.post(url, params, function (data) {
+                                data = $.parseJSON(data);
+                                if (data.status === 1) {
+                                    $.messager.show({ title: "提示", msg: data.msg, timeout: 2000 });
+                                    dg.datagrid('load');
+                                } else {
+                                    $.messager.alert("错误！", data.msg, "error");
+                                }
+                            })
+                        }
+                    });
+                }
+            })
+
             /**
            *初始化列表
            */
@@ -91,26 +110,32 @@
                         text: "增加",
                         iconCls: "icon-add",
                         handler: function () {
-                            $.edit_down("添加文档", 'down_edit.aspx');
+                            $.sr_edit_dialog("new_edit.aspx", { title: "添加创新资讯", form: "newsEditForm" }, function (data) {
+                                data = $.parseJSON(data);
+                                if (data.status === 1) {
+                                    $.messager.show({ title: "提示", msg: data.msg, timeout: 2000 })
+                                    $art_tt.datagrid("load")
+                                } else {
+                                    $.messager.alert("错误", data.msg, "error");
+                                }
+                            });
+                            //$.edit_down("添加文档", 'down_edit.aspx');
                         }
                     }, "-", {
                         text: "删除",
                         iconCls: "icon-delete",
                         handler: function () {
-                            var rows = $("#art_tt").datagrid("getSelections");
+
+                            var rows = $art_tt.datagrid("getSelections");
                             if (rows.length <= 0) {
                                 return false;
                             }
-                            $.messager.confirm("提示", "将删除" + rows.length + "条记录！<br />操作将不可逆！<br />请确认！", function (b) {
-                                if (b) {
-                                    var dids = [];
-                                    $.each(rows, function (i, item) {
-                                        dids.push(item.downID);
-                                    });
-                                    dids = dids.join(",");
-                                    $.delete_art(dids, "down_delete.ashx")
-                                }
+                            var dids = [];
+                            $.each(rows, function (i, item) {
+                                dids.push(item.newsID);
                             });
+                            dids = dids.join(",");
+                            $.delete_item({ dids: dids }, "news_delete.ashx", $art_tt); 
                         }
                     }, "-", {
                         text: "查询",
@@ -150,11 +175,8 @@
 
                     //删除
                     $(".art_del_btn").click(function () {
-                        var b = confirm("删除操作将不可恢复！\n 请确认！");
-                        if (b) {
-                            var did = "0," + $(this).attr("did");
-                            $.delete_down(did, "down_delete.ashx");
-                        }
+                        var dids = "0," + $(this).attr("did");
+                        $.delete_item({ dids: dids }, "news_delete.ashx", $art_tt);
                     });
                 }
             });

@@ -1,7 +1,6 @@
 /**
  * 包含easyui的扩展和常用的方法
  * 
- * @author 孙宇
  */
 
 var sy = $.extend({}, sy);/* 定义全局对象 */
@@ -373,4 +372,37 @@ $.ajaxSetup({
 		$.messager.progress('close');
 		$.messager.alert('错误', XMLHttpRequest.responseText);
 	}
+});
+   /**
+    *  创建tab,使用iframe加载内容
+    *  
+    * @param node 
+    * @returns 
+    */
+$.extend({    
+    addTab: function (node, centerTabs) {
+        if (centerTabs.tabs('exists', node.text)) {
+            centerTabs.tabs('select', node.text);
+        }
+        else {
+            if (node.attributes.url && node.attributes.url.length > 0) {
+                $.messager.progress({
+                    text: '页面加载中....',
+                    interval: 100
+                });
+                centerTabs.tabs('add', {
+                    title: node.text,
+                    closable: true, 
+                    content: '<iframe src="' + node.attributes.url + '" frameborder="0" style="border:0;width:100%;height:99.4%;"></iframe>'
+                });
+            }
+            else {
+                centerTabs.tabs('add', {
+                    title: node.text,
+                    closable: true,
+                    herf: node.attributes.url
+                });
+            }
+        }
+    } 
 });

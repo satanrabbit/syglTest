@@ -2,10 +2,11 @@
 {
     font-size:0.8em;
     color: #666666;
+    background-color:#f8f8f8;
 }
 p
 {
-    color: #3b3c43;
+    color: #121212;
 }
 h1,h2,h3,h4,h5,h6{font-family:"微软雅黑","黑体",tahoma;}
 h1{font-size:22px; }
@@ -101,7 +102,6 @@ a:hover {
     border-right:1px solid #96c6fb;
 }
 .chief p{    
-    color: #666666;
     margin:1px;
 }
 .chief a,.extra a
@@ -160,13 +160,17 @@ a:hover {
     color:#666;
 }
 .chief_main ul li{
-    border-bottom: #9bb2d7 dotted 1px;
-    
+    border-bottom: #9bb2d7 dotted 1px;    
     position:relative; 
+    zoom:1;
+    overflow:auto;
+    margin:3px auto;
 }
 
 .chief_main ul li h4{ 
-     /*line-height:22px;*/
+     line-height:28px;
+     font-size:14px;
+     float:left;
 }
 .chief_main ul li .time_sp
 {

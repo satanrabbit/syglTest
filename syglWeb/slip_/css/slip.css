@@ -1,0 +1,68 @@
+﻿/*
+    slip page css
+*/
+
+body {
+    /*background-color:#f0f0f0;*/
+}
+.ui-nav-main {
+    background: -webkit-linear-gradient(top, #0c92f2, #3997db);
+    background: -moz-linear-gradient(top, #0c92f2, #3997db);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#0c92f2, endColorstr=#3997db);
+}
+.wrapper {
+    width: 990px;
+    margin: 1px auto;
+    
+}
+.ul_support a {
+    display: block;
+    margin: 5px;
+    text-align: center;
+    line-height: 2.5em;
+    border: 1px solid #C2D4DE;
+    border-radius: 5px;
+    color: #666;
+}
+.ul_support a:hover {
+background-color: #DFDFFC;
+color: #033;
+}
+
+.crumb {
+    padding: 7px 10px 7px 9px;
+    border-top: 1px #D2D2D2 solid;
+    background: #F7F8FA;
+}
+#logo { 
+    height: 65px;
+    width: 240px; 
+    background: url(image/logo.gif) no-repeat;
+    text-indent: -9999px;
+}
+
+.help-detail {
+word-wrap: break-word;
+word-break: break-all;
+}
+.help-detail .detail-title {
+padding: 30px 0 20px;
+font-size: 22px;
+font-weight: 700;
+text-align: center;
+border-bottom: 1px #E6E6E6 dashed;
+}
+.help-detail .detail-content {
+overflow: hidden;
+width: 680px;
+padding: 0 30px 40px;
+font-size: 14px;
+line-height: 1.8;
+}
+.ui-form-item {
+    padding: 0 5px 20px 80px;
+}
+.ui-label {
+    width: 80px;
+    margin-left: -90px;
+}

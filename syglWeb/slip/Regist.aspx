@@ -105,12 +105,12 @@
           <div style="float:left;" id='file_frame_wp'> 
             <iframe src="Handlers/UploadFile.aspx" name="file_iframe" id="file_iframe" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"  style=" border-bottom-style:none; width:300px; height:60px; display:block;"></iframe>
           </div>
-        <input id="avatar_x" name="avatar_x" type="hidden" value="" />
-        <input id="avatar_y" name="avatar_y" type="hidden" value="" />
-        <input id="avatar_w" name="avatar_w" type="hidden" value="" />
-        <input id="avatar_h" name="avatar_h" type="hidden" value="" />
-        <input id="avatar_img" name="img" type="hidden" value="" />
-        <input id="old_img" name="old_img" type="hidden" value="" />
+        <input id="avatar_x" name="avatar_x" type="hidden" value="0" />
+        <input id="avatar_y" name="avatar_y" type="hidden" value="0" />
+        <input id="avatar_w" name="avatar_w" type="hidden" value="0" />
+        <input id="avatar_h" name="avatar_h" type="hidden" value="0" />
+        <input id="avatar_img" name="img" type="hidden" value="0" />
+        <input id="old_img" name="old_img" type="hidden" value="0" />
          <div id="submit_w">
           <a id="select_img" href="javascript:;" class="green_button block">选择图片</a>
           <!--a id="avatar_submit" href="javascript:;" class="orange_button block">上传</a-->

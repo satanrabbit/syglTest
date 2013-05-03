@@ -24,7 +24,7 @@ namespace syglWeb
             //查询通知公告
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select TOP 6 articleID,articleTitle,articleIntro,articlePostTime from articles_tb where articleType in(select articleTypeID from articleTypes_tb where articleTypeParent=1) order by articlePostTime desc";
+            cmd.CommandText = "select TOP 11 articleID,articleTitle,articleIntro,articlePostTime from articles_tb where articleType in(select articleTypeID from articleTypes_tb where articleTypeParent=1) order by articlePostTime desc";
 
             da.SelectCommand = cmd;
             da.Fill(ds,"articles_tb_tzgg");
@@ -96,12 +96,10 @@ namespace syglWeb
             DataRowView drv = (DataRowView)(e.Item.DataItem);
             //标题
             HyperLink tzgg_title =(HyperLink)e.Item.FindControl("HyperLink_tzgg_title");
-            tzgg_title.Text =drv["articleTitle"].ToString().Length>20?drv["articleTitle"].ToString().Substring(0,20)+"…":drv["articleTitle"].ToString();
+
+            tzgg_title.Text = drv["articleTitle"].ToString().Length > 21 && drv["articleTitle"].ToString().Length < 27 ? drv["articleTitle"].ToString() : drv["articleTitle"].ToString();
             tzgg_title.ToolTip = drv["articleTitle"].ToString();
             tzgg_title.NavigateUrl = "art.aspx?aid="+drv["articleID"];
-            //简介
-            Label tzgg_intro = (Label)e.Item.FindControl("Label_tzgg_intro");
-            tzgg_intro.Text = drv["articleIntro"].ToString().Length > 46 ? drv["articleIntro"].ToString().Substring(0,46) + "…" : drv["articleIntro"].ToString(); ;
             //时间
             Label tzgg_postTime = (Label)e.Item.FindControl("Label_tzgg_postTime");
             tzgg_postTime.Text = ((DateTime)drv["articlePostTime"]).ToShortDateString();

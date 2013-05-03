@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="art_edit.aspx.cs" ValidateRequest="false" EnableViewState="false" Inherits="syglWeb.Admin.pages.art_edit" %>
 
 <link href="/Sourse/kindeditor_4.1.3/themes/default/default.css" rel="stylesheet" />
-
 <script src="/Sourse/kindeditor_4.1.3/kindeditor-min.js"></script>
 <script src="/Sourse/kindeditor_4.1.3/lang/zh_CN.js"></script>
 <form id="articleEditForm" runat="server">

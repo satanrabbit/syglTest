@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Share/Site.Master" AutoEventWireup="true" EnableViewState="false"  CodeBehind="Default.aspx.cs" Inherits="syglWeb.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Style/iFadeSlide.css" rel="stylesheet" type="text/css" />
+   <%-- <link href="slip_/source/Alice/one-full.css" rel="stylesheet" />--%>
     <script src="Scripts/jquery.iFadeSlide.pack.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
@@ -19,10 +20,7 @@
                             <li>
                                 <h4>
                                     <asp:HyperLink ID="HyperLink_tzgg_title" runat="server"></asp:HyperLink>
-                                </h4>
-                                <p class="l23">
-                                    <asp:Label ID="Label_tzgg_intro" runat="server" Text=""></asp:Label>
-                                </p>
+                                </h4> 
                                 <asp:Label ID="Label_tzgg_postTime" runat="server" Text="" CssClass="time_sp l23"></asp:Label>
                             </li> 
                         </ItemTemplate>
@@ -34,7 +32,7 @@
                     <div id="slide">
                         <asp:Repeater runat="server" ID="marquee">
                             <ItemTemplate>
-                                <a href='<%# Eval("imgLink") %>'><img src='<%# Eval("imgFile") %>'   /></a>
+                                <a href='<%# Eval("imgLink") %>'><img src='<%# Eval("imgFile") %>' alt="##"   /></a>
                             </ItemTemplate>
                         </asp:Repeater>
 				        <div class="ico"></div>

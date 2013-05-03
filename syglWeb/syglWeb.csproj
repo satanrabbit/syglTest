@@ -14,7 +14,7 @@
     <RootNamespace>syglWeb</RootNamespace>
     <AssemblyName>syglWeb</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -76,16 +76,19 @@
     <Content Include="Admin\pages\ptmIntroEdit.aspx" />
     <Content Include="Admin\style\base.css" />
     <Content Include="admLogin.aspx" />
+    <Content Include="App_Data\djdb.mdb" />
     <Content Include="App_Data\slipDB.mdb" />
     <Content Include="App_Data\sygldb.mdb" />
     <Content Include="art.aspx" />
     <Content Include="clm.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Department.aspx" />
+    <Content Include="dj\admin\adminEditPwd.aspx" />
+    <Content Include="dj\images\logo.png" />
     <Content Include="dj\index.aspx" />
+    <Content Include="dj\js\index.js" />
     <Content Include="Down.aspx" />
     <Content Include="DownList.aspx" />
-    <Content Include="index.html" />
     <Content Include="quickpic.ico" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\galleria-1.2.8.min.js" />
@@ -128,6 +131,8 @@
     <Content Include="sf\web\zbtx\zbtx.files\header.htm" />
     <Content Include="sf\web\zbtx\zbtx.htm" />
     <Content Include="sf\web\zbtx\zbtx.html" />
+    <Content Include="Share\FootControl.ascx" />
+    <Content Include="Share\HeaderControl.ascx" />
     <Content Include="slip\about.aspx" />
     <Content Include="slip\about.html" />
     <Content Include="slip\Admin\about.aspx" />
@@ -155,11 +160,727 @@
     <Content Include="slip\Discuss\tags.aspx" />
     <Content Include="slip\op.aspx" />
     <Content Include="slip\opd.aspx" />
+    <Content Include="slip\ops.aspx" />
     <Content Include="slip\Profile\Prj\msg.aspx" />
     <Content Include="slip\Profile\Prj\msgd.aspx" />
     <Content Include="slip\Sources\Portraits\Mini\201211031603526697.jpg" />
     <Content Include="slip\Style\Discuss.css" />
     <Content Include="slip\Style\Images\logo.gif" />
+    <Content Include="slip\Style\Images\xx.gif" />
+    <Content Include="slip_\admin\default.aspx" />
+    <Content Include="slip_\admin\en.aspx" />
+    <Content Include="slip_\admin\eop.aspx" />
+    <Content Include="slip_\admin\news.aspx" />
+    <Content Include="slip_\admin\of.aspx" />
+    <Content Include="slip_\css\iFadeSlide.css" />
+    <Content Include="slip_\css\image\logo.gif" />
+    <Content Include="slip_\css\slip.css" />
+    <Content Include="slip_\Default.aspx" />
+    <Content Include="slip_\et.aspx" />
+    <Content Include="slip_\file\0002%402x.png" />
+    <Content Include="slip_\file\0031%402x.png" />
+    <Content Include="slip_\file\0032%402x.png" />
+    <Content Include="slip_\file\0041%402x.png" />
+    <Content Include="slip_\file\0099%402x.png" />
+    <Content Include="slip_\file\0213%402x.png" />
+    <Content Include="slip_\file\0299%402x.png" />
+    <Content Include="slip_\file\1.jpg" />
+    <Content Include="slip_\file\2.jpg" />
+    <Content Include="slip_\file\3.jpg" />
+    <Content Include="slip_\file\4.jpg" />
+    <Content Include="slip_\file\5.jpg" />
+    <Content Include="slip_\file\abacus.ico" />
+    <Content Include="slip_\file\arithmetic.ico" />
+    <Content Include="slip_\file\chinaz1.ico" />
+    <Content Include="slip_\file\education.ico" />
+    <Content Include="slip_\file\health.ico" />
+    <Content Include="slip_\file\knowledge.ico" />
+    <Content Include="slip_\file\library.ico" />
+    <Content Include="slip_\file\microscope.ico" />
+    <Content Include="slip_\hd.ascx" />
+    <Content Include="slip_\js\ajaxfileupload.js" />
+    <Content Include="slip_\js\jquery-1.8.0.min.js" />
+    <Content Include="slip_\js\jquery-1.9.1.min.js" />
+    <Content Include="slip_\js\jquery.iFadeSlide.pack.js" />
+    <Content Include="slip_\l.aspx" />
+    <Content Include="slip_\lm.ascx" />
+    <Content Include="slip_\n.aspx" />
+    <Content Include="slip_\ns.aspx" />
+    <Content Include="slip_\pd.aspx" />
+    <Content Include="slip_\pf.aspx" />
+    <Content Include="slip_\pm.aspx" />
+    <Content Include="slip_\ps.aspx" />
+    <Content Include="slip_\r.aspx" />
+    <Content Include="slip_\source\Alice\one-full.css" />
+    <Content Include="slip_\source\easyui\changelog.txt" />
+    <Content Include="slip_\source\easyui\easyloader.js" />
+    <Content Include="slip_\source\easyui\easyui_ex.js" />
+    <Content Include="slip_\source\easyui\jquery-1.8.0.min.js" />
+    <Content Include="slip_\source\easyui\jquery.easyui.min.js" />
+    <Content Include="slip_\source\easyui\jquery_easyUI_dialog_form.js" />
+    <Content Include="slip_\source\easyui\licence_gpl.txt" />
+    <Content Include="slip_\source\easyui\license_commercial.txt" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-af.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-ar.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-bg.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-ca.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-cs.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-cz.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-da.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-de.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-el.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-en.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-es.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-fr.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-it.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-jp.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-nl.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-ru.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-tr.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="slip_\source\easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.accordion.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.calendar.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.combo.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.combobox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.combogrid.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.combotree.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.datagrid.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.datebox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.dialog.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.draggable.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.droppable.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.form.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.layout.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.menu.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.menubutton.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.messager.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.numberbox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.pagination.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.panel.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.parser.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.progressbar.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.resizable.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.searchbox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.slider.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.spinner.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.tabs.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.timespinner.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.tree.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.treegrid.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.validatebox.js" />
+    <Content Include="slip_\source\easyui\plugins\jquery.window.js" />
+    <Content Include="slip_\source\easyui\readme.txt" />
+    <Content Include="slip_\source\easyui\src\easyloader.js" />
+    <Content Include="slip_\source\easyui\src\jquery.accordion.js" />
+    <Content Include="slip_\source\easyui\src\jquery.calendar.js" />
+    <Content Include="slip_\source\easyui\src\jquery.combobox.js" />
+    <Content Include="slip_\source\easyui\src\jquery.datebox.js" />
+    <Content Include="slip_\source\easyui\src\jquery.draggable.js" />
+    <Content Include="slip_\source\easyui\src\jquery.droppable.js" />
+    <Content Include="slip_\source\easyui\src\jquery.form.js" />
+    <Content Include="slip_\source\easyui\src\jquery.linkbutton.js" />
+    <Content Include="slip_\source\easyui\src\jquery.menu.js" />
+    <Content Include="slip_\source\easyui\src\jquery.parser.js" />
+    <Content Include="slip_\source\easyui\src\jquery.progressbar.js" />
+    <Content Include="slip_\source\easyui\src\jquery.propertygrid.js" />
+    <Content Include="slip_\source\easyui\src\jquery.resizable.js" />
+    <Content Include="slip_\source\easyui\src\jquery.slider.js" />
+    <Content Include="slip_\source\easyui\src\jquery.tabs.js" />
+    <Content Include="slip_\source\easyui\src\jquery.window.js" />
+    <Content Include="slip_\source\easyui\themes\black\accordion.css" />
+    <Content Include="slip_\source\easyui\themes\black\calendar.css" />
+    <Content Include="slip_\source\easyui\themes\black\combo.css" />
+    <Content Include="slip_\source\easyui\themes\black\combobox.css" />
+    <Content Include="slip_\source\easyui\themes\black\datagrid.css" />
+    <Content Include="slip_\source\easyui\themes\black\datebox.css" />
+    <Content Include="slip_\source\easyui\themes\black\dialog.css" />
+    <Content Include="slip_\source\easyui\themes\black\easyui.css" />
+    <Content Include="slip_\source\easyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\combo_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\layout_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\loading.gif" />
+    <Content Include="slip_\source\easyui\themes\black\images\menu_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\messager_icons.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\pagination_icons.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\panel_tools.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\searchbox_button.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\slider_handle.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\tabs_icons.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\tree_icons.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\validatebox_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="slip_\source\easyui\themes\black\layout.css" />
+    <Content Include="slip_\source\easyui\themes\black\linkbutton.css" />
+    <Content Include="slip_\source\easyui\themes\black\menu.css" />
+    <Content Include="slip_\source\easyui\themes\black\menubutton.css" />
+    <Content Include="slip_\source\easyui\themes\black\messager.css" />
+    <Content Include="slip_\source\easyui\themes\black\pagination.css" />
+    <Content Include="slip_\source\easyui\themes\black\panel.css" />
+    <Content Include="slip_\source\easyui\themes\black\progressbar.css" />
+    <Content Include="slip_\source\easyui\themes\black\propertygrid.css" />
+    <Content Include="slip_\source\easyui\themes\black\searchbox.css" />
+    <Content Include="slip_\source\easyui\themes\black\slider.css" />
+    <Content Include="slip_\source\easyui\themes\black\spinner.css" />
+    <Content Include="slip_\source\easyui\themes\black\splitbutton.css" />
+    <Content Include="slip_\source\easyui\themes\black\tabs.css" />
+    <Content Include="slip_\source\easyui\themes\black\tree.css" />
+    <Content Include="slip_\source\easyui\themes\black\validatebox.css" />
+    <Content Include="slip_\source\easyui\themes\black\window.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\accordion.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\calendar.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\combo.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\combobox.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\datebox.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\dialog.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\easyui.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\validatebox_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\layout.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\menu.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\messager.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\pagination.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\panel.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\slider.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\spinner.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\tabs.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\tree.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\window.css" />
+    <Content Include="slip_\source\easyui\themes\default\accordion.css" />
+    <Content Include="slip_\source\easyui\themes\default\calendar.css" />
+    <Content Include="slip_\source\easyui\themes\default\combo.css" />
+    <Content Include="slip_\source\easyui\themes\default\combobox.css" />
+    <Content Include="slip_\source\easyui\themes\default\datagrid.css" />
+    <Content Include="slip_\source\easyui\themes\default\datebox.css" />
+    <Content Include="slip_\source\easyui\themes\default\dialog.css" />
+    <Content Include="slip_\source\easyui\themes\default\easyui.css" />
+    <Content Include="slip_\source\easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\loading.gif" />
+    <Content Include="slip_\source\easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\messager_icons.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\panel_tools.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\slider_handle.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\tree_icons.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\validatebox_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="slip_\source\easyui\themes\default\layout.css" />
+    <Content Include="slip_\source\easyui\themes\default\linkbutton.css" />
+    <Content Include="slip_\source\easyui\themes\default\menu.css" />
+    <Content Include="slip_\source\easyui\themes\default\menubutton.css" />
+    <Content Include="slip_\source\easyui\themes\default\messager.css" />
+    <Content Include="slip_\source\easyui\themes\default\pagination.css" />
+    <Content Include="slip_\source\easyui\themes\default\panel.css" />
+    <Content Include="slip_\source\easyui\themes\default\progressbar.css" />
+    <Content Include="slip_\source\easyui\themes\default\propertygrid.css" />
+    <Content Include="slip_\source\easyui\themes\default\searchbox.css" />
+    <Content Include="slip_\source\easyui\themes\default\slider.css" />
+    <Content Include="slip_\source\easyui\themes\default\spinner.css" />
+    <Content Include="slip_\source\easyui\themes\default\splitbutton.css" />
+    <Content Include="slip_\source\easyui\themes\default\tabs.css" />
+    <Content Include="slip_\source\easyui\themes\default\tree.css" />
+    <Content Include="slip_\source\easyui\themes\default\validatebox.css" />
+    <Content Include="slip_\source\easyui\themes\default\window.css" />
+    <Content Include="slip_\source\easyui\themes\gray\accordion.css" />
+    <Content Include="slip_\source\easyui\themes\gray\calendar.css" />
+    <Content Include="slip_\source\easyui\themes\gray\combo.css" />
+    <Content Include="slip_\source\easyui\themes\gray\combobox.css" />
+    <Content Include="slip_\source\easyui\themes\gray\datagrid.css" />
+    <Content Include="slip_\source\easyui\themes\gray\datebox.css" />
+    <Content Include="slip_\source\easyui\themes\gray\dialog.css" />
+    <Content Include="slip_\source\easyui\themes\gray\easyui.css" />
+    <Content Include="slip_\source\easyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\loading.gif" />
+    <Content Include="slip_\source\easyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\messager_icons.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\panel_tools.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\tree_icons.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\validatebox_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="slip_\source\easyui\themes\gray\layout.css" />
+    <Content Include="slip_\source\easyui\themes\gray\linkbutton.css" />
+    <Content Include="slip_\source\easyui\themes\gray\menu.css" />
+    <Content Include="slip_\source\easyui\themes\gray\menubutton.css" />
+    <Content Include="slip_\source\easyui\themes\gray\messager.css" />
+    <Content Include="slip_\source\easyui\themes\gray\pagination.css" />
+    <Content Include="slip_\source\easyui\themes\gray\panel.css" />
+    <Content Include="slip_\source\easyui\themes\gray\progressbar.css" />
+    <Content Include="slip_\source\easyui\themes\gray\propertygrid.css" />
+    <Content Include="slip_\source\easyui\themes\gray\searchbox.css" />
+    <Content Include="slip_\source\easyui\themes\gray\slider.css" />
+    <Content Include="slip_\source\easyui\themes\gray\spinner.css" />
+    <Content Include="slip_\source\easyui\themes\gray\splitbutton.css" />
+    <Content Include="slip_\source\easyui\themes\gray\tabs.css" />
+    <Content Include="slip_\source\easyui\themes\gray\tree.css" />
+    <Content Include="slip_\source\easyui\themes\gray\validatebox.css" />
+    <Content Include="slip_\source\easyui\themes\gray\window.css" />
+    <Content Include="slip_\source\easyui\themes\icon.css" />
+    <Content Include="slip_\source\easyui\themes\icons\accept.png" />
+    <Content Include="slip_\source\easyui\themes\icons\add.png" />
+    <Content Include="slip_\source\easyui\themes\icons\application_cascade.png" />
+    <Content Include="slip_\source\easyui\themes\icons\application_home.png" />
+    <Content Include="slip_\source\easyui\themes\icons\back.png" />
+    <Content Include="slip_\source\easyui\themes\icons\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\icons\book.png" />
+    <Content Include="slip_\source\easyui\themes\icons\cancel.png" />
+    <Content Include="slip_\source\easyui\themes\icons\chart_bar.png" />
+    <Content Include="slip_\source\easyui\themes\icons\cog.png" />
+    <Content Include="slip_\source\easyui\themes\icons\computer.png" />
+    <Content Include="slip_\source\easyui\themes\icons\cross.png" />
+    <Content Include="slip_\source\easyui\themes\icons\cut.png" />
+    <Content Include="slip_\source\easyui\themes\icons\date.png" />
+    <Content Include="slip_\source\easyui\themes\icons\delete.png" />
+    <Content Include="slip_\source\easyui\themes\icons\disk.png" />
+    <Content Include="slip_\source\easyui\themes\icons\door_out.png" />
+    <Content Include="slip_\source\easyui\themes\icons\edit_add.png" />
+    <Content Include="slip_\source\easyui\themes\icons\edit_remove.png" />
+    <Content Include="slip_\source\easyui\themes\icons\filesave.png" />
+    <Content Include="slip_\source\easyui\themes\icons\help.png" />
+    <Content Include="slip_\source\easyui\themes\icons\information.png" />
+    <Content Include="slip_\source\easyui\themes\icons\mini_add.png" />
+    <Content Include="slip_\source\easyui\themes\icons\mini_edit.png" />
+    <Content Include="slip_\source\easyui\themes\icons\mini_refresh.png" />
+    <Content Include="slip_\source\easyui\themes\icons\no.png" />
+    <Content Include="slip_\source\easyui\themes\icons\note.png" />
+    <Content Include="slip_\source\easyui\themes\icons\ok.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page_add.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page_delete.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page_edit.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page_paste.png" />
+    <Content Include="slip_\source\easyui\themes\icons\page_white_gear.png" />
+    <Content Include="slip_\source\easyui\themes\icons\pencil.png" />
+    <Content Include="slip_\source\easyui\themes\icons\pencil_green.png" />
+    <Content Include="slip_\source\easyui\themes\icons\photo.png" />
+    <Content Include="slip_\source\easyui\themes\icons\print.png" />
+    <Content Include="slip_\source\easyui\themes\icons\redo.png" />
+    <Content Include="slip_\source\easyui\themes\icons\reload.png" />
+    <Content Include="slip_\source\easyui\themes\icons\report_edit.png" />
+    <Content Include="slip_\source\easyui\themes\icons\search.png" />
+    <Content Include="slip_\source\easyui\themes\icons\sum.png" />
+    <Content Include="slip_\source\easyui\themes\icons\tip.png" />
+    <Content Include="slip_\source\easyui\themes\icons\undo.png" />
+    <Content Include="slip_\source\easyui\themes\icons\user_edit.png" />
+    <Content Include="slip_\source\easyui\themes\icons\user_gray.png" />
+    <Content Include="slip_\source\easyui\themes\metro\accordion.css" />
+    <Content Include="slip_\source\easyui\themes\metro\calendar.css" />
+    <Content Include="slip_\source\easyui\themes\metro\combo.css" />
+    <Content Include="slip_\source\easyui\themes\metro\combobox.css" />
+    <Content Include="slip_\source\easyui\themes\metro\datagrid.css" />
+    <Content Include="slip_\source\easyui\themes\metro\datebox.css" />
+    <Content Include="slip_\source\easyui\themes\metro\dialog.css" />
+    <Content Include="slip_\source\easyui\themes\metro\easyui.css" />
+    <Content Include="slip_\source\easyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\blank.gif" />
+    <Content Include="slip_\source\easyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\loading.gif" />
+    <Content Include="slip_\source\easyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\messager_icons.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\panel_tools.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\tree_icons.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\validatebox_arrows.png" />
+    <Content Include="slip_\source\easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="slip_\source\easyui\themes\metro\layout.css" />
+    <Content Include="slip_\source\easyui\themes\metro\linkbutton.css" />
+    <Content Include="slip_\source\easyui\themes\metro\menu.css" />
+    <Content Include="slip_\source\easyui\themes\metro\menubutton.css" />
+    <Content Include="slip_\source\easyui\themes\metro\messager.css" />
+    <Content Include="slip_\source\easyui\themes\metro\pagination.css" />
+    <Content Include="slip_\source\easyui\themes\metro\panel.css" />
+    <Content Include="slip_\source\easyui\themes\metro\progressbar.css" />
+    <Content Include="slip_\source\easyui\themes\metro\propertygrid.css" />
+    <Content Include="slip_\source\easyui\themes\metro\searchbox.css" />
+    <Content Include="slip_\source\easyui\themes\metro\slider.css" />
+    <Content Include="slip_\source\easyui\themes\metro\spinner.css" />
+    <Content Include="slip_\source\easyui\themes\metro\splitbutton.css" />
+    <Content Include="slip_\source\easyui\themes\metro\tabs.css" />
+    <Content Include="slip_\source\easyui\themes\metro\tree.css" />
+    <Content Include="slip_\source\easyui\themes\metro\validatebox.css" />
+    <Content Include="slip_\source\easyui\themes\metro\window.css" />
+    <Content Include="slip_\source\jquery.slideViewerPro.1.5\jquery.slideViewerPro.1.5.js" />
+    <Content Include="slip_\file\svwloader.gif" />
+    <Content Include="slip_\source\jquery.slideViewerPro.1.5\jquery.timers.js" />
+    <Content Include="slip_\source\jquery.slideViewerPro.1.5\svwp_style.css" />
+    <Content Include="slip_\source\kindeditor\asp.net\bin\LitJSON.dll" />
+    <Content Include="slip_\source\kindeditor\asp.net\demo.aspx" />
+    <Content Include="slip_\source\kindeditor\asp.net\README.txt" />
+    <Content Include="slip_\source\kindeditor\asp\demo.asp" />
+    <Content Include="slip_\source\kindeditor\asp\file_manager_json.asp" />
+    <Content Include="slip_\source\kindeditor\asp\JSON_2.0.4.asp" />
+    <Content Include="slip_\source\kindeditor\asp\UpLoad_Class.asp" />
+    <Content Include="slip_\source\kindeditor\asp\upload_json.asp" />
+    <Content Include="slip_\source\kindeditor\examples\auto-height.html" />
+    <Content Include="slip_\source\kindeditor\examples\colorpicker.html" />
+    <Content Include="slip_\source\kindeditor\examples\custom-plugin.html" />
+    <Content Include="slip_\source\kindeditor\examples\custom-theme.html" />
+    <Content Include="slip_\source\kindeditor\examples\default.html" />
+    <Content Include="slip_\source\kindeditor\examples\dialog.html" />
+    <Content Include="slip_\source\kindeditor\examples\dynamic-load.html" />
+    <Content Include="slip_\source\kindeditor\examples\file-dialog.html" />
+    <Content Include="slip_\source\kindeditor\examples\file-manager.html" />
+    <Content Include="slip_\source\kindeditor\examples\filter-mode.html" />
+    <Content Include="slip_\source\kindeditor\examples\image-dialog.html" />
+    <Content Include="slip_\source\kindeditor\examples\index.css" />
+    <Content Include="slip_\source\kindeditor\examples\index.html" />
+    <Content Include="slip_\source\kindeditor\examples\jquery-ui.html" />
+    <Content Include="slip_\source\kindeditor\examples\jquery.html" />
+    <Content Include="slip_\source\kindeditor\examples\mootools.html" />
+    <Content Include="slip_\source\kindeditor\examples\multi-image-dialog.html" />
+    <Content Include="slip_\source\kindeditor\examples\multi-language.html" />
+    <Content Include="slip_\source\kindeditor\examples\newline.html" />
+    <Content Include="slip_\source\kindeditor\examples\node.html" />
+    <Content Include="slip_\source\kindeditor\examples\paste-type.html" />
+    <Content Include="slip_\source\kindeditor\examples\qqstyle.html" />
+    <Content Include="slip_\source\kindeditor\examples\readonly.html" />
+    <Content Include="slip_\source\kindeditor\examples\simple.html" />
+    <Content Include="slip_\source\kindeditor\examples\uploadbutton.html" />
+    <Content Include="slip_\source\kindeditor\examples\url-type.html" />
+    <Content Include="slip_\source\kindeditor\examples\word-count.html" />
+    <Content Include="slip_\source\kindeditor\jsp\lib\commons-fileupload-1.2.1.jar" />
+    <Content Include="slip_\source\kindeditor\jsp\lib\commons-io-1.4.jar" />
+    <Content Include="slip_\source\kindeditor\jsp\lib\json_simple-1.1.jar" />
+    <Content Include="slip_\source\kindeditor\jsp\README.txt" />
+    <Content Include="slip_\source\kindeditor\kindeditor-all-min.js" />
+    <Content Include="slip_\source\kindeditor\kindeditor-all.js" />
+    <Content Include="slip_\source\kindeditor\kindeditor-min.js" />
+    <Content Include="slip_\source\kindeditor\kindeditor.js" />
+    <Content Include="slip_\source\kindeditor\lang\ar.js" />
+    <Content Include="slip_\source\kindeditor\lang\en.js" />
+    <Content Include="slip_\source\kindeditor\lang\ko.js" />
+    <Content Include="slip_\source\kindeditor\lang\zh_CN.js" />
+    <Content Include="slip_\source\kindeditor\lang\zh_TW.js" />
+    <Content Include="slip_\source\kindeditor\license.txt" />
+    <Content Include="slip_\source\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="slip_\source\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="slip_\source\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="slip_\source\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="slip_\source\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="slip_\source\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="slip_\source\kindeditor\plugins\code\code.js" />
+    <Content Include="slip_\source\kindeditor\plugins\code\prettify.css" />
+    <Content Include="slip_\source\kindeditor\plugins\code\prettify.js" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\flash\flash.js" />
+    <Content Include="slip_\source\kindeditor\plugins\image\image.js" />
+    <Content Include="slip_\source\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="slip_\source\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="slip_\source\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="slip_\source\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="slip_\source\kindeditor\plugins\link\link.js" />
+    <Content Include="slip_\source\kindeditor\plugins\map\map.html" />
+    <Content Include="slip_\source\kindeditor\plugins\map\map.js" />
+    <Content Include="slip_\source\kindeditor\plugins\media\media.js" />
+    <Content Include="slip_\source\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="slip_\source\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="slip_\source\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="slip_\source\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="slip_\source\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="slip_\source\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="slip_\source\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="slip_\source\kindeditor\plugins\preview\preview.js" />
+    <Content Include="slip_\source\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="slip_\source\kindeditor\plugins\table\table.js" />
+    <Content Include="slip_\source\kindeditor\plugins\template\html\1.html" />
+    <Content Include="slip_\source\kindeditor\plugins\template\html\2.html" />
+    <Content Include="slip_\source\kindeditor\plugins\template\html\3.html" />
+    <Content Include="slip_\source\kindeditor\plugins\template\template.js" />
+    <Content Include="slip_\source\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="slip_\source\kindeditor\themes\common\anchor.gif" />
+    <Content Include="slip_\source\kindeditor\themes\common\blank.gif" />
+    <Content Include="slip_\source\kindeditor\themes\common\flash.gif" />
+    <Content Include="slip_\source\kindeditor\themes\common\loading.gif" />
+    <Content Include="slip_\source\kindeditor\themes\common\media.gif" />
+    <Content Include="slip_\source\kindeditor\themes\common\rm.gif" />
+    <Content Include="slip_\source\kindeditor\themes\default\background.png" />
+    <Content Include="slip_\source\kindeditor\themes\default\default.css" />
+    <Content Include="slip_\source\kindeditor\themes\default\default.png" />
+    <Content Include="slip_\source\kindeditor\themes\qq\editor.gif" />
+    <Content Include="slip_\source\kindeditor\themes\qq\qq.css" />
+    <Content Include="slip_\source\kindeditor\themes\simple\simple.css" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-basic.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-event-callbacks.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-fickr.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-flickr-nozoom.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-instagram.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-mixed-JSON-html.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-nozoom.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\demos\mosaiqy-panoramio.html" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\1.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\10.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\2.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\3.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\4.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\5.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\6.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\7.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\8.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\9.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\1.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\10.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\2.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\3.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\4.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\5.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\6.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\7.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\8.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\9.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\jquery-1.6.1.min.js" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\lib-css\mosaiqy.css" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\lib-img\ajax-loader.gif" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\lib-img\close.png" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\lib-img\figcaption-IE-bg.png" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\mosaiqy-1.0.1.js" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\mosaiqy-1.0.1.min.js" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._1.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._10.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._2.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._3.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._4.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._5.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._6.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._7.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._8.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._9.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\zoom\._8.jpg" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\lib\lib-css\._mosaiqy.css" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\lib\lib-img\._ajax-loader.gif" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\lib\lib-img\._close.png" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\lib\lib-img\._figcaption-IE-bg.png" />
+    <Content Include="slip_\source\qTip2\basic.css" />
+    <Content Include="slip_\source\qTip2\core.css" />
+    <Content Include="slip_\source\qTip2\core.js" />
+    <Content Include="slip_\source\qTip2\css3.css" />
+    <Content Include="slip_\source\qTip2\ie6\ie6.css" />
+    <Content Include="slip_\source\qTip2\ie6\ie6.js" />
+    <Content Include="slip_\source\qTip2\intro.js" />
+    <Content Include="slip_\source\qTip2\modal\modal.css" />
+    <Content Include="slip_\source\qTip2\modal\modal.js" />
+    <Content Include="slip_\source\qTip2\outro.js" />
+    <Content Include="slip_\source\qTip2\position\imagemap.js" />
+    <Content Include="slip_\source\qTip2\position\polys.js" />
+    <Content Include="slip_\source\qTip2\position\svg.js" />
+    <Content Include="slip_\source\qTip2\position\viewport.js" />
+    <Content Include="slip_\source\qTip2\tips\jquery.qtip.min.css" />
+    <Content Include="slip_\source\qTip2\tips\jquery.qtip.min.js" />
+    <Content Include="slip_\source\qTip2\tips\jquery.qtip.nightly.min.css" />
+    <Content Include="slip_\source\qTip2\tips\jquery.qtip.nightly.min.js" />
+    <Content Include="slip_\source\qTip2\tips\tips.css" />
+    <Content Include="slip_\source\qTip2\tips\tips.js" />
     <Content Include="Sourse\img\uploadify-cancel.png" />
     <Content Include="Sourse\jquery_easyui\changelog.txt" />
     <Content Include="Sourse\jquery_easyui\demo\accordion.html" />
@@ -2636,12 +3357,23 @@
     <Compile Include="Department.aspx.designer.cs">
       <DependentUpon>Department.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dj\admin\adminEditPwd.aspx.cs">
+      <DependentUpon>adminEditPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dj\admin\adminEditPwd.aspx.designer.cs">
+      <DependentUpon>adminEditPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dj\DjOledb.cs" />
     <Compile Include="dj\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dj\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dj\login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
     </Compile>
     <Compile Include="Down.aspx.cs">
       <DependentUpon>Down.aspx</DependentUpon>
@@ -2658,6 +3390,20 @@
       <DependentUpon>DownList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Share\FootControl.ascx.cs">
+      <DependentUpon>FootControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\FootControl.ascx.designer.cs">
+      <DependentUpon>FootControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Share\HeaderControl.ascx.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\HeaderControl.ascx.designer.cs">
+      <DependentUpon>HeaderControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Share\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2719,6 +3465,9 @@
     </Compile>
     <Compile Include="slip\Admin\news.aspx.designer.cs">
       <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip\Admin\news_delete.ashx.cs">
+      <DependentUpon>news_delete.ashx</DependentUpon>
     </Compile>
     <Compile Include="slip\Admin\news_list.ashx.cs">
       <DependentUpon>news_list.ashx</DependentUpon>
@@ -3027,6 +3776,13 @@
     <Compile Include="slip\opd.aspx.designer.cs">
       <DependentUpon>opd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip\ops.aspx.cs">
+      <DependentUpon>ops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip\ops.aspx.designer.cs">
+      <DependentUpon>ops.aspx</DependentUpon>
+    </Compile>
     <Compile Include="slip\Profile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3175,6 +3931,147 @@
     <Compile Include="slip\tpNotice.aspx.designer.cs">
       <DependentUpon>tpNotice.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip_\admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\en.aspx.cs">
+      <DependentUpon>en.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\en.aspx.designer.cs">
+      <DependentUpon>en.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\eop.aspx.cs">
+      <DependentUpon>eop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\eop.aspx.designer.cs">
+      <DependentUpon>eop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\fileManage.ashx.cs">
+      <DependentUpon>fileManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\ndl.ashx.cs">
+      <DependentUpon>ndl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\nl.ashx.cs">
+      <DependentUpon>nl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\of.aspx.cs">
+      <DependentUpon>of.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\of.aspx.designer.cs">
+      <DependentUpon>of.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\opdl.ashx.cs">
+      <DependentUpon>opdl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\opl.ashx.cs">
+      <DependentUpon>opl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\otl.ashx.cs">
+      <DependentUpon>otl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\upload.ashx.cs">
+      <DependentUpon>upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\et.aspx.cs">
+      <DependentUpon>et.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\et.aspx.designer.cs">
+      <DependentUpon>et.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\hd.ascx.cs">
+      <DependentUpon>hd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\hd.ascx.designer.cs">
+      <DependentUpon>hd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\l.aspx.cs">
+      <DependentUpon>l.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\l.aspx.designer.cs">
+      <DependentUpon>l.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\lm.ascx.cs">
+      <DependentUpon>lm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\lm.ascx.designer.cs">
+      <DependentUpon>lm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\n.aspx.cs">
+      <DependentUpon>n.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\n.aspx.designer.cs">
+      <DependentUpon>n.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\ns.aspx.cs">
+      <DependentUpon>ns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\ns.aspx.designer.cs">
+      <DependentUpon>ns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\DateModel.cs" />
+    <Compile Include="slip_\pd.aspx.cs">
+      <DependentUpon>pd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\pd.aspx.designer.cs">
+      <DependentUpon>pd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\pf.aspx.cs">
+      <DependentUpon>pf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\pf.aspx.designer.cs">
+      <DependentUpon>pf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\pm.aspx.cs">
+      <DependentUpon>pm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\pm.aspx.designer.cs">
+      <DependentUpon>pm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\ps.aspx.cs">
+      <DependentUpon>ps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\ps.aspx.designer.cs">
+      <DependentUpon>ps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\r.aspx.cs">
+      <DependentUpon>r.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\r.aspx.designer.cs">
+      <DependentUpon>r.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3193,6 +4090,8 @@
     <Folder Include="slip\Sources\ProjectImg\Original\" />
     <Folder Include="slip\Sources\TampImgs\" />
     <Folder Include="slip\Sources\TempFiles\" />
+    <Folder Include="slip_\admin\files\" />
+    <Folder Include="slip_\source\kindeditor\attached\" />
     <Folder Include="Sourse\Files\" />
     <Folder Include="Sourse\kindeditor_4.1.3\attached\" />
   </ItemGroup>
@@ -3256,6 +4155,8 @@
     <Content Include="slip\Admin\pc_list.ashx" />
     <Content Include="slip\Admin\pcStep_list.ashx" />
     <Content Include="slip\Admin\cp_delete.ashx" />
+    <Content Include="dj\login.ashx" />
+    <Content Include="slip\Admin\news_delete.ashx" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetIdHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\GetInfoHandler.jsp" />
     <None Include="slip\Sources\dhtmlxvault_std_1.6\handlers\jsp\UploadHandler.jsp" />
@@ -3389,11 +4290,48 @@
     <Content Include="Sourse\uploadify-v3.1\.htaccess" />
     <Content Include="Sourse\uploadify-v3.1\check-exists.php" />
     <Content Include="Sourse\uploadify-v3.1\uploadify.php" />
+    <Content Include="slip_\source\easyui\themes\black\images\Thumbs.db" />
+    <Content Include="slip_\source\easyui\themes\bootstrap\images\Thumbs.db" />
+    <Content Include="slip_\source\easyui\themes\default\images\Thumbs.db" />
+    <Content Include="slip_\source\easyui\themes\gray\images\Thumbs.db" />
+    <Content Include="slip_\source\easyui\themes\metro\images\Thumbs.db" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\thumb\Thumbs.db" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\images\zoom\Thumbs.db" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\lib\lib-img\Thumbs.db" />
+    <Content Include="slip_\source\mosaiqy1.0.1\README" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\._.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\thumb\._.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\images\zoom\._.DS_Store" />
+    <Content Include="slip_\source\mosaiqy1.0.1\__MACOSX\lib\._.DS_Store" />
+    <Content Include="slip_\source\kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="slip_\source\kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="slip_\source\kindeditor\jsp\demo.jsp" />
+    <Content Include="slip_\source\kindeditor\jsp\file_manager_json.jsp" />
+    <Content Include="slip_\source\kindeditor\jsp\upload_json.jsp" />
+    <Content Include="slip_\source\kindeditor\php\demo.php" />
+    <Content Include="slip_\source\kindeditor\php\file_manager_json.php" />
+    <Content Include="slip_\source\kindeditor\php\JSON.php" />
+    <Content Include="slip_\source\kindeditor\php\upload_json.php" />
+    <Content Include="slip_\admin\nl.ashx" />
+    <Content Include="slip_\admin\ndl.ashx" />
+    <Content Include="slip_\admin\otl.ashx" />
+    <Content Include="slip_\admin\opl.ashx" />
+    <Content Include="slip_\admin\opdl.ashx" />
+    <Content Include="slip_\admin\upload.ashx" />
+    <Content Include="slip_\admin\fileManage.ashx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\SRlib\SRLib\SRLib.csproj">
       <Project>{7a97e212-b647-443b-84bf-2aec46cce337}</Project>
       <Name>SRLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GitHub\SRFileManagerLibrary\SRFileManagerLibrary\SRFileManagerLibrary.csproj">
+      <Project>{adb20e89-4121-420f-8b6c-a5456f33a7fe}</Project>
+      <Name>SRFileManagerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -3407,12 +4345,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9214</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:9214/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

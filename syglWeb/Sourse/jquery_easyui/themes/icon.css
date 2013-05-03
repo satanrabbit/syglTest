@@ -109,3 +109,19 @@
 .icon-information {
     background:url('icons/information.png') no-repeat;
 }
+.icon-chart_bar {
+    background:url('icons/chart_bar.png') no-repeat;
+}
+.icon-page_paste {
+    background:url('icons/page_paste.png') no-repeat;
+}
+.icon-computer {
+    background:url('icons/computer.png') no-repeat;
+}
+.icon-user_gray {
+    background:url('icons/user_gray.png') no-repeat;
+}
+.icon-application_home {
+    background:url('icons/application_home.png') no-repeat;
+}
+
