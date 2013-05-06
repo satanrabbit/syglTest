@@ -7,28 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace syglWeb.slip_ {
+namespace syglWeb.slip_.admin {
     
     
-    public partial class ps {
-        
-        /// <summary>
-        /// Head1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
-        /// <summary>
-        /// form1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class login {
         
         /// <summary>
         /// hd 控件。
@@ -40,21 +22,21 @@ namespace syglWeb.slip_ {
         protected global::syglWeb.slip_.hd hd;
         
         /// <summary>
-        /// supportTitle 控件。
+        /// ff 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label supportTitle;
+        protected global::System.Web.UI.HtmlControls.HtmlForm ff;
         
         /// <summary>
-        /// supportContent 控件。
+        /// Panel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label supportContent;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
     }
 }

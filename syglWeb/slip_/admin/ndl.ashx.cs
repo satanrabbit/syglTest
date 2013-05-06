@@ -6,7 +6,7 @@ using LitJson;
 namespace syglWeb.slip_.admin
 {
     /// <summary>
-    /// ndl 的摘要说明
+    /// ndl 删除新闻
     /// </summary>
     public class ndl : IHttpHandler
     {

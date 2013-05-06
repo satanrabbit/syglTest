@@ -77,8 +77,8 @@
                 </div>
             </div>
             <div class="ui-grid-18">
-                <div class="crumb">  <a href="#" >创新平台</a>
-					&gt; <a href="#" >创新资讯</a>
+                <div class="crumb">  <a href="default.aspx" >创新平台</a>
+					&gt; <a href="ns.aspx" >创新资讯</a>
 					&gt; <a href="#" ><font style="font-weight:bold"><asp:Label runat="server" ID="ntitleTop"></asp:Label></font></a>							
                 </div>
                 <div class="help-detail">

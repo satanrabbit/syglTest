@@ -17,7 +17,7 @@
     <script src="source/easyui/jquery_easyUI_dialog_form.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
+   
     <div class="wrapper">
         <uc1:hd runat="server" id="hd" />
         <div class="ui-grid-row">
@@ -77,96 +77,76 @@
                 </div>
             </div>
             <div class="ui-grid-18">
-                <div class="crumb">        			              																																																													<a href="http://help.alipay.com/lab/index.htm" seed="helpCrumb-link" smartracker="on">帮助中心</a>
-					&gt; <a href="#" >创新平台</a>
-					&gt; <a href="#" >创新资讯</a>
-					
+                <div class="crumb"><a href="default.aspx" >创新平台</a>
+					&gt; <a href="ns.aspx" >创新资讯</a>
                 </div>
                 <table class="ui-table ui-table-noborder">
-                    <tbody><tr>  
-                            <td width="300">
-                                <p>
-                                    <a href="n.aspx">地址：浙江省杭州市西湖区晚唐路567号</a>
-                                </p>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
-                        <tr>  
-                            <td>
-                                <a>地址：浙江省杭州市西湖区晚唐路567号</a>
-                            </td>
-                            <td>2012-2-30</td>
-                            <td>详细</td>
-                        </tr>
+                    <tbody>
+                        <asp:Repeater ID="NewsRepeater" runat="server">
+                            <ItemTemplate>
+                                 <tr>  
+                                    <td >
+                                        <p>
+                                            <a href="n.aspx?n=<%# Eval("newsID")%>"><%#Eval("newsTitle") %></a>
+                                        </p>
+                                    </td>
+                                    <td width="100"><%# Convert.ToDateTime(Eval("newsPostTime")).ToString("yyyy年MM月dd日") %></td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                       
                     </tbody>
-                </table>
-                <div class="ui-paging">
-                    <a href="#" class="ui-paging-prev">
+                </table> 
+                    <div class="ui-paging">
+
+                    <%if (page>1) { %><a href="ns.aspx?page=<%= page-1 %>" class="ui-paging-prev">
                         <i class="iconfont" title="左三角形"></i> 上一页
                     </a>
-                    <a href="#" class="ui-paging-item">1</a>
-                    <a href="#" class="ui-paging-item ui-paging-current">2</a>
-                    <a href="#" class="ui-paging-item">3</a>
-                    <a href="#" class="ui-paging-item">4</a>
-                    <a href="#" class="ui-paging-item">5</a>
-                    <a href="#" class="ui-paging-item">6</a>
-                    <a href="#" class="ui-paging-item">7</a>
-                    <span class="ui-paging-ellipsis">...</span>
-                    <a href="#" class="ui-paging-item">24</a>
-                    <a href="#" class="ui-paging-next">
+                    <%}for(int i =1; i<=pages;i++){
+                          int li =Math.Abs( page - i);
+                          if (i == 1||i==pages||page<=8)
+                          {
+                             %> <a href="#" class="ui-paging-item <% if (li == 0) { %>ui-paging-current<%}%>"><%= i %></a><%
+                          }else
+                          {
+                            if (page > 8) {
+                               
+                                  if (li == 5)
+                                  {
+                                      %>…<%
+                                  }
+                                if (li == 0)
+                                {
+                                    %> <a href="#" class="ui-paging-item ui-paging-current "><%= i %></a><%
+                                }
+                                if (li < 5)
+                                {
+                                    %><a href="#" class="ui-paging-item <% if (li == 0) { %>ui-paging-current<%}%>"><%= i %></a> <% 
+                                }
+                                
+                              }
+                          } 
+                    } 
+                      if(page<pages){ %>
+                    <a href="ns.aspx?page=<%= page+1 %>" class="ui-paging-next">
                         下一页 <i class="iconfont" title="右三角形"></i>
                     </a>
-                    <span class="ui-paging-info"><span class="ui-paging-bold">5/7</span>页</span>
-                    <span class="ui-paging-which"><input name="some_name" value="6" type="text"></span>
-                    <a class="ui-paging-info ui-paging-goto" href="#">跳转</a>
+                    <%} %>
+                    <span class="ui-paging-info"><span class="ui-paging-bold"><%=page %>/<%=pages %></span>页</span>
+                    <span class="ui-paging-which"><input id="page-to" name="some_name" value="1" type="text" /></span>
+                    <a class="ui-paging-info ui-paging-goto" id="jump-page" href="#">跳转</a>
                 </div>
-
+                 <script type="text/javascript">
+                     $(function () {
+                         $("#jump-page").click(function () {
+                             window.location.href = "ns.aspx?page=" + $("#page-to").val();
+                         });
+                         
+                     });
+                 </script>
             </div>
+                     
         </div>
-    </div>
-    </form>
+    </div> 
 </body>
 </html>

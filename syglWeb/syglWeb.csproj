@@ -168,8 +168,12 @@
     <Content Include="slip\Style\Images\logo.gif" />
     <Content Include="slip\Style\Images\xx.gif" />
     <Content Include="slip_\admin\default.aspx" />
+    <Content Include="slip_\admin\ep.aspx" />
     <Content Include="slip_\admin\en.aspx" />
     <Content Include="slip_\admin\eop.aspx" />
+    <Content Include="slip_\admin\espt.aspx" />
+    <Content Include="slip_\admin\login.aspx" />
+    <Content Include="slip_\admin\mot.aspx" />
     <Content Include="slip_\admin\news.aspx" />
     <Content Include="slip_\admin\of.aspx" />
     <Content Include="slip_\css\iFadeSlide.css" />
@@ -206,6 +210,7 @@
     <Content Include="slip_\lm.ascx" />
     <Content Include="slip_\n.aspx" />
     <Content Include="slip_\ns.aspx" />
+    <Content Include="slip_\opd.aspx" />
     <Content Include="slip_\pd.aspx" />
     <Content Include="slip_\pf.aspx" />
     <Content Include="slip_\pm.aspx" />
@@ -881,6 +886,8 @@
     <Content Include="slip_\source\qTip2\tips\jquery.qtip.nightly.min.js" />
     <Content Include="slip_\source\qTip2\tips\tips.css" />
     <Content Include="slip_\source\qTip2\tips\tips.js" />
+    <Content Include="slip_\file\200.png" />
+    <Content Include="slip_\admin\spts.aspx" />
     <Content Include="Sourse\img\uploadify-cancel.png" />
     <Content Include="Sourse\jquery_easyui\changelog.txt" />
     <Content Include="Sourse\jquery_easyui\demo\accordion.html" />
@@ -3938,6 +3945,13 @@
     <Compile Include="slip_\admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip_\admin\ep.aspx.cs">
+      <DependentUpon>ep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\ep.aspx.designer.cs">
+      <DependentUpon>ep.aspx</DependentUpon>
+    </Compile>
     <Compile Include="slip_\admin\en.aspx.cs">
       <DependentUpon>en.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3952,8 +3966,29 @@
     <Compile Include="slip_\admin\eop.aspx.designer.cs">
       <DependentUpon>eop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip_\admin\espt.aspx.cs">
+      <DependentUpon>espt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\espt.aspx.designer.cs">
+      <DependentUpon>espt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="slip_\admin\fileManage.ashx.cs">
       <DependentUpon>fileManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\mot.aspx.cs">
+      <DependentUpon>mot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\mot.aspx.designer.cs">
+      <DependentUpon>mot.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip_\admin\ndl.ashx.cs">
       <DependentUpon>ndl.ashx</DependentUpon>
@@ -3965,6 +4000,7 @@
     <Compile Include="slip_\admin\news.aspx.designer.cs">
       <DependentUpon>news.aspx</DependentUpon>
     </Compile>
+    <Compile Include="slip_\admin\newsForJson.cs" />
     <Compile Include="slip_\admin\nl.ashx.cs">
       <DependentUpon>nl.ashx</DependentUpon>
     </Compile>
@@ -3981,8 +4017,17 @@
     <Compile Include="slip_\admin\opl.ashx.cs">
       <DependentUpon>opl.ashx</DependentUpon>
     </Compile>
+    <Compile Include="slip_\admin\otdel.ashx.cs">
+      <DependentUpon>otdel.ashx</DependentUpon>
+    </Compile>
     <Compile Include="slip_\admin\otl.ashx.cs">
       <DependentUpon>otl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\saveot.ashx.cs">
+      <DependentUpon>saveot.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\sptl.ashx.cs">
+      <DependentUpon>sptl.ashx</DependentUpon>
     </Compile>
     <Compile Include="slip_\admin\upload.ashx.cs">
       <DependentUpon>upload.ashx</DependentUpon>
@@ -4037,6 +4082,13 @@
       <DependentUpon>ns.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip_\DateModel.cs" />
+    <Compile Include="slip_\opd.aspx.cs">
+      <DependentUpon>opd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\opd.aspx.designer.cs">
+      <DependentUpon>opd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="slip_\pd.aspx.cs">
       <DependentUpon>pd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4071,6 +4123,13 @@
     </Compile>
     <Compile Include="slip_\r.aspx.designer.cs">
       <DependentUpon>r.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\admin\spts.aspx.cs">
+      <DependentUpon>spts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\admin\spts.aspx.designer.cs">
+      <DependentUpon>spts.aspx</DependentUpon>
     </Compile>
     <Compile Include="test\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -4323,6 +4382,9 @@
     <Content Include="slip_\admin\opdl.ashx" />
     <Content Include="slip_\admin\upload.ashx" />
     <Content Include="slip_\admin\fileManage.ashx" />
+    <Content Include="slip_\admin\saveot.ashx" />
+    <Content Include="slip_\admin\otdel.ashx" />
+    <Content Include="slip_\admin\sptl.ashx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SRlib\SRLib\SRLib.csproj">

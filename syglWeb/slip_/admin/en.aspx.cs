@@ -44,14 +44,14 @@ namespace syglWeb.slip_.admin
                     returnMsg(2,"请填写文章标题");
                 }
 
-                if (Request.Form["newsPostTime"] == "" || Request.Form["newsPostTime"] == null)
+                if (Request.Form["newsPostTime"].Trim() == "" || Request.Form["newsPostTime"].Trim() == null)
                 {
                     nw.newsPostTime = DateTime.Now;
                 }
                 else
                 {
                     string dd = Request.Form["newsPostTime"] + " " + DateTime.Now.ToShortTimeString();
-                    nw.newsPostTime =Convert.ToDateTime( dd);
+                    nw.newsPostTime =Convert.ToDateTime(dd);
                 }
 
                 if (Request.Form["newsContent"] == "" || Request.Form["newsContent"] == null)
@@ -65,16 +65,13 @@ namespace syglWeb.slip_.admin
                 
                     dm.SaveNews(nw);
                     returnMsg(1,"保存成功！");
-                  
-                
-
             }
             else
             {
                 if (Request.Params["n"] == "" || Request.Params["n"] == null)
                 {
                     //新建，啥也不做
-
+                    this.newsPostTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 }
                 else
                 {

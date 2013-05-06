@@ -26,7 +26,7 @@
         $.extend({
             delete_news: function (aids, href, $tt) {
                 $.post(href, { nids: aids }, function (data) {
-                    console.info(data);
+                    
                     data = $.parseJSON(data);
                     if (data.status === 1) {
                         $.messager.show({ title: "删除成功！", msg: data.msg, timeout: 2000 });
@@ -65,8 +65,7 @@
                         iconCls: "icon-add",
                         handler: function () {
                             $.sr_edit_dialog("en.aspx", { title: '修改新闻', form: 'editNews', width: 600, maximized: true, maximizable: true, modal: true }, function (data) {
-                                data = $.parseJSON(data);
-                                console.info(data.stauts);
+                                data = $.parseJSON(data);                                
                                 if (data.stauts === 1) {
                                     //成功，刷新datagrid，提醒
                                     $.messager.show({ title: '添加成功', msg: data.msg, timeout: 2000 });
@@ -95,13 +94,6 @@
                                 }
                             });
                         }
-                    //}, "-", {
-                    //    text: "查询",
-                    //    iconCls: "icon-search",
-                    //    handler: function () {
-                    //        $("body").layout("expand", "north");
-                    //        $("#lease_house_tt").datagrid("clearSelections");
-                    //    }
                     },
                     "-"
                 ],

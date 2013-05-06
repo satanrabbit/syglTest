@@ -6,11 +6,7 @@ using LitJson;
 
 namespace syglWeb.slip_.admin
 {
-    public class newsForJson
-    {
-        public List<News> rows { get; set; }
-        public int total {get;set;}
-    }
+    
     /// <summary>
     /// 获取新闻的json字符串
     /// </summary>

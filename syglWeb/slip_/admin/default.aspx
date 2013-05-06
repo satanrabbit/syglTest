@@ -42,9 +42,9 @@
     </style>  
 </head>
 <body  class="easyui-layout"  >
-		<div region="north"  style="height:70px;background-color:#f0f0f0;">
-            <div style="position:relative; height:70px;">
-                <div style="position:absolute; right:30px;bottom:5px;">
+		<div region="north"  style="height:50px;background-color:#f0f0f0;">
+            <div style="position:relative; height:45px;">
+                <div style="position:absolute; right:30px;bottom:2px;">
                       <p><a class="easyui-linkbutton" href="#" data-options="iconCls:'icon-door_out'">退出</a></p>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 		        <div class="op-memu" >
                     <p ><a class="easyui-linkbutton menuLink" href="news.aspx" data-options="iconCls:'icon-report_edit'" >创新资讯</a></p>
                     <p ><a class="easyui-linkbutton menuLink"  href="of.aspx" data-options="iconCls:'icon-note'">创新成果(旧)</a></p>
-                    <p ><a class="easyui-linkbutton menuLink"  data-options="iconCls:'icon-chart_bar'" >项目支持</a></p
+                    <p ><a class="easyui-linkbutton menuLink" href="spts.aspx"  data-options="iconCls:'icon-chart_bar'" >项目支持</a></p
                     <p ><a class="easyui-linkbutton menuLink"  data-options="iconCls:'icon-chart_bar'" >帮助中心</a></p>
 		        </div>
                      

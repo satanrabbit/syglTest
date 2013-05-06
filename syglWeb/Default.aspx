@@ -75,7 +75,7 @@
                 <li class="longTile"><a href="http://210.31.141.73/dzyh/Default_Stu.aspx" class="subdoor" ><i id="door2" class="door2">.</i><span class="sdtext">低值易耗品申领系统</span></a></li>
                 <li class="longTile"><a href="http://210.31.141.73/dxyq/index.aspx" class="subdoor" ><i id="door3" class="door3">.</i><span class="sdtext">大型仪器预约系统</span></a></li>
                 <li class="longTile"><a href="http://sygl.tust.edu.cn/webdecl/login.aspx" class="subdoor" ><i id="door6" class="door6">.</i><span class="sdtext">实验室信息上报系统</span></a></li>
-                 <li class="shortTile"><a href="/slip/" target="_blank" class="subdoor" ><i id="door4" class="door4">.</i><span class="sdtext">创新平台</span></a></li>
+                 <li class="shortTile"><a href="/slip_/" target="_blank" class="subdoor" ><i id="door4" class="door4">.</i><span class="sdtext">创新平台</span></a></li>
                 <li class="shortTile"><a href="/sf/index.html" class="subdoor" ><i id="door5" class="door5">.</i><span class="sdtext">示范中心</span></a></li>
             </ul>
             <script type="text/javascript">

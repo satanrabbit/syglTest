@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ps.aspx.cs" Inherits="syglWeb.slip_.ps" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="opd.aspx.cs" Inherits="syglWeb.slip_.opd" %>
+
 <%@ Register Src="~/slip_/hd.ascx" TagPrefix="uc1" TagName="hd" %>
 <!DOCTYPE html>
-<!--项目支持页面-->
+<!--旧的项目成果详细页--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -21,22 +22,20 @@
     <div class="wrapper">
        <uc1:hd runat="server" id="hd" />
          <div class="ui-grid-row">
-            <div class="ui-grid-7">
+            <div class="ui-grid-5">
                      <div class="ui-box"> 
                      <div class="ui-box-head">
                         <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">项目支持</h3>
+                            <h3 class="ui-box-head-title">历届优秀成果展示</h3>
                         </div>
                     </div>
                     <div class="ui-box-container">
                         <div class="ui-box-content">
                             <div class="ul_support">
-                                  <a  href="Support/SupportDetail.aspx?sid=1">经费支持</a>          
-                                  <a  href="Support/SupportDetail.aspx?sid=2">条件保障</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=3">院系合作</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=4">校企联合</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=5">创新竞赛</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=6">创新训练基地</a>
+                                  <a  href="#">2013年开放基金优秀项目</a>
+                                  <a  href="#">2012年开放基金优秀项目</a>
+                                  <a  href="#">2011年开放基金优秀项目</a>
+                                  <a  href="#">2010年开放基金优秀项目</a>
                                 </div>
                         </div>
                     </div>
@@ -77,18 +76,33 @@
                 </div>
            
             </div>
-            <div class="ui-grid-18">
-                <div class="crumb"><a href="default.aspx" >创新平台</a>
-					&gt; <a href="#" >项目支持</a> 						
+            <div class="ui-grid-20">
+                <div class="crumb"> 
+                    <a href="#" >创新平台</a>
+					&gt; <a href="pf.aspx" >创新成果</a>
+					&gt; <asp:HyperLink ID="opTypeLink" runat="server"></asp:HyperLink>
+                    						
                 </div>
                 <div class="help-detail">
         			<h2 class="detail-title">
-        				<asp:Label runat="server" ID="supportTitle"></asp:Label>
+        				<asp:Label ID="opTitle" runat="server"></asp:Label>
         			</h2>
-        			<div class="detail-content">
-                        <asp:Label runat="server" ID="supportContent"></asp:Label>
-        		    </div> 
-		</div>
+        			<table class="ui-table ui-table-noborder ">
+                        <tbody>
+                            <tr>          
+                                <td width="120"> <asp:Image ID="opImage" runat="server" ImageUrl="~/slip_/file/200.png" Width="100" /></td>
+                                <td>
+                                    <p>负责人：<asp:Label runat="server" ID="opLeader"></asp:Label> &emsp; &emsp;联系邮箱：<asp:Label runat="server" ID="opEmail"></asp:Label> &emsp; &emsp;单位：<asp:Label runat="server" ID="opDepartment"></asp:Label></p>
+                                    <br />
+                                    <p>项目时间：<asp:Label runat="server" ID="opYear"></asp:Label>&emsp; &emsp;项目成员：<asp:Label runat="server" ID="opNum"></asp:Label></p>
+                                </td>
+                            </tr>        
+                        </tbody>
+                    </table> 
+                    <div  style="margin:10px;">
+                        <asp:Label runat="server" ID="opContent"></asp:Label>
+                    </div>
+		        </div>
             </div>
         </div>
     </div>

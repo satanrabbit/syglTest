@@ -14,8 +14,17 @@ namespace syglWeb.slip_.admin
         public void ProcessRequest(HttpContext context)
         {
             DataModal dm = new DataModal();
+            List<oldType> ots = dm.GetOldType();
+            if (context.Request.Params["al"] == "true")
+            {
+                oldType ot = new oldType();
+                ot.typeID = 0;
+                ot.typeIndex = 99999;
+                ot.typeName = "全部";
+                ots.Add(ot);
+            }
             context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
-            context.Response.Write(JsonMapper.ToJson(dm.GetOldType()));
+            context.Response.Write(JsonMapper.ToJson(ots));
             context.Response.End();
         }
 

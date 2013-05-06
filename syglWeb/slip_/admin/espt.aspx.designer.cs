@@ -7,37 +7,19 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace syglWeb.slip_ {
+namespace syglWeb.slip_.admin {
     
     
-    public partial class ps {
+    public partial class espt {
         
         /// <summary>
-        /// Head1 控件。
+        /// editSupport 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
-        /// <summary>
-        /// form1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// hd 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::syglWeb.slip_.hd hd;
+        protected global::System.Web.UI.HtmlControls.HtmlForm editSupport;
         
         /// <summary>
         /// supportTitle 控件。
@@ -46,7 +28,7 @@ namespace syglWeb.slip_ {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label supportTitle;
+        protected global::System.Web.UI.WebControls.TextBox supportTitle;
         
         /// <summary>
         /// supportContent 控件。
@@ -55,6 +37,15 @@ namespace syglWeb.slip_ {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label supportContent;
+        protected global::System.Web.UI.WebControls.TextBox supportContent;
+        
+        /// <summary>
+        /// supportID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField supportID;
     }
 }
