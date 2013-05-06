@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 using LitJson;
+using System.Web.SessionState;
 
 
 namespace syglWeb.slip_.admin
@@ -10,10 +11,19 @@ namespace syglWeb.slip_.admin
     /// <summary>
     /// 获取新闻的json字符串
     /// </summary>
-    public class nl : IHttpHandler
+    public class nl : IHttpHandler, IRequiresSessionState
     {
         public void ProcessRequest(HttpContext context)
         {
+            if (context.Session["SlipAdmin"] == null)
+            {
+                //保存出错
+
+                context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+                context.Response.StatusCode = 401;
+                context.Response.StatusDescription = "您没有登录或登录超时，请重新登录！";
+                context.Response.End();
+            }
             listNewsWithPages ln = new listNewsWithPages();
             DataModal dm = new DataModal();
 

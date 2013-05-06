@@ -5,18 +5,27 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.SessionState;
 
 namespace syglWeb.slip_.admin
 {
     /// <summary>
     /// fileManage 的摘要说明
     /// </summary>
-    public class fileManage : IHttpHandler
+    public class fileManage : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
+            if (context.Session["SlipAdmin"] == null)
+            {
+                //保存出错
 
+               context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+               context.Response.StatusCode = 401;
+               context.Response.StatusDescription = "您没有登录或登录超时，请重新登录！";
+               context.Response.End();
+            }
             String aspxUrl = context.Request.Path.Substring(0, context.Request.Path.LastIndexOf("/") + 1);
 
             //根目录路径，相对路径

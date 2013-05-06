@@ -2,17 +2,27 @@
 using System;
 using System.Collections.Generic;
 using System.Web;
+using System.Web.SessionState;
 
 namespace syglWeb.slip_.admin
 {
     /// <summary>
     /// opl 旧的创新成果的列表
     /// </summary>
-    public class opl : IHttpHandler
+    public class opl : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
+            if (context.Session["SlipAdmin"] == null)
+            {
+                //保存出错
+
+                context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+                context.Response.StatusCode = 401;
+                context.Response.StatusDescription = "您没有登录或登录超时，请重新登录！";
+                context.Response.End();
+            }
             oldProjectWithtotal opt = new oldProjectWithtotal();
             DataModal dm = new DataModal();
 

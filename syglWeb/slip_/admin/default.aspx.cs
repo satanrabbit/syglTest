@@ -11,7 +11,10 @@ namespace syglWeb.slip_.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["SlipAdmin"] == null || Session["SlipAdmin"]=="")
+            {
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

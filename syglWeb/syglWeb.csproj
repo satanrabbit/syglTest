@@ -170,7 +170,6 @@
     <Content Include="slip_\admin\default.aspx" />
     <Content Include="slip_\admin\ep.aspx" />
     <Content Include="slip_\admin\en.aspx" />
-    <Content Include="slip_\admin\eop.aspx" />
     <Content Include="slip_\admin\espt.aspx" />
     <Content Include="slip_\admin\login.aspx" />
     <Content Include="slip_\admin\mot.aspx" />
@@ -3958,13 +3957,6 @@
     </Compile>
     <Compile Include="slip_\admin\en.aspx.designer.cs">
       <DependentUpon>en.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="slip_\admin\eop.aspx.cs">
-      <DependentUpon>eop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="slip_\admin\eop.aspx.designer.cs">
-      <DependentUpon>eop.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip_\admin\espt.aspx.cs">
       <DependentUpon>espt.aspx</DependentUpon>

@@ -38,12 +38,16 @@
                                     <label for="" class="ui-label">
                                         <span class="ui-form-required">*</span>账号：
                                     </label>
-                                    <input class="ui-input easyui-validatebox"  type="text" data-options="required:true,missingMessage:'请输登录账号'" name="adminAccount" /> <span class="ui-form-explain">填写注册的邮箱、教工卡号或学号</span>                                   
+                                    <input class="ui-input easyui-validatebox"  
+                                        type="text" data-options="required:true,missingMessage:'请输登录账号'" 
+                                        name="adminAccount" />                                    
                                 </div>
 
                                 <div class="ui-form-item  ">
                                     <label for="" class="ui-label"> <span class="ui-form-required ">*</span>密码：</label>
-                                    <input class="ui-input easyui-validatebox" data-options="required:true,missingMessage:'请输入6-15位的密码！',invalidMessage:'请输入6-15位的密码！'" type="password" name="adminPwd" /> 
+                                    <input class="ui-input easyui-validatebox" 
+                                        data-options="required:true,missingMessage:'请输入6-15位的密码！',invalidMessage:'请输入6-15位的密码！'" 
+                                        type="password" name="adminPwd" /> 
                                 </div> 
                                 <div class="ui-form-item">
                                     <input type="submit" id="submit" class="ui-button ui-button-mblue" value="登录" />

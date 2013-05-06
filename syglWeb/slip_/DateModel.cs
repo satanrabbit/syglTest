@@ -447,7 +447,26 @@ namespace syglWeb.slip_
             return admin_tb;
         }
         #endregion
-
+        #region 获取指定帐号的管理员
+        public Admin GetAdmin(int id)
+        {
+            Admin admin_tb = new Admin();
+            conn.Open();
+            cmd.CommandText = "select * from adminTB where adminID = " + id + " ";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                admin_tb.adminAcount = dr["adminAccount"].ToString();
+                admin_tb.adminID = Convert.ToInt32(dr["adminID"]);
+                admin_tb.adminIdentity = Convert.ToInt32(dr["adminIdentity"]);
+                admin_tb.adminName = dr["adminName"].ToString();
+                admin_tb.adminPWD = dr["adminPWD"].ToString();
+                admin_tb.adminRemark = dr["adminRemark"].ToString();
+            }
+            conn.Close();
+            return admin_tb;
+        }
+        #endregion
     }
     #region 新闻类
     /// <summary>
@@ -537,4 +556,5 @@ namespace syglWeb.slip_
         public string adminRemark { get; set; }
     }
     #endregion
+
 }

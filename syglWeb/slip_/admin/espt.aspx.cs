@@ -11,8 +11,19 @@ namespace syglWeb.slip_.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ( Session["SlipAdmin"] == null)
+            {
+                //保存出错
+
+                Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+                Response.StatusCode = 402;
+                Response.StatusDescription = "您没有登录或登录超时，请重新登录！";
+                Response.End();
+            }
             if (IsPostBack)
             {
+                JsonData jd = new JsonData();
+                 
                 int status = 0;
                 string msg = "未知状态";
                 Support spt = new Support();
@@ -30,7 +41,7 @@ namespace syglWeb.slip_.admin
                 {
                     msg = "错误：" + ex.Message;
                 }
-                JsonData jd = new JsonData();
+                
                 jd["stauts"] = status;
                 jd["msg"] = msg;
                 Response.AddHeader("Content-Type", "text/html; charset=UTF-8");

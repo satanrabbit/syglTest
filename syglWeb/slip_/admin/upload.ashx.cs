@@ -4,18 +4,28 @@ using System.Web;
 using LitJson;
 using SRFileManagerLibrary;
 using System.Collections;
-
+using System.Web.SessionState;
 namespace syglWeb.slip_.admin
 {
     /// <summary>
     /// upload 的摘要说明
     /// </summary>
-    public class upload : IHttpHandler
+    public class upload : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
             Hashtable ht = new Hashtable();
+            if (context.Session["SlipAdmin"] == null)
+            {
+                //保存出错
+                ht["error"] = 1;
+                ht["message"] = "您没有登录，没有上传权限！";
+                context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
+                context.Response.Write(JsonMapper.ToJson(ht));
+                context.Response.End();
+            }
+           
             SRUploadFile srUpfile = new SRUploadFile(context, "imgFile");
 
             srUpfile.FileType = context.Request.QueryString["dir"];
