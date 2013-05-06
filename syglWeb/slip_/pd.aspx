@@ -16,7 +16,7 @@
     <script src="js/jquery-1.8.0.min.js"></script> 
     <script src="source/easyui/jquery.easyui.min.js"></script>
     <script src="source/easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script src="source/easyui/easyui_ex.js"></script>
+<%--    <script src="source/easyui/easyui_ex.js"></script>--%>
     <script src="source/easyui/jquery_easyUI_dialog_form.js"></script>
     <script src="source/jquery.slideViewerPro.1.5/jquery.slideViewerPro.1.5.js"></script>
     <script src="source/jquery.slideViewerPro.1.5/jquery.timers.js"></script>

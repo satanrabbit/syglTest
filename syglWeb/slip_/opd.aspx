@@ -14,7 +14,7 @@
     <script src="js/jquery-1.9.1.min.js"></script> 
     <script src="source/easyui/jquery.easyui.min.js"></script>
     <script src="source/easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script src="source/easyui/easyui_ex.js"></script>
+<%--    <script src="source/easyui/easyui_ex.js"></script>--%>
     <script src="source/easyui/jquery_easyUI_dialog_form.js"></script>
 </head>
 <body>
