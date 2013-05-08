@@ -467,6 +467,44 @@ namespace syglWeb.slip_
             return admin_tb;
         }
         #endregion
+        #region 获取帮助列表
+        public HelpListWithTotal GetHelpsWithTotal(int page,int pageSize,string sort,string sortOrder)
+        {
+            HelpListWithTotal ht = new HelpListWithTotal();
+            conn.Open();
+            cmd.CommandText = "select count(helpID) from help_tb ";
+            ht.total = Convert.ToInt32(cmd.ExecuteScalar());
+            if (page == 1)
+            {
+
+                cmd.CommandText = "select top " + pageSize + "  helpID , helpTitle from help_tb order by " + sort + " " + sortOrder;
+            }
+            else
+            {
+                cmd.CommandText = "select top " + pageSize + " helpID ,helpTitle from help_tb where helpID not in (select top "+ (page-1)*pageSize+ " helpID from help_tb order by "+ sort +" " +sortOrder+" )"+" order by  " + sort +" "+sortOrder;
+            }
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Help hl = new Help();
+                hl.helpID=Convert.ToInt32(dr["helpID"]);
+                hl.helpTitle = dr["helpTitle"].ToString();
+                hl.helpContent = "";
+                ht.rows.Add(hl);
+            }
+            conn.Close();
+            return ht;
+        }
+        #endregion
+        #region 获取指定的帮助
+
+        #endregion
+        #region 保存帮助
+
+        #endregion
+        #region 删除帮助
+
+        #endregion
     }
     #region 新闻类
     /// <summary>
@@ -554,6 +592,17 @@ namespace syglWeb.slip_
         public int adminIdentity { get; set; }
         public string adminName { get; set; }
         public string adminRemark { get; set; }
+    }
+    #endregion
+    #region 帮助内容
+    public class Help {
+        public int helpID { get; set; }
+        public string helpTitle { get; set; }
+        public string helpContent { get; set; }
+    }
+    public class HelpListWithTotal {
+        public List<Help> rows { get; set; }
+        public int total { get; set; }
     }
     #endregion
 

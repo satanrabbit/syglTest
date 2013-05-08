@@ -42,7 +42,7 @@
                 <div class="ui-box  ui-box-follow">
                     <div class="ui-box-head">
                         <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">创新资讯</h3>
+                            <h3 class="ui-box-head-title">最新资讯</h3>
                         </div>
                     </div>
                     <div class="ui-box-container">
@@ -59,7 +59,7 @@
                 <div class="ui-box ui-box-follow">
                     <div class="ui-box-head">
                         <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">创新成果</h3>
+                            <h3 class="ui-box-head-title">帮助</h3>
                         </div>
                     </div>
                     <div class="ui-box-container">

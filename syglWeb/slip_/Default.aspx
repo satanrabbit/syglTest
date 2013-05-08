@@ -18,7 +18,7 @@
     <script src="js/jquery.iFadeSlide.pack.js"></script>
     <script src="source/easyui/jquery.easyui.min.js"></script>
     <script src="source/easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script src="source/easyui/easyui_ex.js"></script>
+<%--    <script src="source/easyui/easyui_ex.js"></script>--%>
     <script src="source/easyui/jquery_easyUI_dialog_form.js"></script>
 </head>
 <body>
@@ -41,7 +41,7 @@
                         <div class="ui-box-head-border">
                             <h3 class="ui-box-head-title">新闻资讯</h3>
                             <%--<span class="ui-box-head-text">其他文字</span>--%>
-                            <a href="#" class="ui-box-head-more">更多</a>
+                            <a href="ns.aspx" class="ui-box-head-more">更多</a>
                         </div>
                     </div>
                     <div class="ui-box-container">
@@ -64,50 +64,31 @@
                     <div class="ui-box-head">
                         <div class="ui-box-head-border">
                             <h3 class="ui-box-head-title">创新成果</h3> 
-                            <a href="#" class="ui-box-head-more">更多</a>
+                            <a href="pf.aspx" class="ui-box-head-more">更多</a>
                         </div>
                     </div>
                     <div class="ui-box-container">
                         <div class="ui-box-content">
                             <table class="ui-table ">
                                     <tbody>
-                                        <tr>
+                                        <asp:Repeater ID="OpsRepeater" runat="server" OnItemDataBound="OpsRepeater_ItemDataBound">
+                                            <ItemTemplate>
+                                               <tr>          
+                                                    <td width="120"> 
+                                                        <asp:Image ID="opImage" runat="server" ImageUrl="~/slip_/file/200.png" Width="100" /></td>
+                                                    <td>
+                                                        <p><a href="opd.aspx?pid=<%# Eval("opID") %>"><%# Eval("opTitle") %></a></p>                                             
+                                                        <p>负责人：<%# Eval("opLeader") %>
+                                                             &emsp; &emsp;联系邮箱：<%# Eval("opEmail") %>
+                                                             &emsp; &emsp;单位：<%# Eval("opDepartment") %></p>
                                             
-                                            <td> <img src="file/chinaz1.ico" /></td>
-                                            <td>
-                                                <p>电话：13000111222</p>
-                                                <p>地址：浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号</p>
-                                            </td>
-                                            <td width="40">操作</td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            <td> <img src="file/chinaz1.ico" /></td>
-                                            <td>
-                                                <p>电话：13000111222</p>
-                                                <p>地址：浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号</p>
-                                            </td>
-                                            <td>操作</td>
-                                        </tr>
-                                        <tr>
-                                           
-                                            <td> <img src="file/chinaz1.ico" /></td>
-                                            <td>
-                                                <p>电话：13000111222</p>
-                                                <p>地址：浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号</p>
-                                            </td>
-                                            <td>操作</td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            <td> <img src="file/chinaz1.ico" /></td>
-                                            <td>
-                                                <p>电话：13000111222</p>
-                                                <p>地址：浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号浙江省杭州市西湖区晚唐路567号</p>
-                                            </td>
-                                            <td>操作</td>
-                                        </tr>
-                                         
+                                                        <p>项目时间：<%# Eval("opLeader") %>
+                                                            &emsp; &emsp;项目成员：<%# Eval("opNum") %></p>
+                                                        <p>&emsp;&emsp;<%# Eval("opIntro") %></p>
+                                                    </td>
+                                                </tr>    
+                                                </ItemTemplate>
+                                        </asp:Repeater>     
                                     </tbody>
                                 </table>
                             </div>
@@ -122,17 +103,18 @@
                             background-color:#0094ff;
                             text-align:center;
                             font-size:26px;
-                            margin:20px 0 0 10px;
-                            "><a style="margin:0 auto;width:30px;display:block; color:#f0f0f0;">项目支持</a></div>
+                            line-height:45px;
+                            margin:10px 0 0 0px;
+                            "><a style="margin:0 auto;width:30px;display:block; padding:15px 10px;  color:#f0f0f0; text-decoration:none;" href="ps.aspx">项目支持</a></div>
                          </div>
                          <div class="ui-grid-7">
                               <div class="ul_support">
-                                  <a  href="Support/SupportDetail.aspx?sid=1">经费支持</a>          
-                                  <a  href="Support/SupportDetail.aspx?sid=2">条件保障</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=3">院系合作</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=4">校企联合</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=5">创新竞赛</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=6">创新训练基地</a>
+                                  <a  href="ps.aspx?sid=1">经费支持</a>          
+                                  <a  href="ps.aspx?sid=2">条件保障</a>
+                                  <a  href="ps.aspx?sid=3">院系合作</a>
+                                  <a  href="ps.aspx?sid=4">校企联合</a>
+                                  <a  href="ps.aspx?sid=5">创新竞赛</a>
+                                  <a  href="ps.aspx?sid=6">创新训练基地</a>
                                 </div>
                          </div>
                     </div>

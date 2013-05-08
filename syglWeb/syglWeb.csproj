@@ -201,6 +201,7 @@
     <Content Include="slip_\file\library.ico" />
     <Content Include="slip_\file\microscope.ico" />
     <Content Include="slip_\hd.ascx" />
+    <Content Include="slip_\hl.aspx" />
     <Content Include="slip_\js\ajaxfileupload.js" />
     <Content Include="slip_\js\jquery-1.8.0.min.js" />
     <Content Include="slip_\js\jquery-1.9.1.min.js" />
@@ -4044,6 +4045,13 @@
     </Compile>
     <Compile Include="slip_\hd.ascx.designer.cs">
       <DependentUpon>hd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="slip_\hl.aspx.cs">
+      <DependentUpon>hl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="slip_\hl.aspx.designer.cs">
+      <DependentUpon>hl.aspx</DependentUpon>
     </Compile>
     <Compile Include="slip_\l.aspx.cs">
       <DependentUpon>l.aspx</DependentUpon>

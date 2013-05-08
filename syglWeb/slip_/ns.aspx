@@ -25,24 +25,7 @@
                 <div class="ui-box">
                     <div class="ui-box-head">
                         <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">最新发布</h3>
-                        </div>
-                    </div>
-                    <div class="ui-box-container">
-                        <div class="ui-box-content">
-                            <ul class="ui-list">
-                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
-                                <li class="ui-list-item"><a href="#">如何提现？</a></li>
-                                <li class="ui-list-item"><a href="#">支付宝数字证书有什么作用？</a></li>
-                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui-box ui-box-follow">
-                    <div class="ui-box-head">
-                        <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">焦点阅读</h3>
+                            <h3 class="ui-box-head-title">最新资讯</h3>
                         </div>
                     </div>
                     <div class="ui-box-container">
@@ -65,16 +48,34 @@
                     <div class="ui-box-container">
                         <div class="ui-box-content">
                             <div class="ul_support">
-                                  <a  href="Support/SupportDetail.aspx?sid=1">经费支持</a>          
-                                  <a  href="Support/SupportDetail.aspx?sid=2">条件保障</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=3">院系合作</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=4">校企联合</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=5">创新竞赛</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=6">创新训练基地</a>
+                                   <a  href="ps.aspx?sid=1">经费支持</a>          
+                                  <a  href="ps.aspx?sid=2">条件保障</a>
+                                  <a  href="ps.aspx?sid=3">院系合作</a>
+                                  <a  href="ps.aspx?sid=4">校企联合</a>
+                                  <a  href="ps.aspx?sid=5">创新竞赛</a>
+                                  <a  href="ps.aspx?sid=6">创新训练基地</a>
                                 </div>
                         </div>
                     </div>
                 </div>
+                <div class="ui-box ui-box-follow">
+                    <div class="ui-box-head">
+                        <div class="ui-box-head-border">
+                            <h3 class="ui-box-head-title">帮助</h3>
+                        </div>
+                    </div>
+                    <div class="ui-box-container">
+                        <div class="ui-box-content">
+                            <ul class="ui-list">
+                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+                                <li class="ui-list-item"><a href="#">如何提现？</a></li>
+                                <li class="ui-list-item"><a href="#">支付宝数字证书有什么作用？</a></li>
+                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="ui-grid-18">
                 <div class="crumb"><a href="default.aspx" >创新平台</a>

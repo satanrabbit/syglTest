@@ -52,7 +52,7 @@
                                     <label for="" class="ui-label">
                                         <span class="ui-form-required">*</span>题&emsp;&emsp;目 
                                     </label>
-                                    <input class="ui-input" type="text" style="width:70%;"> <span class="ui-form-other"></span>
+                                    <input class="ui-input" type="text" style="width:70%; background-color:#fdfdfd;"> <span class="ui-form-other"></span>
                                     <p class="ui-form-explain">您准备进行的开放基金项目的题目,请准确概述，此题目将作为您以后申请开放基金课题的题目！</p>
                                 </div>                                
                                 <div class="ui-form-item">
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>                          
                                 <div class="ui-grid-row">
-                                    <textarea class="ui-textarea" style="width:98%;"></textarea>
+                                    <textarea class="ui-textarea" style="width:98%; background-color:#fdfdfd;"></textarea>
                                 </div>
                                 <div class="ui-form-item">
                                     <label for="" class="ui-label">

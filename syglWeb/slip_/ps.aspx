@@ -31,12 +31,12 @@
                     <div class="ui-box-container">
                         <div class="ui-box-content">
                             <div class="ul_support">
-                                  <a  href="Support/SupportDetail.aspx?sid=1">经费支持</a>          
-                                  <a  href="Support/SupportDetail.aspx?sid=2">条件保障</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=3">院系合作</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=4">校企联合</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=5">创新竞赛</a>
-                                  <a  href="Support/SupportDetail.aspx?sid=6">创新训练基地</a>
+                                   <a  href="ps.aspx?sid=1">经费支持</a>          
+                                  <a  href="ps.aspx?sid=2">条件保障</a>
+                                  <a  href="ps.aspx?sid=3">院系合作</a>
+                                  <a  href="ps.aspx?sid=4">校企联合</a>
+                                  <a  href="ps.aspx?sid=5">创新竞赛</a>
+                                  <a  href="ps.aspx?sid=6">创新训练基地</a>
                                 </div>
                         </div>
                     </div>
